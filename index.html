@@ -1,12 +1,211 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
+
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+    <!-- Шапка документа -->
+    <header class="page-header">
+      <!-- Лого -->
+      <h1 class="page-header__logo">
+        <img src="#" width="80" height="30" alt="Pink">
+      </h1>
+      <!-- Меню-гамбургер -->
+      <nav class="main-nav">
+        <span class="main-nav__toggle  main-nav__toggle--closed"> Открыть меню </span>
+        <!-- Меню списком -->
+        <div class="main-nav__inner  main-nav__inner--closed">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#"> Главная </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#"> Фотографии </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#"> Конкурс </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#"> HTML Academy </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Интро-блок -->
+    <div class="intro">
+      <div class="intro__inner">
+        <h2 class="intro__tittle"> Взгляните на жизнь иначе! </h2>
+      </div>
+    </div>
+
+    <!-- блок "скачать" -->
+    <div class="app-load">
+      <div class="app-load__inner">
+        <a class="app-load__main-btn" href="#"> Скачать приложение </a>
+        <ul class="app-load__list">
+          <li class="app-load__btn  app-load__btn--apple">
+            <a href="#"> Apple </a>
+          </li>
+          <li class="app-load__btn  app-load__btn--android">
+            <a href="#"> Android </a>
+          </li>
+          <li class="app-load__btn  app-load__btn--wind">
+            <a href="#"> Windows </a>
+          </li>
+        </ul>
+        <p class="app-load__brief"> Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8 </p>
+      </div>
+    </div>
+
+    <!-- Промо-блок -->
+    <div class="promo">
+      <div class="promo__inner">
+
+        <h2 class="promo__tittle"> Устали от серости мегаполиса? Нам есть что предложить! </h2>
+        <ul class="promo__list">
+          <li class="promo__item">
+            <p class="promo__item-tittle"> Поднимает настроение </p>
+            <p> Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов! </p>
+          </li>
+          <li class="promo__item">
+            <p class="promo__item-tittle"> Меняет мир вокруг </p>
+            <p> Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект </p>
+          </li>
+          <li class="promo__item">
+            <p class="promo__item-tittle"> Заводит новых друзей </p>
+            <p> Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых </p>
+          </li>
+        </ul>
+        <img class="promo__img" src="http://placehold.it/160x280" width="160" height="280" alt="iPhone">
+
+      </div>
+    </div>
+
+    <!-- блок отзывов -->
+    <div class="review">
+      <div class="review__inner">
+
+        <div class="review__item">
+          <p class="review__author"> Николай Петров </p>
+          <p class="review__content">
+            "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+          </p>
+        </div>
+
+        <div class="review__item">
+          <p class="review__author"> Николай Петров </p>
+          <p class="review__content">
+            "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+          </p>
+        </div>
+
+        <div class="review__item">
+          <p class="review__author"> Николай Петров </p>
+          <p class="review__content">
+            "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+          </p>
+        </div>
+
+        <div class="slider-nav  review__nav">
+          <span class="slider-nav__btn"> 1 </span>
+          <span class="slider-nav__btn"> 2 </span>
+          <span class="slider-nav__btn"> 3 </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Прайс -->
+    <div class="price">
+      <div class="price__inner">
+
+        <table class="price__item">
+          <tr>
+            <td class="price__field  price__field--header"> База 1,99 USD </td>
+          </tr>
+          <tr>
+            <td class="price__field"> Розовый фильтр </td>
+            <td class="price__pick"><span> yes </span></td>
+          </tr>
+          <tr>
+            <td class="price__field"> Смайлики </td>
+            <td class="price__pick"><span> no </span></td>
+          </tr>
+          <tr>
+            <td class="price__field"> Комментарии </td>
+            <td class="price__pick"><span> no </span></td>
+          </tr>
+        </table>
+
+        <table class="price__item">
+          <tr>
+            <td class="price__field  price__field--header"> Стандарт 3,99 USD </td>
+          </tr>
+          <tr>
+            <td class="price__field"> Розовый фильтр </td>
+            <td class="price__pick"><span> yes </span></td>
+          </tr>
+          <tr>
+            <td class="price__field"> Смайлики </td>
+            <td class="price__pick"><span> yes </span></td>
+          </tr>
+          <tr>
+            <td class="price__field"> Комментарии </td>
+            <td class="price__pick"><span> no </span></td>
+          </tr>
+        </table>
+
+        <table class="price__item">
+          <tr>
+            <td class="price__field  price__field--header"> Анлим 9,99 USD </td>
+          </tr>
+          <tr>
+            <td class="price__field"> Розовый фильтр </td>
+            <td class="price__pick"><span> yes </span></td>
+          </tr>
+          <tr>
+            <td class="price__field"> Смайлики </td>
+            <td class="price__pick"><span> yes </span></td>
+          </tr>
+          <tr>
+            <td class="price__field"> Комментарии </td>
+            <td class="price__pick"><span> yes </span></td>
+          </tr>
+        </table>
+
+        <div class="slider-nav  price__nav">
+          <span class="slider-nav__btn"> 1 </span>
+          <span class="slider-nav__btn"> 2 </span>
+          <span class="slider-nav__btn"> 3 </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Контакты -->
+    <footer class="contacts">
+      <div class="contacts__inner">
+
+        <h2 class="contacts__tittle"> Остались вопросы ? Свяжитесь с нами! </h2>
+        <div class="contacts__content">
+          <p class="contacts__phone">  Звоните:
+            <a href="tel:+78125556666"> +7(812)555-66-66 </a>
+          </p>
+          <p class="contacts__mail"> Пишите:
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="contacts__adress"> Приезжайте в гости: ул. Большая Конюшенная, 19/8 </p>
+        </div>
+
+      </div>
+      <div class="contacts__map"></div>
+    </footer>
 
   </body>
 </html>
