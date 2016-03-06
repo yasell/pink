@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
 
-  <body>
+<body>
 
-    <!-- Шапка документа -->
-    <header class="page-header">
-      <!-- Лого -->
-      <h1 class="page-header__logo">
-        <img src="#" width="80" height="30" alt="Pink">
-      </h1>
-      <!-- Меню-гамбургер -->
-      <nav class="main-nav">
-        <span class="main-nav__toggle  main-nav__toggle--closed"> Открыть меню </span>
-        <!-- Меню списком -->
-        <div class="main-nav__inner  main-nav__inner--closed">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#"> Главная </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#"> Фотографии </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#"> Конкурс </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#"> HTML Academy </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+  <!-- Шапка документа -->
+  <header class="page-header">
+    <!-- Логотип -->
+    <h1 class="page-header__logo">
+      <img src="#" width="80" height="30" alt="Pink">
+    </h1>
+    <!-- Меню-гамбургер -->
+    <span class="main-nav__toggle"> Открыть меню </span>
+    <!-- Основное навигационное меню -->
+    <nav class="main-nav">
+      <div class="main-nav__inner">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#"> Главная </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#"> Фотографии </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#"> Конкурс </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#"> HTML Academy </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
+  <main class="page-content">
     <!-- Интро-блок -->
     <div class="intro">
       <div class="intro__inner">
-        <h2 class="intro__tittle"> Взгляните на жизнь иначе! </h2>
+        <h2 class="intro__title"> Взгляните на жизнь иначе! </h2>
       </div>
     </div>
 
@@ -49,14 +50,14 @@
       <div class="app-load__inner">
         <a class="app-load__main-btn" href="#"> Скачать приложение </a>
         <ul class="app-load__list">
-          <li class="app-load__btn  app-load__btn--apple">
-            <a href="#"> Apple </a>
+          <li class="app-load__item  app-load__item--apple">
+            <a class="app-load__link" href="#"> Apple </a>
           </li>
-          <li class="app-load__btn  app-load__btn--android">
-            <a href="#"> Android </a>
+          <li class="app-load__item  app-load__item--android">
+            <a class="app-load__link" href="#"> Android </a>
           </li>
-          <li class="app-load__btn  app-load__btn--wind">
-            <a href="#"> Windows </a>
+          <li class="app-load__item  app-load__item--wind">
+            <a class="app-load__link" href="#"> Windows </a>
           </li>
         </ul>
         <p class="app-load__brief"> Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8 </p>
@@ -67,21 +68,34 @@
     <div class="promo">
       <div class="promo__inner">
 
-        <h2 class="promo__tittle"> Устали от серости мегаполиса? Нам есть что предложить! </h2>
+        <div class="promo__title">
+          <p class="promo__half-title"> Устали от серости мегаполиса? </p>
+          <p class="promo__half-title"> Нам есть, что вам предложить! </p>
+        </div>
+
         <ul class="promo__list">
           <li class="promo__item">
-            <p class="promo__item-tittle"> Поднимает настроение </p>
-            <p> Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов! </p>
+            <dl>
+              <dt class="promo__item-title"> Поднимает настроение </dt>
+              <dd class="promo__item-content"> Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов! </dd>
+            </dl>
           </li>
+
           <li class="promo__item">
-            <p class="promo__item-tittle"> Меняет мир вокруг </p>
-            <p> Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект </p>
+            <dl>
+              <dt class="promo__item-title"> Меняет мир вокруг </dt>
+              <dd class="promo__item-content"> Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект </dd>
+            </dl>
           </li>
+
           <li class="promo__item">
-            <p class="promo__item-tittle"> Заводит новых друзей </p>
-            <p> Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых </p>
+            <dl>
+            <dt class="promo__item-title"> Заводит новых друзей </dt>
+            <dd class="promo__item-content"> Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых </dd>
+            </dl>
           </li>
         </ul>
+
         <img class="promo__img" src="http://placehold.it/160x280" width="160" height="280" alt="iPhone">
 
       </div>
@@ -90,27 +104,35 @@
     <!-- блок отзывов -->
     <div class="review">
       <div class="review__inner">
+        <ul class="review__list">
 
-        <div class="review__item">
-          <p class="review__author"> Николай Петров </p>
-          <p class="review__content">
-            "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
-          </p>
-        </div>
+          <li class="review__item">
+            <dl>
+              <dt class="review__author"> Николай Петров </dt>
+              <dd class="review__content">
+                "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+              </dd>
+            </dl>
+          </li>
 
-        <div class="review__item">
-          <p class="review__author"> Николай Петров </p>
-          <p class="review__content">
-            "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
-          </p>
-        </div>
+          <li class="review__item">
+            <dl>
+              <dt class="review__author"> Николай Петров </dt>
+              <dd class="review__content">
+                "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+              </dd>
+            </dl>
+          </li>
 
-        <div class="review__item">
-          <p class="review__author"> Николай Петров </p>
-          <p class="review__content">
-            "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
-          </p>
-        </div>
+          <li class="review__item">
+            <dl>
+              <dt class="review__author"> Николай Петров </dt>
+              <dd class="review__content">
+                "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+              </dd>
+            </dl>
+          </li>
+        </ul>
 
         <div class="slider-nav  review__nav">
           <span class="slider-nav__btn"> 1 </span>
@@ -124,60 +146,65 @@
     <!-- Прайс -->
     <div class="price">
       <div class="price__inner">
+        <ul class="price__list">
 
-        <table class="price__item">
-          <tr>
-            <td class="price__field  price__field--header"> База 1,99 USD </td>
-          </tr>
-          <tr>
-            <td class="price__field"> Розовый фильтр </td>
-            <td class="price__pick"><span> yes </span></td>
-          </tr>
-          <tr>
-            <td class="price__field"> Смайлики </td>
-            <td class="price__pick"><span> no </span></td>
-          </tr>
-          <tr>
-            <td class="price__field"> Комментарии </td>
-            <td class="price__pick"><span> no </span></td>
-          </tr>
-        </table>
+          <li class="price__item">
+            <div class="price__field  price__field--header">
+              <span class="price__name"> База </span>
+              <span class="price__cost"> 1,99 USD </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-name"> Розовый фильтр </span>
+              <span class="price__marker  price__marker--yes"> yes </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-name"> Смайлики </span>
+              <span class="price__marker  price__marker--no"> no </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-name"> Комментарии </span>
+              <span class="price__marker  price__marker--no"> no </span>
+            </div>
+          </li>
 
-        <table class="price__item">
-          <tr>
-            <td class="price__field  price__field--header"> Стандарт 3,99 USD </td>
-          </tr>
-          <tr>
-            <td class="price__field"> Розовый фильтр </td>
-            <td class="price__pick"><span> yes </span></td>
-          </tr>
-          <tr>
-            <td class="price__field"> Смайлики </td>
-            <td class="price__pick"><span> yes </span></td>
-          </tr>
-          <tr>
-            <td class="price__field"> Комментарии </td>
-            <td class="price__pick"><span> no </span></td>
-          </tr>
-        </table>
+          <li class="price__item">
+            <div class="price__field  price__field--header">
+              <span class="price__name"> Стандарт </span>
+              <span class="price__cost"> 3,99 USD </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-name"> Розовый фильтр </span>
+              <span class="price__marker  price__marker--yes"> yes </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-name"> Смайлики </span>
+              <span class="price__marker  price__marker--yes"> yes </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-name"> Комментарии </span>
+              <span class="price__marker  price__marker--no"> no </span>
+            </div>
+          </li>
 
-        <table class="price__item">
-          <tr>
-            <td class="price__field  price__field--header"> Анлим 9,99 USD </td>
-          </tr>
-          <tr>
-            <td class="price__field"> Розовый фильтр </td>
-            <td class="price__pick"><span> yes </span></td>
-          </tr>
-          <tr>
-            <td class="price__field"> Смайлики </td>
-            <td class="price__pick"><span> yes </span></td>
-          </tr>
-          <tr>
-            <td class="price__field"> Комментарии </td>
-            <td class="price__pick"><span> yes </span></td>
-          </tr>
-        </table>
+          <li class="price__item">
+            <div class="price__field  price__field--header">
+               <span class="price__name"> Анлим </span>
+               <span class="price__cost"> 9,99 USD </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-name"> Розовый фильтр </span>
+              <span class="price__marker  price__marker--yes"> yes </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-name"> Смайлики </span>
+              <span class="price__marker  price__marker--yes"> yes </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-name"> Комментарии </span>
+              <span class="price__marker  price__marker--yes"> yes </span>
+            </div>
+          </li>
+        </ul>
 
         <div class="slider-nav  price__nav">
           <span class="slider-nav__btn"> 1 </span>
@@ -187,25 +214,34 @@
 
       </div>
     </div>
+  </main>
 
-    <!-- Контакты -->
-    <footer class="contacts">
-      <div class="contacts__inner">
+  <!-- Контакты -->
+  <footer class="page-footer">
 
-        <h2 class="contacts__tittle"> Остались вопросы ? Свяжитесь с нами! </h2>
-        <div class="contacts__content">
-          <p class="contacts__phone">  Звоните:
-            <a href="tel:+78125556666"> +7(812)555-66-66 </a>
+    <div class="contacts">
+      <h2 class="contacts__title"> Остались вопросы ? Свяжитесь с нами! </h2>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <p class="contacts__link"> Звоните:
+            <a class="contacts__phone" href="tel:+78125556666"> +7(812)555-66-66 </a>
           </p>
-          <p class="contacts__mail"> Пишите:
-            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+        <li class="contacts__item">
+          <p class="contacts__link"> Пишите:
+            <a class="contacts__mail" href="mailto:mail@htmlacademy.ru"> mail@htmlacademy.ru </a>
           </p>
-          <p class="contacts__adress"> Приезжайте в гости: ул. Большая Конюшенная, 19/8 </p>
-        </div>
+        </li>
+        <li class="contacts__item">
+          <p class="contacts__link"> Приезжайте в гости:
+            <span class="contacts__adress"> ул. Большая Конюшенная, 19/8 </span>
+          </p>
+        </li>
+      </ul>
+    </div>
 
-      </div>
-      <div class="contacts__map"></div>
-    </footer>
+    <div class="page-footer__map"></div>
+  </footer>
 
-  </body>
+</body>
 </html>
