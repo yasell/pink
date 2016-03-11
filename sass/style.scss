@@ -1,0 +1,27 @@
+// переменные, миксины
+@import "variables.scss";
+@import "mixins.scss";
+@import "normalize.scss";
+
+// базовые
+@import "base.scss";
+@import "layout.scss";
+@import "fonts.scss";
+
+// блоки
+@import "app-load.scss";
+@import "contacts.scss";
+@import "form.scss";
+@import "intro.scss";
+@import "main-nav.scss";
+@import "page-content.scss";
+@import "page-footer.scss";
+@import "page-header.scss";
+@import "post.scss";
+@import "price.scss";
+@import "promo.scss";
+@import "review.scss";
+@import "social-links.scss";
+@import "slider-nav.scss";
+@import "upload.scss";
+@import "popap.scss";
