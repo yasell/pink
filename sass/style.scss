@@ -1,22 +1,27 @@
-body {
- background-color: $body-bg;
-}
-
-@import "mixins.scss";
+// переменные, миксины
 @import "variables.scss";
-@import "blocks/app-load.scss";
-@import "blocks/contacts.scss";
-@import "blocks/form.scss";
-@import "blocks/intro.scss";
-@import "blocks/main-nav.scss";
-@import "blocks/page-content.scss";
-@import "blocks/page-footer.scss";
-@import "blocks/page-header.scss";
-@import "blocks/post.scss";
-@import "blocks/price.scss";
-@import "blocks/promo.scss";
-@import "blocks/review.scss";
-@import "blocks/social-links.scss";
-@import "blocks/slider-nav.scss";
-@import "blocks/upload.scss";
-@import "blocks/popap.scss";
+@import "mixins.scss";
+@import "normalize.scss";
+
+// базовые
+@import "base.scss";
+@import "layout.scss";
+@import "fonts.scss";
+
+// блоки
+@import "app-load.scss";
+@import "contacts.scss";
+@import "form.scss";
+@import "intro.scss";
+@import "main-nav.scss";
+@import "page-content.scss";
+@import "page-footer.scss";
+@import "page-header.scss";
+@import "post.scss";
+@import "price.scss";
+@import "promo.scss";
+@import "review.scss";
+@import "social-links.scss";
+@import "slider-nav.scss";
+@import "upload.scss";
+@import "popap.scss";
