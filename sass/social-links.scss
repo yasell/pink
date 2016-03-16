@@ -1,17 +1,18 @@
 .social-links {
-  display: none;
-  padding-top: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 290px;
 
   outline: 1px solid blue;
 
   @media (min-width: $tablet) {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 400px;
-  }
+    flex-direction: row;
 
-  @media (min-width: $desktop) {
-
+    height: 130px;
   }
 }
 

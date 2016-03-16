@@ -1,23 +1,43 @@
 .page-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
-  height: 65px;
+  height: 235px;
 
   background-color: $header-bg;
 
   @media (min-width: $tablet) {
-    min-height: 110px;
+    min-height: 440px;
   }
 
   @media (min-width: $desktop) {
-    min-height: 115px;
+    min-height: 390px;
   }
-  // @include clearfix;
+}
+
+.page-header__roof {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+
+  background: $header-bg;
+
+  @media (min-width: $tablet) {
+    height: 110px;
+  }
 }
 
 .page-header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: inherit;
 
   @include container;
 }
@@ -27,7 +47,7 @@
   width: 80px;
   height: 30px;
 
-  @media (min-width: $desktop) {
+  @media (min-width: $tablet) {
     width: 150px;
     height: 50px;
   }
@@ -39,10 +59,10 @@
 
   background-image: url(../img/icon-menu-burger.svg);
 
-  @media (min-width: $tablet) {
-    width: 50px;
-    height: 25px;
-  }
+  // @media (min-width: $tablet) {
+  //   width: 50px;
+  //   height: 25px;
+  // }
 
   @media (min-width: $desktop) {
     display: none;

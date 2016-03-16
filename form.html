@@ -3,70 +3,72 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 
-  <!-- Шапка документа -->
+  <!-- Document header -->
   <header class="page-header">
-    <div class="page-header__inner">
+    <div class="page-header__roof">
+      <div class="page-header__inner">
 
-      <!-- Логотип -->
-      <h1 class="page-header__logo">
+        <!-- Logo-->
+        <h1 class="page-header__logo">
         <img src="img/logo-pink-white-mobile.svg" alt="Pink">
         </h1>
 
-      <!-- Меню-гамбургер -->
-      <div class="page-header__trigger-wrap">
-        <a class="page-header__trigger-btn" href="#"> Открыть меню </a>
-      </div>
-
-      <!-- Основное навигационное меню -->
-      <nav class="main-nav">
-        <div class="main-nav__inner">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html"> Главная </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="photo.html"> Фотографии </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#"> Конкурс </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#"> HTML Academy </a>
-            </li>
-          </ul>
+        <!-- "hamburger-menu" -->
+        <div class="page-header__trigger-wrap">
+          <a class="page-header__trigger-btn" href="#"> Открыть меню </a>
         </div>
-      </nav>
+
+        <!-- Main navigation menu -->
+        <nav class="main-nav">
+          <div class="main-nav__inner">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html"> Главная </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="photo.html"> Фотографии </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link"> Конкурс </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#"> HTML Academy </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
-  </header>
 
-
-  <main class="page-content">
-
-
-    <!-- Заголовочный-блок -->
+    <!-- Promo block at header -->
     <div class="form-intro">
       <div class="form-intro__inner">
         <h2 class="form-intro__title"> Конкурс на самое безбашеное путешествие с Пинк </h2>
       </div>
     </div>
 
-    <!-- Большая огромная Форма -->
+  </header>
+
+
+  <main class="page-content">
+
+    <!-- Big, Big, Big Form -->
     <div class="form">
       <div class="form__inner">
-
         <p class="form__title"> Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
+      </div>
+      <form class="form__list" action="/echo" method="post">
 
-        <form class="form__list" action="/echo" method="post">
-
-          <div class="form__item">
+        <div class="form__item">
+          <div class="form__inner">
             <ul class="form__text">
 
               <li class="form__block">
@@ -98,8 +100,10 @@
 
             </ul>
           </div>
+        </div>
 
-          <div class="form__item">
+        <div class="form__item">
+          <div class="form__inner">
             <p class="form__item-intro"> Ваши безбашенные достижения в путешествии </p>
             <ul class="form__progress">
 
@@ -141,8 +145,10 @@
 
             </ul>
           </div>
+        </div>
 
-          <div class="form__item">
+        <div class="form__item">
+          <div class="form__inner">
             <ul class="form__contacts">
 
               <li class="form__block">
@@ -165,8 +171,10 @@
 
             </ul>
           </div>
+        </div>
 
-          <div class="form__item">
+        <div class="form__item">
+          <div class="form__inner">
             <p class="form__item-intro"> С каким приложением путешествовали? </p>
             <ul class="form__travelapp">
               <li class="form__travelapp-part">
@@ -186,54 +194,56 @@
               </li>
             </ul>
           </div>
+        </div>
 
-          <div class="form__item">
+        <div class="form__item">
+          <div class="form__inner">
             <p class="form__item-intro"> Опишите свои эмоции </p>
             <textarea class="form__textarea" name="emotion" rows="6" cols="40"> Можно прям в красках, не стесняясь выражений </textarea>
+            <button class="form__submit"> Отправить форму </button>
+
+            <p class="form__required"><span>*</span> - обязательные поля </p>
           </div>
+        </div>
 
-          <button class="form__submit"> Отправить форму </button>
-
-        </form>
-
-        <p class="form__required"><span>*</span> - обязательные поля </p>
-
-      </div>
+      </form>
     </div>
   </main>
 
-  <!-- подвал -->
+
+  <!-- Document footer -->
   <footer class="page-footer">
     <div class="page-footer__inner">
 
-      <div class="page-footer__logo">
-        <img src="http://placehold.it/160x50" alt="Pink" />
-      </div>
+      <!-- "Social" links block -->
+      <div class="social-links">
 
-      <div class="page-footer__social">
-        <!-- блок соц.кнопок -->
-        <ul class="social-links">
+        <img class="social-links__logo" src="http://placehold.it/150x60" alt="Pink">
+
+        <ul class="social-links__list">
           <li class="social-links__item">
-            <a class="social-links__ref social-links__ref--vk" href="#"> Мы в Твиттере </a>
+            <a class="social-links__link  social-links--tweetter" href="#">tweeter</a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__ref social-links__ref--fb" href="https://www.facebook.com/htmlacademy"> Мы в Фейсбуке </a>
+            <a class="social-links__link  social-links--facebook" href="#">facebook</a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__ref social-links__ref--inst" href="#"> Мы в Ютьюбе </a>
+            <a class="social-links__link  social-links--youtube" href="#">youtube</a>
           </li>
         </ul>
-      </div>
 
-      <div class="page-footer__copyright">
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"> Разработано: <img src="#" alt="HTML Academy"/></a>
+        <div class="social-links__copyright">
+          Разработано
+          <img class="social-links__copyright-logo" src="http://placehold.it/30x40" alt="">
+        </div>
       </div>
 
     </div>
   </footer>
 
-  <!-- Всплывающие попапы -->
-  <!-- Всё Ок -->
+
+  <!-- "Pop-up" blocks -->
+  <!-- Ок -->
   <div class="popap popap--ok">
     <div class="popap__inner">
       <dl>
@@ -244,7 +254,7 @@
     </div>
   </div>
 
-  <!-- Не заполнены поля -->
+  <!-- No -->
   <div class="popap popap--error">
     <div class="popap__inner">
       <dl>

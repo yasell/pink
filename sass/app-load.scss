@@ -1,36 +1,30 @@
 .app-load {
-  min-height: 660px;
+  width: 100%;
+  min-height: 270px;
+  margin-top: auto;
 
   background: $intro-bg;
 
-  // @include clearfix;
+  @media (min-width: $tablet) {
+    width: 100%;
+    min-height: 420px;
+    margin-top: 0;
+    padding-top: 110px;
 
-  // @media (min-width: $tablet) {
-    // min-height: 620px;
-  // }
+    background: none;
+  }
 
-  // @media (min-width: $desktop) {
-  //   min-height: 745px;
-  // }
+  @media (min-width: $desktop) {
+    min-height: 510px;
+  }
 }
 
 .app-load__inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 665px;
 
-  outline: 1px solid white;
-
-  @media (min-width: $tablet) {
-    min-height: 420px;
-    padding-top: 100px;
-  }
-
-  @media (min-width: $desktop) {
-    min-height: 520px;
-    padding: 110px 0;
-  }
+  outline: 1px solid red;
 
   @include container;
 }
@@ -48,16 +42,11 @@
     display: block;
     margin: 0;
   }
-
-  @media (min-width: $desktop) {
-    // padding-top: 115px;
-  }
 }
 
 .app-load__vendor-block {
   width: 100%;
-
-  margin-top: auto;
+  margin-top: 25px;
 
   @media (min-width: $tablet) {
     width: 300px;
@@ -66,7 +55,6 @@
 
   @media (min-width: $desktop) {
     height: 290px;
-    // padding-top: 60px;
   }
 }
 

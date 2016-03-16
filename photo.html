@@ -3,52 +3,65 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- Шапка документа -->
+
+  <!-- Document header -->
   <header class="page-header">
-    <!-- Логотип -->
-    <a class="page-header__logo">
-      <img src="#" width="100" height="40" alt="Pink">
-    </a>
-    <!-- Меню-гамбургер -->
-    <div class="page-header__trigger-wrap">
-      <a class="page-header__trigger-btn" href="#"> Открыть меню </a>
-    </div>
-    <!-- Основное навигационное меню -->
-    <nav class="main-nav">
-      <div class="main-nav__inner">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html"> Главная </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#"> Фотографии </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html"> Конкурс </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#"> HTML Academy </a>
-          </li>
-        </ul>
+    <div class="page-header__roof">
+      <div class="page-header__inner">
+
+        <!-- Logo-->
+        <h1 class="page-header__logo">
+        <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+        </h1>
+
+        <!-- "hamburger-menu" -->
+        <div class="page-header__trigger-wrap">
+          <a class="page-header__trigger-btn" href="#"> Открыть меню </a>
+        </div>
+
+        <!-- Main navigation menu -->
+        <nav class="main-nav">
+          <div class="main-nav__inner">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html"> Главная </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link"> Фотографии </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="form.html"> Конкурс </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#"> HTML Academy </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </div>
+
+    <!-- Promo block at header -->
+    <div class="photo-intro">
+      <div class="photo-intro__inner">
+        <h2 class="photo-intro__title"> Фотографии пользователей </h2>
+      </div>
+    </div>
+
   </header>
 
-  <main class="page-content">
-    <!-- Интро-блок -->
-    <div class="intro">
-      <div class="intro__inner">
-        <h2 class="intro__title"> Фотографии пользователей </h2>
-      </div>
-    </div>
 
-    <!-- Лента записей пользователей -->
+  <main class="page-content">
+
+
+    <!-- Contents Title -->
     <div class="post">
       <div class="post__inner">
         <p class="post__title">
@@ -56,152 +69,165 @@
         </p>
       </div>
 
-      <ul class="post__list">
+      <!-- "Post of a day" - large foto -->
+      <div class="post__of-day">
+        <a class="post__img  post__img--winner" href="#"><img src="#" alt="foto-of-a-day" /></a>
+        <div class="post__inner">
+          <dl class="post__description">
+            <dt class="post__author"> Анна <span>(5 минут назад)</span> </dt>
+            <dd class="post__message"> Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы! </dd>
+          </dl>
+          <span class="post__like"><i></i> <span>Нравится: 215</span> </span>
+        </div>
+      </div>
 
-        <!-- Пост дня -->
-        <li class="post__item">
-          <a class="post__img  post__img--winner" href="#"><img src="http://placehold.it/320x140" alt="user-foto" /></a>
-          <div class="post__inner">
-            <dl class="post__description">
-              <dt class="post__author"> Анна <span>(5 минут назад)</span> </dt>
-              <dd class="post__message"> Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы! </dd>
-            </dl>
-            <span class="post__like"><i></i> <span>Нравится: 215</span> </span>
-          </div>
-        </li>
+      <div class="post__inner">
+        <!-- Users feed -->
+        <ul class="post__list">
 
-        <li class="post__item">
-          <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
-          <div class="post__inner">
+          <li class="post__item">
+            <!--  -->
+            <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
             <dl class="post__description">
               <dt class="post__author"> Антон <span>(12 часов назад)</span> </dt>
               <dd class="post__message"> Соседи будут рады! </dd>
             </dl>
             <span class="post__like"><i></i> <span>Нравится: 666</span> </span>
-          </div>
-        </li>
+            <!-- </div> -->
+          </li>
 
-        <li class="post__item">
-          <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
-          <div class="post__inner">
+          <li class="post__item">
+            <!-- <div class="post__inner"> -->
+            <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
             <dl class="post__description">
               <dt class="post__author"> Борис <span>(20 часов назад)</span> </dt>
               <dd class="post__message"> Здесь могла быть ваша цитата о высоком и вечном. </dd>
             </dl>
             <span class="post__like"><i></i> <span>Нравится: 215</span> </span>
-          </div>
-        </li>
+            <!-- </div> -->
+          </li>
 
-        <li class="post__item">
-          <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
-          <div class="post__inner">
-            <dl class="post__description">
-              <dt class="post__author"> Сергей <span>(25 часов назад)</span> </dt>
-              <dd class="post__message"> Самая кубанская в мире! </dd>
-            </dl>
-            <span class="post__like"><i></i> <span>Нравится: 4</span> </span>
-          </div>
-        </li>
+          <li class="post__item">
+            <!-- <div class="post__inner"> -->
+              <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
+              <dl class="post__description">
+                <dt class="post__author"> Сергей <span>(25 часов назад)</span> </dt>
+                <dd class="post__message"> Самая кубанская в мире! </dd>
+              </dl>
+              <span class="post__like"><i></i> <span>Нравится: 4</span> </span>
+            <!-- </div> -->
+          </li>
 
-        <li class="post__item">
-          <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
-          <div class="post__inner">
-            <dl class="post__description">
-              <dt class="post__author"> Левон <span>(5 часов назад)</span> </dt>
-              <dd class="post__message"> Вчера он на луну летал, сегодня в руки к нам попал. </dd>
-            </dl>
-            <span class="post__like"><i></i> <span>Нравится: 356</span> </span>
-          </div>
-        </li>
+          <li class="post__item">
+            <!-- <div class="post__inner"> -->
+              <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
+              <dl class="post__description">
+                <dt class="post__author"> Левон <span>(5 часов назад)</span> </dt>
+                <dd class="post__message"> Вчера он на луну летал, сегодня в руки к нам попал. </dd>
+              </dl>
+              <span class="post__like"><i></i> <span>Нравится: 356</span> </span>
+            <!-- </div> -->
+          </li>
 
-        <li class="post__item">
-          <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
-          <div class="post__inner">
-            <dl class="post__description">
-              <dt class="post__author"> Максим <span>(40 часов назад)</span> </dt>
-              <dd class="post__message"> Где снег-то? </dd>
-            </dl>
-            <span class="post__like"><i></i> <span>Нравится: 150</span> </span>
-          </div>
-        </li>
+          <li class="post__item">
+            <!-- <div class="post__inner"> -->
+              <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
+              <dl class="post__description">
+                <dt class="post__author"> Максим <span>(40 часов назад)</span> </dt>
+                <dd class="post__message"> Где снег-то? </dd>
+              </dl>
+              <span class="post__like"><i></i> <span>Нравится: 150</span> </span>
+            <!-- </div> -->
+          </li>
 
-        <li class="post__item">
-          <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
-          <div class="post__inner">
-            <dl class="post__description">
-              <dt class="post__author"> Надежда <span>(45 часов назад)</span> </dt>
-              <dd class="post__message"> Всем GM и взаимные лайки! </dd>
-            </dl>
-            <span class="post__like"><i></i> <span>Нравится: 2560</span> </span>
-          </div>
-        </li>
+          <li class="post__item">
+            <!-- <div class="post__inner"> -->
+              <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
+              <dl class="post__description">
+                <dt class="post__author"> Надежда <span>(45 часов назад)</span> </dt>
+                <dd class="post__message"> Всем GM и взаимные лайки! </dd>
+              </dl>
+              <span class="post__like"><i></i> <span>Нравится: 2560</span> </span>
+            <!-- </div> -->
+          </li>
 
-      </ul>
+        </ul>
+      </div>
     </div>
 
-    <!-- блок загрузки фото -->
+    <!-- "Upload foto" block -->
     <div class="upload">
       <div class="upload__inner">
-
         <p class="upload__title"> Затмите их всех! Выкладывайте все, что накопилось в телефоне! </p>
+      </div>
 
-        <form class="upload__area" action="/echo" method="post" enctype="multipart/form-data">
-          <label class="upload__foto">
-            <input type="file" name="foto">
-            <img src="http://placehold.it/280x375" alt="foto"/>
-          </label>
-          <!-- инструменты редактирования -->
-          <div class="upload__tools">
-            <a class="upload__tool  upload__tool--crop  upload__tool--active" href="#"> Crop </a>
-            <!-- ползунок -->
-            <div class="upload__range-control">
-              <div class="upload__range-bar"></div>
-              <div class="upload__range-toggle"></div>
+      <div class="upload__wrapper">
+        <div class="upload__inner">
+          <form class="upload__area" action="/echo" method="post" enctype="multipart/form-data">
+            <!-- Foto -->
+            <label class="upload__foto">
+              <input type="file" name="foto">
+              <img src="http://placehold.it/280x375" alt="foto" />
+            </label>
+
+            <!-- edit tools -->
+            <div class="upload__tools">
+              <a class="upload__tool  upload__tool--crop  upload__tool--active" href="#"> Crop </a>
+              <!-- range -->
+              <div class="upload__range-control">
+                <div class="upload__range-bar"></div>
+                <div class="upload__range-toggle"></div>
+              </div>
+
+              <a class="upload__tool  upload__tool--fill" href="#"> Fill </a>
+              <a class="upload__tool  upload__tool--bright" href="#"> Bright </a>
             </div>
 
-            <a class="upload__tool  upload__tool--fill" href="#"> Fill </a>
-            <a class="upload__tool  upload__tool--bright" href="#"> Bright </a>
-          </div>
-          <!-- кнопки отправки -->
-          <div class="upload__send">
-            <button class="upload__btn  upload__btn--active"> Запостить </button>
-            <button class="upload__btn"> Отмена </button>
-          </div>
-        </form>
+            <!-- submit buttons -->
+            <div class="upload__send">
+              <button class="upload__btn  upload__btn--active"> Запостить </button>
+              <button class="upload__btn"> Отмена </button>
+            </div>
 
+          </form>
+        </div>
       </div>
+
     </div>
   </main>
 
-  <!-- подвал -->
+
+  <!-- Document footer -->
   <footer class="page-footer">
     <div class="page-footer__inner">
 
-      <div class="page-footer__logo">
-        <img src="http://placehold.it/160x50" alt="Pink" />
-      </div>
+      <!-- "Social" links block -->
+      <div class="social-links">
 
-      <div class="page-footer__social">
-        <!-- блок соц.кнопок -->
-        <ul class="social-links">
+        <img class="social-links__logo" src="http://placehold.it/150x60" alt="Pink">
+
+        <ul class="social-links__list">
           <li class="social-links__item">
-            <a class="social-links__ref social-links__ref--vk" href="#"> Мы в Твиттере </a>
+            <a class="social-links__link  social-links--tweetter" href="#">tweeter</a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__ref social-links__ref--fb" href="https://www.facebook.com/htmlacademy"> Мы в Фейсбуке </a>
+            <a class="social-links__link  social-links--facebook" href="#">facebook</a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__ref social-links__ref--inst" href="#"> Мы в Ютьюбе </a>
+            <a class="social-links__link  social-links--youtube" href="#">youtube</a>
           </li>
         </ul>
-      </div>
 
-      <div class="page-footer__copyright">
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"> Разработано: <img src="#" alt="HTML Academy"/></a>
+        <div class="social-links__copyright">
+          Разработано
+          <img class="social-links__copyright-logo" src="http://placehold.it/30x40" alt="">
+        </div>
       </div>
 
     </div>
   </footer>
 
+
 </body>
+
 </html>

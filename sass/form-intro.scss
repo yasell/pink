@@ -1,0 +1,26 @@
+.form-intro {
+  width: 230px;
+  padding-top: 65px;
+
+  outline: 1px solid white;
+
+  @media (min-width: $tablet) {
+    width: 500px;
+    padding-top: 110px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 820px;
+  }
+}
+
+.form-intro__inner {
+  margin: 0 auto;
+}
+
+.form-intro__title {
+  margin: 0;
+
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,14 @@
+.photo-intro {
+
+}
+
+.photo-intro__inner {
+  @include container;
+
+  outline: 1px solid green;
+}
+
+.photo-intro__title {
+  margin: 0;
+  text-align: center;
+}

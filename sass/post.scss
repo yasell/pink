@@ -1,3 +1,73 @@
 .post {
-  outline: 1px solid #000;
+
+}
+
+.post__inner {
+  @include container;
+}
+
+.post__title {
+  min-height: 185px;
+  margin: 0;
+
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    min-height: 230px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 240px;
+  }
+}
+
+.post__of-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.post__of-day > .post__inner {
+  background: $gray-bg;
+}
+
+.post__img {
+
+}
+
+.post__img--winner {
+  width: 100%;
+  height: 140px;
+}
+
+.post__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ @media (min-width: $tablet) {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.post__item {
+  background: $gray-bg;
+
+  @media (min-width: $tablet) {
+    width: 300px;
+    height: 455px;
+  }
+}
+
+.post__description {
+
 }

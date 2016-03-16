@@ -1,3 +1,27 @@
 .form {
-  outline: 1px solid #000;
+
+}
+
+.form__inner {
+  @include container;
+}
+
+.form__title {
+  margin: 0;
+}
+
+.form__list {
+
+}
+
+.form__item {
+
+}
+
+.form__item:nth-child(2n) {
+  background: $gray-bg;
+
+  @media (min-width: $tablet) {
+    background: none;
+  }
 }
