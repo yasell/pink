@@ -1,3 +1,37 @@
 .price {
-  outline: 1px solid #000;
+  min-height: 445px;
+
+  background: $gray-bg;
+  outline: 1px solid red;
+
+  @media (min-width: $tablet) {
+    min-height: 325px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 450px;
+  }
+}
+
+.price__inner {
+  @include container;
+}
+
+.price__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.price__list li:not(:first-child) {
+  display: none;
+}
+
+.price__item {
+
 }

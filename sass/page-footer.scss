@@ -1,3 +1,17 @@
 .page-footer {
+  min-height: 600px;
+
   outline: 1px solid red;
+
+  @media (min-width: $tablet) {
+    min-height: 900px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 1060px;
+  }
+}
+
+.page-footer__inner {
+  @include container;
 }

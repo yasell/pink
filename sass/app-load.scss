@@ -1,3 +1,104 @@
 .app-load {
-  outline: 1px solid #000;
+  min-height: 660px;
+
+  background: $intro-bg;
+
+  // @include clearfix;
+
+  // @media (min-width: $tablet) {
+    // min-height: 620px;
+  // }
+
+  // @media (min-width: $desktop) {
+  //   min-height: 745px;
+  // }
+}
+
+.app-load__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 665px;
+
+  outline: 1px solid white;
+
+  @media (min-width: $tablet) {
+    min-height: 420px;
+    padding-top: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 520px;
+    padding: 110px 0;
+  }
+
+  @include container;
+}
+
+.app-load__title {
+  display: none;
+  width: 190px;
+
+  font-size: 40px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    display: block;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    // padding-top: 115px;
+  }
+}
+
+.app-load__vendor-block {
+  width: 100%;
+
+  margin-top: auto;
+
+  @media (min-width: $tablet) {
+    width: 300px;
+    height: 245px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 290px;
+    // padding-top: 60px;
+  }
+}
+
+.app-load__main-btn {
+  display: block;
+  width: 100%;
+
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.app-load__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.app-load__item {
+  display: inline-block;
+
+  vertical-align: middle;
+}
+
+.appload__link {
+
+}
+
+.app-load__brief {
+  color: #fff;
 }

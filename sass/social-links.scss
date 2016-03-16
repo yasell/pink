@@ -1,3 +1,35 @@
 .social-links {
-  outline: 1px solid #fff;
+  display: none;
+  padding-top: 500px;
+
+  outline: 1px solid blue;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 400px;
+  }
+
+  @media (min-width: $desktop) {
+
+  }
+}
+
+.social-links__logo {
+
+}
+
+.social-links__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-links__item {
+
 }
