@@ -1,3 +1,38 @@
 .review {
-  outline: 1px solid #000;
+  min-height: 340px;
+
+  outline: 1px solid green;
+
+  @media (min-width: $tablet) {
+    min-height: 250px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 400px;
+    padding-top: 190px;
+  }
+}
+
+.review__inner {
+  @include container;
+}
+
+.review__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.review__list li:not(:first-child) {
+  display: none;
+}
+
+.review__item {
+
 }

@@ -1,3 +1,92 @@
 .app-load {
-  outline: 1px solid #000;
+  width: 100%;
+  min-height: 270px;
+  margin-top: auto;
+
+  background: $intro-bg;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    min-height: 420px;
+    margin-top: 0;
+    padding-top: 110px;
+
+    background: none;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 510px;
+  }
+}
+
+.app-load__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  outline: 1px solid red;
+
+  @include container;
+}
+
+.app-load__title {
+  display: none;
+  width: 190px;
+
+  font-size: 40px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    display: block;
+    margin: 0;
+  }
+}
+
+.app-load__vendor-block {
+  width: 100%;
+  margin-top: 25px;
+
+  @media (min-width: $tablet) {
+    width: 300px;
+    height: 245px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 290px;
+  }
+}
+
+.app-load__main-btn {
+  display: block;
+  width: 100%;
+
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.app-load__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.app-load__item {
+  display: inline-block;
+
+  vertical-align: middle;
+}
+
+.appload__link {
+
+}
+
+.app-load__brief {
+  color: #fff;
 }

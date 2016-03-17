@@ -3,233 +3,263 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- Шапка документа -->
+
+  <!-- Document header -->
   <header class="page-header">
-    <!-- Логотип -->
-    <a class="page-header__logo">
-      <img src="#" width="80" height="30" alt="Pink">
-    </a>
-    <!-- Меню-гамбургер -->
-    <div class="page-header__trigger-wrap">
-      <a class="page-header__trigger-btn" href="#"> Открыть меню </a>
-    </div>
-    <!-- Основное навигационное меню -->
-    <nav class="main-nav">
-      <div class="main-nav__inner">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html"> Главная </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="photo.html"> Фотографии </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#"> Конкурс </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#"> HTML Academy </a>
-          </li>
-        </ul>
+    <div class="page-header__roof">
+      <div class="page-header__inner">
+
+        <!-- Logo-->
+        <h1 class="page-header__logo">
+        <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+        </h1>
+
+        <!-- "hamburger-menu" -->
+        <div class="page-header__trigger-wrap">
+          <a class="page-header__trigger-btn" href="#"> Открыть меню </a>
+        </div>
+
+        <!-- Main navigation menu -->
+        <nav class="main-nav">
+          <div class="main-nav__inner">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html"> Главная </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="photo.html"> Фотографии </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link"> Конкурс </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#"> HTML Academy </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </div>
+
+    <!-- Promo block at header -->
+    <div class="form-intro">
+      <div class="form-intro__inner">
+        <h2 class="form-intro__title"> Конкурс на самое безбашеное путешествие с Пинк </h2>
+      </div>
+    </div>
+
   </header>
 
-  <main class="page-content">
-    <!-- Интро-блок -->
-    <div class="intro">
-      <div class="intro__inner">
-        <h2 class="intro__title"> Конкурс на самое безбашеное путешествие с Пинк </h2>
-      </div>
-    </div>
 
-    <!-- Большая огромная Форма -->
+  <main class="page-content">
+
+    <!-- Big, Big, Big Form -->
     <div class="form">
       <div class="form__inner">
-
         <p class="form__title"> Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
-
-        <form class="form__list" action="/echo" method="post">
-
-        <div class="form__item">
-          <ul class="form__text">
-
-            <li class="form__block">
-              <dl class="form__text-block">
-                <dt class="form__text-title"><label for="name"> Имя </label></dt>
-                <dd class="form__text-field"><input class="form__main-field" type="text" id="name" value="" placeholder="Введите ваше имя"></dd>
-              </dl>
-            </li>
-
-            <li class="form__block">
-              <dl class="form__text-block">
-                <dt class="form__text-title"><label for="family"> Фамилия </label></dt>
-                <dd class="form__text-field"><input class="form__main-field" type="text" id="family" value="" placeholder="Укажите фамилию"></dd>
-              </dl>
-            </li>
-
-            <li class="form__block">
-              <dl class="form__text-block">
-                <dt class="form__text-title"><label for="middle-name"> Отчество </label></dt>
-                <dd class="form__text-field"><input class="form__main-field" type="text" id="middle-name" value="" placeholder="Ну и отчество тоже"></dd>
-              </dl>
-            </li>
-
-          </ul>
-        </div>
-
-        <div class="form__item">
-          <p class="form__item-intro"> Ваши безбашенные достижения в путешествии </p>
-          <ul class="form__progress">
-
-            <li class="form__progress-part">
-              <label class="form__check">
-                <input class="form__checkbox" type="checkbox" name="selfi" checked> <span class="form__field-name"> Сделал селфи с акулой </span>
-              </label>
-            </li>
-
-            <li class="form__progress-part">
-              <label class="form__check">
-                <input class="form__checkbox" type="checkbox" name="hot" checked> <span class="form__field-name"> Обгорел на пляже </span>
-              </label>
-            </li>
-
-            <li class="form__progress-part">
-              <label class="form__check">
-                <input class="form__checkbox" type="checkbox" name="norris"> <span class="form__field-name"> Видел Чака Норриса </span>
-              </label>
-            </li>
-
-            <li class="form__progress-part">
-              <label class="form__check">
-                <input class="form__checkbox" type="checkbox" name="souvenir"> <span class="form__field-name"> Накупил сувениров </span>
-              </label>
-            </li>
-
-            <li class="form__progress-part">
-              <label class="form__check">
-                <input class="form__checkbox" type="checkbox" name="tower" checked> <span class="form__field-name"> Удержал башню </span>
-              </label>
-            </li>
-
-            <li class="form__progress-part">
-              <label class="form__check">
-                <input class="form__checkbox" type="checkbox" name="riot"> <span class="form__field-name"> Разгромил отель </span>
-              </label>
-            </li>
-
-          </ul>
-        </div>
-
-        <div class="form__item">
-          <ul class="form__contacts">
-
-            <li class="form__block">
-              <dl class="form__text-block">
-                <dt class="form__text-title"><label for="tel"> Номерок телефончика </label></dt>
-                <dd class="form__text-field"><input class="form__main-field" type="tel" id="tel" value="" placeholder="Номер, пожалуйста"></dd>
-              </dl>
-            </li>
-
-            <li class="form__block">
-              <dl class="form__text-block">
-                <dt class="form__text-title"><label for="mail"> Адресок почты </label></dt>
-                <dd class="form__text-field"><input class="form__main-field" type="email" id="mail" value="" placeholder="E-mail, пожалуйста"></dd>
-              </dl>
-            </li>
-
-          </ul>
-        </div>
-
-        <div class="form__item">
-          <p class="form__item-intro"> С каким приложением путешествовали? </p>
-          <ul class="form__travelapp">
-            <li class="form__travelapp-part">
-              <label class="form__check">
-                <input class="form__radio" type="radio" name="app" value="ios" checked> <span class="form__field-name"> Pink для iOS </span>
-              </label>
-            </li>
-            <li class="form__travelapp-part">
-              <label class="form__check">
-                <input class="form__radio" type="radio" name="app" value="android"> <span class="form__field-name"> Pink на Android </span>
-              </label>
-            </li>
-            <li class="form__travelapp-part">
-              <label class="form__check">
-                <input class="form__radio" type="radio" name="app" value="windows"> <span class="form__field-name"> Windows Phone </span>
-              </label>
-            </li>
-          </ul>
-        </div>
-
-        <div class="form__item">
-          <p class="form__item-intro"> Опишите свои эмоции </p>
-          <textarea class="form__textarea" name="emotion" rows="6" cols="40"> Можно прям в красках, не стесняясь выражений </textarea>
-        </div>
-
-        <button class="form__submit"> Отправить форму </button>
-
-        </form>
-
-        <p class="form__required"><span>*</span> - обязательные поля </p>
-
       </div>
+      <form class="form__list" action="/echo" method="post">
+
+        <div class="form__item">
+          <div class="form__inner">
+            <ul class="form__text">
+
+              <li class="form__block">
+                <dl class="form__text-block">
+                  <dt class="form__text-title"><label for="name"> Имя </label></dt>
+                  <dd class="form__text-field">
+                    <input class="form__main-field" type="text" id="name" value="" placeholder="Введите ваше имя">
+                  </dd>
+                </dl>
+              </li>
+
+              <li class="form__block">
+                <dl class="form__text-block">
+                  <dt class="form__text-title"><label for="family"> Фамилия </label></dt>
+                  <dd class="form__text-field">
+                    <input class="form__main-field" type="text" id="family" value="" placeholder="Укажите фамилию">
+                  </dd>
+                </dl>
+              </li>
+
+              <li class="form__block">
+                <dl class="form__text-block">
+                  <dt class="form__text-title"><label for="middle-name"> Отчество </label></dt>
+                  <dd class="form__text-field">
+                    <input class="form__main-field" type="text" id="middle-name" value="" placeholder="Ну и отчество тоже">
+                  </dd>
+                </dl>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="form__item">
+          <div class="form__inner">
+            <p class="form__item-intro"> Ваши безбашенные достижения в путешествии </p>
+            <ul class="form__progress">
+
+              <li class="form__progress-part">
+                <label class="form__check">
+                  <input class="form__checkbox" type="checkbox" name="selfi" checked> <span class="form__field-name"> Сделал селфи с акулой </span>
+                </label>
+              </li>
+
+              <li class="form__progress-part">
+                <label class="form__check">
+                  <input class="form__checkbox" type="checkbox" name="hot" checked> <span class="form__field-name"> Обгорел на пляже </span>
+                </label>
+              </li>
+
+              <li class="form__progress-part">
+                <label class="form__check">
+                  <input class="form__checkbox" type="checkbox" name="norris"> <span class="form__field-name"> Видел Чака Норриса </span>
+                </label>
+              </li>
+
+              <li class="form__progress-part">
+                <label class="form__check">
+                  <input class="form__checkbox" type="checkbox" name="souvenir"> <span class="form__field-name"> Накупил сувениров </span>
+                </label>
+              </li>
+
+              <li class="form__progress-part">
+                <label class="form__check">
+                  <input class="form__checkbox" type="checkbox" name="tower" checked> <span class="form__field-name"> Удержал башню </span>
+                </label>
+              </li>
+
+              <li class="form__progress-part">
+                <label class="form__check">
+                  <input class="form__checkbox" type="checkbox" name="riot"> <span class="form__field-name"> Разгромил отель </span>
+                </label>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="form__item">
+          <div class="form__inner">
+            <ul class="form__contacts">
+
+              <li class="form__block">
+                <dl class="form__text-block">
+                  <dt class="form__text-title"><label for="tel"> Номерок телефончика </label></dt>
+                  <dd class="form__text-field">
+                    <input class="form__main-field" type="tel" id="tel" value="" placeholder="Номер, пожалуйста">
+                  </dd>
+                </dl>
+              </li>
+
+              <li class="form__block">
+                <dl class="form__text-block">
+                  <dt class="form__text-title"><label for="mail"> Адресок почты </label></dt>
+                  <dd class="form__text-field">
+                    <input class="form__main-field" type="email" id="mail" value="" placeholder="E-mail, пожалуйста">
+                  </dd>
+                </dl>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="form__item">
+          <div class="form__inner">
+            <p class="form__item-intro"> С каким приложением путешествовали? </p>
+            <ul class="form__travelapp">
+              <li class="form__travelapp-part">
+                <label class="form__check">
+                  <input class="form__radio" type="radio" name="app" value="ios" checked> <span class="form__field-name"> Pink для iOS </span>
+                </label>
+              </li>
+              <li class="form__travelapp-part">
+                <label class="form__check">
+                  <input class="form__radio" type="radio" name="app" value="android"> <span class="form__field-name"> Pink на Android </span>
+                </label>
+              </li>
+              <li class="form__travelapp-part">
+                <label class="form__check">
+                  <input class="form__radio" type="radio" name="app" value="windows"> <span class="form__field-name"> Windows Phone </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="form__item">
+          <div class="form__inner">
+            <p class="form__item-intro"> Опишите свои эмоции </p>
+            <textarea class="form__textarea" name="emotion" rows="6" cols="40"> Можно прям в красках, не стесняясь выражений </textarea>
+            <button class="form__submit"> Отправить форму </button>
+
+            <p class="form__required"><span>*</span> - обязательные поля </p>
+          </div>
+        </div>
+
+      </form>
     </div>
   </main>
 
-  <!-- подвал -->
+
+  <!-- Document footer -->
   <footer class="page-footer">
     <div class="page-footer__inner">
 
-      <div class="page-footer__logo">
-        <img src="http://placehold.it/160x50" alt="Pink" />
-      </div>
+      <!-- "Social" links block -->
+      <div class="social-links">
 
-      <div class="page-footer__social">
-        <!-- блок соц.кнопок -->
-        <ul class="social-links">
+        <img class="social-links__logo" src="http://placehold.it/150x60" alt="Pink">
+
+        <ul class="social-links__list">
           <li class="social-links__item">
-            <a class="social-links__ref social-links__ref--vk" href="#"> Мы в Твиттере </a>
+            <a class="social-links__link  social-links--tweetter" href="#">tweeter</a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__ref social-links__ref--fb" href="https://www.facebook.com/htmlacademy"> Мы в Фейсбуке </a>
+            <a class="social-links__link  social-links--facebook" href="#">facebook</a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__ref social-links__ref--inst" href="#"> Мы в Ютьюбе </a>
+            <a class="social-links__link  social-links--youtube" href="#">youtube</a>
           </li>
         </ul>
-      </div>
 
-      <div class="page-footer__copyright">
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"> Разработано: <img src="#" alt="HTML Academy"/></a>
+        <div class="social-links__copyright">
+          Разработано
+          <img class="social-links__copyright-logo" src="http://placehold.it/30x40" alt="">
+        </div>
       </div>
 
     </div>
   </footer>
 
-  <!-- Всплывающие попапы -->
-  <!-- Всё Ок -->
+
+  <!-- "Pop-up" blocks -->
+  <!-- Ок -->
   <div class="popap popap--ok">
     <div class="popap__inner">
       <dl>
-      <dt class="popap__title"> Ваша заявка отправлена </dt>
-      <dd class="popap__content"> Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас. </dd>
+        <dt class="popap__title"> Ваша заявка отправлена </dt>
+        <dd class="popap__content"> Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас. </dd>
       </dl>
       <a class="popap__btn" href="#"> Ok </a>
     </div>
   </div>
 
-  <!-- Не заполнены поля -->
+  <!-- No -->
   <div class="popap popap--error">
     <div class="popap__inner">
       <dl>
-      <dt class="popap__title"> Что-то пошло не так! </dt>
-      <dd class="popap__content"> Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить </dd>
+        <dt class="popap__title"> Что-то пошло не так! </dt>
+        <dd class="popap__content"> Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить </dd>
       </dl>
       <a class="popap__btn" href="#"> Закрыть окно </a>
     </div>

@@ -1,3 +1,19 @@
 .popap {
-  outline: 1px solid #fff;
+  display: none;
+}
+
+.popap__inner {
+  @include container;
+}
+
+.popap__title {
+
+}
+
+.popap__content {
+
+}
+
+.popap__btn {
+
 }
