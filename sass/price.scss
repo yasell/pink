@@ -1,5 +1,6 @@
 .price {
   min-height: 445px;
+  padding-top: 90px;
 
   background: $gray-bg;
   outline: 1px solid red;
@@ -14,14 +15,17 @@
 }
 
 .price__inner {
+  outline: 1px solid red;
+
   @include container;
 }
 
 .price__list {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
 
@@ -30,8 +34,31 @@
 
 .price__list li:not(:first-child) {
   display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
 }
 
 .price__item {
+  width: 100%;
+  min-height: 280px;
 
+  outline: 1px solid yellow;
+
+  @media (min-width: $tablet) {
+    width: 150px;
+    min-height: 215px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 235px;
+    height: 280px;
+  }
+}
+
+.price__nav {
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
