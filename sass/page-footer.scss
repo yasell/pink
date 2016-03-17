@@ -1,15 +1,7 @@
 .page-footer {
-  min-height: 600px;
+  min-height: 200px;
 
   outline: 1px solid green;
-
-  @media (min-width: $tablet) {
-    min-height: 900px;
-  }
-
-  @media (min-width: $desktop) {
-    min-height: 1060px;
-  }
 }
 
 .page-footer__inner {

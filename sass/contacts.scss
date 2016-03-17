@@ -6,6 +6,7 @@
   min-height: 100px;
   margin: 0;
 
+  text-align: center;
   outline: 1px solid red;
 
   @media (min-width: $tablet) {
@@ -28,8 +29,14 @@
   padding-top: 70px;
 
   list-style: none;
+
+  @media (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
-.contacts__item {
-
+.contacts__item:nth-child(2) {
+    @media (min-width: $desktop) {
+      order: 1;
+    }
 }

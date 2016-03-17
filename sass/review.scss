@@ -1,28 +1,32 @@
 .review {
   min-height: 340px;
+  padding-top: 50px;
 
   outline: 1px solid green;
 
   @media (min-width: $tablet) {
     min-height: 250px;
-    padding: 0;
+    padding-top: 100px;
   }
 
   @media (min-width: $desktop) {
     min-height: 400px;
-    padding-top: 190px;
+    padding-top: 180px;
   }
 }
 
 .review__inner {
   @include container;
+
+  outline: 1px solid red;
 }
 
 .review__list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
 
@@ -34,5 +38,5 @@
 }
 
 .review__item {
-
+  min-height: 200px;
 }

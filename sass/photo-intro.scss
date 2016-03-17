@@ -1,14 +1,44 @@
 .photo-intro {
+  position: relative;
+  top: -65px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 240px;
+
+  background: $intro-bg;
+
+  @media (min-width: $tablet) {
+    top: -110px;
+    min-height: 440px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 395px;
+  }
 }
 
 .photo-intro__inner {
   @include container;
-
-  outline: 1px solid green;
+  outline: 1px solid red;
 }
 
 .photo-intro__title {
+  // width: 185px;
   margin: 0;
+  padding-top: 65px;
+
   text-align: center;
+  color: #fff;
+
+  @media (min-width: $tablet) {
+    // width: 360px;
+    padding-top: 110px;
+  }
+
+  @media (min-width: $desktop) {
+    // width: 340px;
+  }
 }

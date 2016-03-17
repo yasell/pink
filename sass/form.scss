@@ -1,13 +1,36 @@
 .form {
+  margin-top: -65px;
 
+  @media (min-width: $tablet) {
+    margin-top: -110px;
+  }
 }
 
 .form__inner {
   @include container;
+  outline: 1px solid red;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
 }
 
 .form__title {
   margin: 0;
+
+  outline: 1px solid green;
+
+  @media (min-width: $tablet) {
+    width: 500px;
+    margin: 0 auto;
+  }
 }
 
 .form__list {
@@ -15,13 +38,49 @@
 }
 
 .form__item {
-
+  width: 100%;
+  outline: 1px solid green;
 }
 
+// gray background on mobile
 .form__item:nth-child(2n) {
   background: $gray-bg;
 
   @media (min-width: $tablet) {
     background: none;
+  }
+}
+
+.form__item:first-child {
+  @media (min-width: $desktop) {
+    width: 470px;
+  }
+}
+
+.form__item:nth-child(2) {
+  @media (min-width: $tablet) {
+    order: 3;
+  }
+}
+
+.form__item:nth-child(3) {
+  @media (min-width: $tablet) {
+    order: 2;
+  }
+}
+
+.form__item:nth-child(4) {
+  @media (min-width: $tablet) {
+    order: 1;
+  }
+
+  @media (min-width: $desktop) {
+    width: 470px;
+  }
+}
+
+.form__item:nth-child(5) {
+  @media (min-width: $tablet) {
+    order: 4;
   }
 }
