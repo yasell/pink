@@ -1,6 +1,25 @@
 .slider-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80px;
   height: 20px;
+}
 
-  text-align: center;
-  outline: 1px solid green;
+.slider-nav__btn {
+	display: inline-block;
+  width: 6px;
+  height: 6px;
+
+  background-color: $gray-dark;
+  border-radius: 50%;
+  box-sizing: content-box;
+
+  cursor: pointer;
+}
+
+.slider-nav__btn-current {
+  background-color: $body-bg;
+
+  border: 3px solid $blue-color;
 }

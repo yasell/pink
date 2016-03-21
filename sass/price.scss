@@ -1,9 +1,10 @@
 .price {
-  min-height: 445px;
+  position: relative;
+  top: -65px;
+
   padding-top: 90px;
 
   background: $gray-bg;
-  outline: 1px solid red;
 
   @media (min-width: $tablet) {
     min-height: 325px;
@@ -15,7 +16,9 @@
 }
 
 .price__inner {
-  outline: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include container;
 }
@@ -23,32 +26,64 @@
 .price__list {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
   margin: 0;
   padding: 0;
 
   list-style: none;
-}
-
-.price__list li:not(:first-child) {
-  display: none;
 
   @media (min-width: $tablet) {
-    display: block;
+    width: 100%;
+    padding-bottom: 65px;
   }
 }
 
-.price__item {
-  width: 100%;
-  min-height: 280px;
+// показывать или нет на мобайл (?)
+.price__list li:not(:nth-child(2)) {
+  // display: none;
 
-  outline: 1px solid yellow;
+  @media (min-width: $tablet) {
+    // display: block;
+  }
+}
+
+// moving table column
+.price__item:first-child {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: flex-start;
+    width: 155px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 235px;
+  }
+}
+
+.price__item:first-child .price__field {
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+
+.price__item:first-child .price__field:first-child {
+  display: none;
+}
+
+// price table
+.price__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 275px;
+  min-height: 275px;
 
   @media (min-width: $tablet) {
     width: 150px;
-    min-height: 215px;
+    min-height: 220px;
   }
 
   @media (min-width: $desktop) {
@@ -57,7 +92,85 @@
   }
 }
 
+.price__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+
+  font: normal 14px/30px "OpenSans", sans-serif;
+
+  background: $body-bg;
+  border: 1px solid $gray-dark;
+
+  @media (min-width: $tablet) {
+    justify-content: center;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+  }
+}
+
+.price__field:first-child {
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+
+  color: #fff;
+  background-color: $blue-color;
+
+  @media (min-width: $tablet) {
+    height: 80px;
+  }
+}
+
+.price__field:last-child {
+  border-bottom: 2px solid $gray-dark;
+}
+
+.price__item:last-child .price__field {
+  border-right: 2px solid $gray-dark;
+}
+
+.price__name {
+  font: bold 18px/30px "OpenSans", sans-serif;
+}
+
+.price__cost {
+  font: 200 24px/30px "OpenSans", sans-serif;
+}
+
+.price__field-name {
+  padding-left: 20px;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.price__marker {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+
+  font-size: 0;
+
+  background: olive;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+}
+
+// slider navigation
 .price__nav {
+  padding: 50px 0;
+}
+
+.price__list ~ .slider-nav {
   @media (min-width: $tablet) {
     display: none;
   }

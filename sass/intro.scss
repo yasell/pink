@@ -1,16 +1,16 @@
 .intro {
+  position: relative;
+  top: -65px;
+
   display: none;
-  min-height: 400px;
-  padding-top: 70px;
 
   @media (min-width: $tablet) {
     display: block;
-    min-height: 340px;
-    padding-top: 40px;
+    padding: 60px 0;
   }
 
   @media (min-width: $desktop) {
-    min-height: 360px;
+    background: $gray-bg;
   }
 }
 
@@ -25,28 +25,74 @@
   }
 }
 
-.intro__img {
-  width: 250px;
+// picture "Clock"
+.intro__img-wrapper {
+  position: relative;
+
+  display: block;
+  width: 240px;
+  height: 280px;
+
+  overflow: hidden;
 
   @media (min-width: $desktop) {
     width: 300px;
-    height: 350px;
+    height: 345px;
   }
 }
 
+.intro__img {
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+// content
 .intro__content {
-  width: 310px;
+  font: normal 14px/24px "OpenSans", sans-serif;
+
+  @media (min-width: $tablet) {
+    width: 310px;
+  }
 
   @media (min-width: $desktop) {
     width: 570px;
+
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
 .intro__title {
   width: 170px;
+  margin: 0;
 
-  font-size: 40px;
-  font-weight: 400;
-  color: 000;
-  text-align: center;
+  font: bold 30px/36px "OpenSans", sans-serif;
+  text-align: left;
+
+  @media (min-width: $desktop) {
+    width: 100%;
+
+    line-height: 30px;
+  }
+}
+
+.intro__title span {
+  display: inline-block;
+}
+
+.intro__description {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.intro__href {
+  color: $pink-color;
 }

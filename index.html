@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
 
 
@@ -27,7 +28,7 @@
 
       <!-- Main navigation menu -->
       <nav class="main-nav">
-        <div class="main-nav__inner">
+        <!-- <div class="main-nav__inner"> -->
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link"> Главная </a>
@@ -42,7 +43,7 @@
               <a class="main-nav__link" href="#"> HTML Academy </a>
             </li>
           </ul>
-        </div>
+        <!-- </div> -->
       </nav>
     </div>
   </header>
@@ -111,8 +112,8 @@
             </li>
           </ul>
 
-          <div class="promo__picture">
-            <img class="promo__img" src="http://placehold.it/160x280" width="160" height="280" alt="iPhone">
+          <div class="promo__img-wrapper">
+            <img class="promo__img" src="http://placehold.it/160x280" alt="iPhone">
           </div>
 
         </div>
@@ -124,12 +125,12 @@
     <div class="intro">
       <div class="intro__inner">
 
-        <div class="intro__img">
-          <img src="http://placehold.it/250x280" alt="Clock">
+        <div class="intro__img-wrapper">
+          <img class="intro__img" src="http://placehold.it/240x280" alt="Clock">
         </div>
 
         <div class="intro__content">
-          <h2 class="intro__title"> Эффект на 24 часа! </h2>
+          <h2 class="intro__title"> Эффект <span>на 24 часа!</span> </h2>
           <p class="intro__description">
             Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
           </p>
@@ -147,9 +148,9 @@
 
           <li class="review__item">
             <dl class="review__item-inner">
-              <dt class="review__author"> Николай Петров </dt>
+              <dt class="review__author"> Николай Петров <span class="review__author-intro"> 25 лет, водитель трамвая </span> </dt>
               <dd class="review__content">
-                "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
+                Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
               </dd>
             </dl>
           </li>
@@ -173,11 +174,11 @@
           </li>
         </ul>
 
-        <div class="slider-nav  review__nav">
-          <span class="slider-nav__btn"> 1 </span>
-          <span class="slider-nav__btn"> 2 </span>
-          <span class="slider-nav__btn"> 3 </span>
-        </div>
+        <nav class="slider-nav  review__nav">
+          <span class="slider-nav__btn slider-nav__btn-current"></span>
+          <span class="slider-nav__btn"></span>
+          <span class="slider-nav__btn"></span>
+        </nav>
 
       </div>
     </div>
@@ -189,7 +190,22 @@
         <ul class="price__list">
 
           <li class="price__item">
-            <div class="price__field  price__field--header">
+
+            <div class="price__field price__field-header"></div>
+
+            <div class="price__field">
+              <span class="price__field-forename"> Розовый фильтр </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-forename"> Смайлики </span>
+            </div>
+            <div class="price__field">
+              <span class="price__field-forename"> Комментарии </span>
+            </div>
+          </li>
+
+          <li class="price__item">
+            <div class="price__field price__field-header">
               <span class="price__name"> База </span>
               <span class="price__cost"> 1,99 USD </span>
             </div>
@@ -208,7 +224,7 @@
           </li>
 
           <li class="price__item">
-            <div class="price__field  price__field--header">
+            <div class="price__field price__field-header">
               <span class="price__name"> Стандарт </span>
               <span class="price__cost"> 3,99 USD </span>
             </div>
@@ -227,7 +243,7 @@
           </li>
 
           <li class="price__item">
-            <div class="price__field  price__field--header">
+            <div class="price__field price__field-header">
               <span class="price__name"> Анлим </span>
               <span class="price__cost"> 9,99 USD </span>
             </div>
@@ -247,9 +263,9 @@
         </ul>
 
         <div class="slider-nav  price__nav">
-          <span class="slider-nav__btn"> 1 </span>
-          <span class="slider-nav__btn"> 2 </span>
-          <span class="slider-nav__btn"> 3 </span>
+          <span class="slider-nav__btn"></span>
+          <span class="slider-nav__btn slider-nav__btn-current"></span>
+          <span class="slider-nav__btn"></span>
         </div>
 
       </div>
@@ -267,18 +283,17 @@
         <ul class="contacts__list">
           <li class="contacts__item">
             <p class="contacts__link"> Звоните:
-              <a class="contacts__phone" href="tel:+78125556666"> +7(812)555-66-66 </a>
+              <a class="contacts__link-item" href="tel:+78125556666"> +7(812)555-66-66 </a>
             </p>
           </li>
           <li class="contacts__item">
             <p class="contacts__link"> Пишите:
-              <a class="contacts__mail" href="mailto:mail@htmlacademy.ru"> mail@htmlacademy.ru </a>
+              <a class="contacts__link-item" href="mailto:mail@htmlacademy.ru"> mail@htmlacademy.ru </a>
             </p>
           </li>
           <li class="contacts__item">
             <p class="contacts__link"> Приезжайте в гости:
-              <br>
-              <span class="contacts__adress"> ул. Большая Конюшенная, 19/8 </span>
+              <span class="contacts__link-item"> ул. Большая <br> Конюшенная, 19/8 </span>
             </p>
           </li>
         </ul>
@@ -286,13 +301,16 @@
     </div>
 
     <!-- Map-->
-    <div class="page-footer__map"></div>
+    <div class="page-footer__map">
+
+    </div>
 
     <!-- "Social links" block -->
     <div class="page-footer__inner">
       <div class="social-links">
 
         <img class="social-links__logo" src="http://placehold.it/150x60" alt="Pink">
+
         <ul class="social-links__list">
           <li class="social-links__item">
             <a class="social-links__link  social-links--tweetter" href="#">tweeter</a>
@@ -304,8 +322,9 @@
             <a class="social-links__link  social-links--youtube" href="#">youtube</a>
           </li>
         </ul>
+
         <div class="social-links__copyright">
-          Разработано
+          <span> Разработано </span>
           <img class="social-links__copyright-logo" src="http://placehold.it/30x40" alt="">
         </div>
 

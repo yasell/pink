@@ -1,24 +1,22 @@
 .review {
-  min-height: 340px;
-  padding-top: 50px;
-
-  outline: 1px solid green;
+  position: relative;
+  top: -65px;
 
   @media (min-width: $tablet) {
-    min-height: 250px;
-    padding-top: 100px;
+    padding-top: 40px;
   }
 
   @media (min-width: $desktop) {
-    min-height: 400px;
     padding-top: 180px;
   }
 }
 
 .review__inner {
-  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  outline: 1px solid red;
+  @include container;
 }
 
 .review__list {
@@ -38,5 +36,112 @@
 }
 
 .review__item {
-  min-height: 200px;
+  text-align: center;
+}
+
+// slider btn (desktop)
+.review__item::before,
+.review__item::after {
+  @media (min-width: $desktop) {
+    content: "";
+    position: relative;
+
+    display: block;
+    background-color: $gray-bg;
+    width: 25px;
+    height: 50px;
+  }
+}
+
+.review__item::before {
+  @media (min-width: $desktop) {
+    top: 55px;
+    right: 19%;
+  }
+}
+
+.review__item::after {
+  @media (min-width: $desktop) {
+    bottom:  190px;
+    left: 116%  ;
+  }
+}
+
+// comment content
+.review__item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font: normal 14px/30px "OpenSans", sans-serif;
+
+  @media (min-width: $tablet) {
+    flex-direction: column-reverse;
+
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 680px;
+  }
+}
+
+.review__author {
+  padding-top: 45px;
+
+  font: bold 18px/30px "OpenSans", sans-serif;
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.review__author-intro {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+
+    font: normal 14px/30px "OpenSans", sans-serif;
+  }
+}
+
+.review__content {
+  padding-top: 10px;
+  padding-bottom: 35px;
+
+  quotes: "\00ab" "\00bb";
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    quotes: none;
+  }
+}
+
+.review__content::before {
+  content:open-quote;
+}
+
+.review__content::after {
+  content:close-quote;
+}
+
+.review__list ~ .review__nav {
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }

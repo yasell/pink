@@ -4,12 +4,25 @@
   z-index: 50;
 
   width: 100%;
-  min-height: 730px;
 
   background: $intro-bg;
 
   @media (min-width: $tablet) {
     top: -110px;
+  }
+}
+
+.app-load__inner {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  min-height: 729px;
+
+  @include container;
+
+  @media (min-width: $tablet) {
+    min-height: 725px;
+    padding-top: 110px;
   }
 
   @media (min-width: $desktop) {
@@ -17,34 +30,19 @@
   }
 }
 
-.app-load__inner {
-  display: flex;
-  flex-direction: column-reverse;
-  min-height: inherit;
-
-  outline: 1px solid red;
-
-  @include container;
-
-  @media (min-width: $tablet) {
-    justify-content: center;
-    padding-top: 110px;
-  }
-}
-
 .app-load__vendor-block {
   width: 100%;
   min-height: 270px;
-
-  outline: 1px solid yellow;
+  margin-top: auto;
 
   @media (min-width: $tablet) {
     width: 300px;
-    min-height: 420px;
+    min-height: 410px;
+    margin: 0;
   }
 
   @media (min-width: $desktop) {
-    height: 290px;
+    min-height: 505 px;
   }
 }
 
@@ -52,45 +50,94 @@
   display: none;
   margin: 0;
 
-  font-size: 40px;
-  font-weight: 400;
-  color: #fff;
+  font: 200 40px/0.8 "OpenSans", sans-serif;
+  font-style: normal;
   text-align: center;
+
+  color: #fff;
 
   @media (min-width: $tablet) {
     display: block;
+
+    font-size: 50px;
   }
 }
 
 .app-load__main-btn {
   display: block;
   width: 100%;
+  margin-top: 30px;
+  padding: 15px 0;
 
-  color: #fff;
+  font: 700 18px/18px "OpenSans", sans-serif;
   text-align: center;
   text-decoration: none;
 
-  border: 2px solid #fff;
-  border-radius: 5px;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 20px;
+
+  @media (min-width: $tablet) {
+    margin-top: 40px;
+
+    font-size: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 70px;
+  }
 }
 
 .app-load__list {
+  display: flex;
+  justify-content: space-around;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 
   list-style: none;
 }
 
 .app-load__item {
   display: inline-block;
+  padding-top: 40px;
 
-  vertical-align: middle;
+  @media (min-width: $tablet) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 80px;
+  }
 }
 
-.appload__link {
+.app-load__link {
+  display: block;
+  width: 50px;
+  height: 50px;
 
+  font-size: 0px;
+  text-decoration: none;
+
+  background: olive;
 }
 
 .app-load__brief {
+  margin: 0;
+  padding-top: 20px;
+
+  font: 200 14px/24px "OpenSans", sans-serif;
+  font-style: normal;
+  text-align: center;
+
   color: #fff;
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 60px;
+  }
 }
