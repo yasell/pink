@@ -1,14 +1,14 @@
 .app-load {
   position: relative;
-  top: -65px;
   z-index: 50;
 
   width: 100%;
+  margin-top: -65px;
 
   background: $intro-bg;
 
   @media (min-width: $tablet) {
-    top: -110px;
+    margin-top: -110px;
   }
 }
 

@@ -64,15 +64,9 @@
 }
 
 .post__of-day .post__inner {
-  background: $gray-bg;
-}
-
-.post__of-day .post__like {
   position: relative;
 
-  @media (min-width: $tablet) {
-
-  }
+  background: $gray-bg;
 }
 
 // post feed
@@ -95,6 +89,8 @@
 }
 
 .post__item {
+  position: relative;
+
   width: 280px;
   margin-bottom: 20px;
 
@@ -144,7 +140,7 @@
   font: normal 14px/24px "OpenSans", sans-serif;
 
   @media (min-width: $tablet) {
-    padding: 30px;
+    padding: 25px 30px;
   }
 }
 
@@ -158,20 +154,78 @@
 }
 
 .post__like {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-bottom: 25px;
+
+  cursor: default;
 
   font: normal 12px/24px "OpenSans", sans-serif;
   text-decoration: none;
 
   color: $pink-color;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 25px;
+  }
 }
 
 .post__like i {
-  display: inline-block;
   width: 15px;
   height: 15px;
   margin: 0 20px;
 
   background: olive;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+}
+
+.post__like span {
+  @media (min-width: $tablet) {
+    order: -1;
+  }
+}
+
+// from "photo of a day"
+.post__of-day .post__like {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    bottom: 73px;
+    left: 443px;
+
+    width: 175px;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 50px;
+    left: 765px;
+  }
+}
+
+.post__of-day .post__like span {
+  @media (min-width: $tablet) {
+    order: -1;
+  }
+}
+
+.post__of-day .post__like i {
+  @media (min-width: $tablet) {
+    margin-left: 15px;
+  }
 }

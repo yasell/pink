@@ -1,14 +1,5 @@
 .review {
   position: relative;
-  top: -65px;
-
-  @media (min-width: $tablet) {
-    padding-top: 40px;
-  }
-
-  @media (min-width: $desktop) {
-    padding-top: 180px;
-  }
 }
 
 .review__inner {
@@ -36,7 +27,14 @@
 }
 
 .review__item {
+  position: relative;
+
   text-align: center;
+
+  @media (min-width: $desktop) {
+    padding-top: 190px;
+    padding-bottom: 45px;
+  }
 }
 
 // slider btn (desktop)
@@ -44,26 +42,31 @@
 .review__item::after {
   @media (min-width: $desktop) {
     content: "";
-    position: relative;
+    position: absolute;
 
     display: block;
-    background-color: $gray-bg;
-    width: 25px;
+    width: 50px;
     height: 50px;
   }
 }
 
 .review__item::before {
   @media (min-width: $desktop) {
-    top: 55px;
-    right: 19%;
+    top: 225px;
+    left: -130px;
+
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;
+    border-radius: 2px;
+    transform: rotate(45deg);
+
   }
 }
 
 .review__item::after {
   @media (min-width: $desktop) {
-    bottom:  190px;
-    left: 116%  ;
+    top:  225px;
+    right: -130px;
   }
 }
 

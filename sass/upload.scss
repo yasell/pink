@@ -98,13 +98,26 @@
 }
 
 .upload__tool-list {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 0;
   padding: 20px 0;
-
   list-style: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 2px;
+    width: 5000px;
+    margin-left: -2500px;
+    background: gray;
+
+
+  }
 
   @media (min-width: $tablet) {
     flex-direction: column;
