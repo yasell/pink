@@ -1,8 +1,16 @@
 .main-nav {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
 
-  font-size: 0;
-  list-style: none;
+  transform: translate(0,-100%);
+  transition: .3s ease;
+
+  body.menu-open & {
+    transform: translate(0,0);
+  }
 
   @media(min-width: $desktop) {
     display: block;
@@ -19,7 +27,7 @@
 }
 
 .main-nav__item {
-  display: inline-block;
+
 }
 
 .main-nav__link {

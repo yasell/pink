@@ -3,6 +3,8 @@
 }
 
 .review__inner {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,8 +40,8 @@
 }
 
 // slider btn (desktop)
-.review__item::before,
-.review__item::after {
+.review__nav--prev,
+.review__nav--next {
   @media (min-width: $desktop) {
     content: "";
     position: absolute;
@@ -50,10 +52,10 @@
   }
 }
 
-.review__item::before {
+.review__nav--prev {
   @media (min-width: $desktop) {
     top: 225px;
-    left: -130px;
+    left: 8px;
 
     border-bottom: 2px solid gray;
     border-left: 2px solid gray;
@@ -63,10 +65,15 @@
   }
 }
 
-.review__item::after {
+.review__nav--next {
   @media (min-width: $desktop) {
     top:  225px;
-    right: -130px;
+    right: 8px;
+
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    border-radius: 2px;
+    transform: rotate(45deg);
   }
 }
 

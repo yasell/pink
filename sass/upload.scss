@@ -109,18 +109,20 @@
   &:before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
     left: 50%;
     height: 2px;
     width: 5000px;
     margin-left: -2500px;
-    background: gray;
-
-
+    background: #dddfe0;
   }
 
   @media (min-width: $tablet) {
     flex-direction: column;
+
+    &:before {
+      display: none;
+    }
   }
 }
 

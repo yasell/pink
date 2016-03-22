@@ -215,7 +215,8 @@ textarea {
     top: -15px;
     left: 50%;
 
-    margin-left: -25%;
+    transform: translate(-50%,0);
+    white-space: nowrap;
     padding: 0 35px;
 
     background: $body-bg;
@@ -400,7 +401,47 @@ textarea {
 }
 
 .form__radio {
+  display: none;
+
   margin-right: 30px;
+
+  &:checked + .form__field-name:after {
+  
+    opacity: 1;
+  }
+}
+
+.form__field-name {
+  position: relative;
+    padding-left: 40px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+
+
+    border-radius: 100%;
+    background: red;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+
+
+    border-radius: 100%;
+    background: green;
+    opacity: 0;
+    transition: .3s ease;
+  }
 }
 
 // comment block
