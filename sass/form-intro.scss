@@ -1,22 +1,14 @@
 .form-intro {
-  position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -65px;
-  min-height: 240px;
+  padding-top: 65px;
 
   background: $intro-bg;
 
   @media (min-width: $tablet) {
-    margin-top: -110px;
-    min-height: 440px;
-  }
-
-  @media (min-width: $desktop) {
-    min-height: 395px;
+    padding-top: 110px;
   }
 }
 
@@ -26,15 +18,19 @@
 
 .form-intro__title {
   margin: 0;
-  padding-top: 65px;
+  padding: 30px 0 50px 0;
 
   font: 200 24px "OpenSans", sans-serif;
   text-align: center;
   color: #fff;
 
   @media (min-width: $tablet) {
-    padding-top: 110px;
+    padding: 75px 0;
 
     font-size: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 75px 0 95px 0;
   }
 }

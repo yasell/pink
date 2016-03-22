@@ -1,25 +1,11 @@
 .form {
 
-
-  @media (min-width: $tablet) {
-
-  }
 }
 
 .form__inner {
   position: relative;
 
   @include container;
-
-  // @media (min-width: $tablet) {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
-  //
-  // @media (min-width: $desktop) {
-  //   flex-direction: row;
-  //   flex-wrap: wrap;
-  // }
 }
 
 .form__title {
@@ -39,7 +25,7 @@
   }
 
   @media (min-width: $desktop) {
-    width: 620px;
+    width: 800px;
   }
 }
 
@@ -51,12 +37,24 @@
   }
 }
 
-// form (common styles)
+// form - common styles
 .form__list input[type="text"],
 input[type="tel"],
 input[type="email"],
 textarea {
   border: 2px solid $gray-light;
+
+  &::-webkit-input-placeholder {
+    color: $blue-color;
+   }
+
+   &::-moz-placeholder {
+    color: $blue-color;
+   }
+
+   &:-ms-input-placeholder {
+    color: $blue-color;
+   }
 }
 
 .form__list {
@@ -143,7 +141,7 @@ textarea {
   }
 }
 
-// text block (fio)
+// text block (FIO)
 .form__text {
   display: flex;
   flex-direction: column;
@@ -201,7 +199,7 @@ textarea {
   font-size: 18px;
 }
 
-// checkbox block
+// checkbox (progress-block)
 .form__item-intro {
   margin: 0;
   padding: 35px 0;
@@ -223,34 +221,9 @@ textarea {
   }
 }
 
-.form__item:nth-child(4) .form__item-intro {
+.form__progress-part {
   @media (min-width: $desktop) {
-    margin-left: -41%;
-  }
-}
-
-.form__progress {
-  display: flex;
-  flex-direction: column;
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-
-  @media (min-width: $tablet) {
-    padding: 50px 0;
-    padding-left: 60px;
-
-    border: 2px solid $gray-light;
-  }
-
-  @media (min-width: $desktop) {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 50px 60px;
+    width: 260px;
   }
 }
 
@@ -284,12 +257,33 @@ textarea {
   }
 }
 
+.form__progress {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet) {
+    padding: 50px 0;
+    padding-left: 60px;
+
+    border: 2px solid $gray-light;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px 60px;
+  }
+}
+
 .form__progress-part {
   padding-bottom: 40px;
-
-  @media ($tablet) {
-
-  }
 }
 
 .form__check {
@@ -300,11 +294,45 @@ textarea {
   font-size: 18px;
 }
 
+ // square checkbox
 .form__checkbox {
+  display: none;
   margin-right: 30px;
 
-  @media ($tablet) {
+  &:checked + .form__field-square:after {
+   opacity: 1;
+  }
+}
 
+.form__field-square {
+  position: relative;
+  padding: 3px 0 0 60px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid $gray-light;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 100%;
+    background: red;
+    opacity: 0;
+    transition: .3s ease;
   }
 }
 
@@ -356,14 +384,13 @@ textarea {
 
 .form__contacts .form__block:first-child {
   @media (min-width: $tablet) {
-  padding-bottom: 35px;
+    padding-bottom: 35px;
   }
 }
 
 .form__contacts .form__text-block {
   flex-direction: column;
   align-items: flex-start;
-
 }
 
 .form__contacts .form__text-title {
@@ -372,7 +399,25 @@ textarea {
   padding-top: 15px;
 }
 
-// checkbox (app) block
+.form__contacts .form__text-field {
+  position: relative;
+
+  @media (min-width: $tablet) {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      width: 26px;
+      height: 26px;
+
+      background: olive;
+    }
+  }
+}
+
+// checkbox (app - block)
 .form-item:nth-child(4) .form__inner {
   @media (min-width: $desktop) {
     width: 435px;
@@ -400,45 +445,48 @@ textarea {
   padding-bottom: 35px;
 }
 
+// radio buttons
 .form__radio {
   display: none;
 
   margin-right: 30px;
 
   &:checked + .form__field-name:after {
-  
+
     opacity: 1;
   }
 }
 
 .form__field-name {
   position: relative;
-    padding-left: 40px;
+
+  padding: 3px 0 0 60px;
 
   &:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 26px;
-    height: 26px;
 
+    width: 40px;
+    height: 40px;
 
+    border: 2px solid $gray-light;
     border-radius: 100%;
-    background: red;
+    cursor: pointer;
   }
 
   &:after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 12px;
+    left: 12px;
+
     width: 16px;
     height: 16px;
 
-
     border-radius: 100%;
-    background: green;
+    background: red;
     opacity: 0;
     transition: .3s ease;
   }
@@ -478,7 +526,7 @@ textarea {
   }
 
   @media (min-width: $desktop) {
-    width: 620px;
+    width: 820px;
     height: 125px;
     margin: 0;
   }
