@@ -58,7 +58,6 @@ textarea {
 }
 
 .form__list {
-  @include container;
 
   @media (min-width: $tablet) {
     display: flex;
@@ -69,6 +68,8 @@ textarea {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+
+    @include container;
   }
 }
 
@@ -193,8 +194,7 @@ textarea {
 
 .form__main-field {
   width: 100%;
-  padding: 20px 0;
-  padding-left: 20px;
+  padding: 20px 20px;
 
   font-size: 18px;
 }
@@ -397,6 +397,10 @@ textarea {
   order: 2;
   padding-left: 20px;
   padding-top: 15px;
+}
+
+.form__contacts .form__main-field {
+  padding-right: 50px;
 }
 
 .form__contacts .form__text-field {
