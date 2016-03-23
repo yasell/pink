@@ -1,18 +1,16 @@
 .social-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 
-  width: 100%;
-  height: 290px;
-
-  outline: 1px solid blue;
+  display: none;
+  min-height: 130px;
 
   @media (min-width: $tablet) {
-    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    height: 130px;
+  @media (min-width: $desktop) {
+    min-height: 200px;
   }
 }
 
@@ -24,7 +22,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -33,4 +30,29 @@
 
 .social-links__item {
 
+}
+
+.social-links__link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+
+  font-size: 0px;
+  text-decoration: none;
+
+  border: 2px solid $gray-bg;
+  border-radius: 50%;
+  background: olive;
+}
+
+.social-links__copyright {
+  display: flex;
+
+  font: normal 14px/18px "OpenSans", sans-serif;
+  align-items: center;
+}
+
+.social-links__copyright span {
+  padding: 0 15px;
 }

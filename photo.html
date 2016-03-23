@@ -11,39 +11,41 @@
 <body>
 
 
-  <!-- Document header -->
+  <!-- Document Header -->
   <header class="page-header">
     <div class="page-header__inner">
 
-      <!-- Logo-->
+      <!-- Logo -->
       <h1 class="page-header__logo">
-        <img src="img/logo-pink-white-mobile.svg" alt="Pink">
-        </h1>
+      <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+      </h1>
 
       <!-- "hamburger-menu" -->
-      <div class="page-header__trigger-wrap">
-        <a class="page-header__trigger-btn" href="#"> Открыть меню </a>
-      </div>
+      <a class="page-header__trigger-btn" href="#"> Открыть меню </a>
 
       <!-- Main navigation menu -->
       <nav class="main-nav">
-        <div class="main-nav__inner">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html"> Главная </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link"> Фотографии </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html"> Конкурс </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#"> HTML Academy </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list">
+
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html"> Главная </a>
+          </li>
+
+          <li class="main-nav__item">
+            <a class="main-nav__link"> Фотографии </a>
+          </li>
+
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html"> Конкурс </a>
+          </li>
+
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#"> HTML Academy </a>
+          </li>
+
+        </ul>
       </nav>
+
     </div>
   </header>
 
@@ -68,7 +70,9 @@
 
       <!-- "Post of a day" - large foto -->
       <div class="post__of-day">
-        <a class="post__img  post__img--winner" href="#"><img src="#" alt="foto-of-a-day" /></a>
+        <a class="post__img-wrapper" href="#">
+          <img class="post__img  post__img--winner" src="http://placehold.it/400x200" alt="foto-of-a-day" />
+        </a>
         <div class="post__inner">
           <dl class="post__description">
             <dt class="post__author"> Анна <span>(5 минут назад)</span> </dt>
@@ -83,34 +87,9 @@
         <ul class="post__list">
 
           <li class="post__item">
-            <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
-            <dl class="post__description">
-              <dt class="post__author"> Антон <span>(12 часов назад)</span> </dt>
-              <dd class="post__message"> Соседи будут рады! </dd>
-            </dl>
-            <a class="post__like" href="#"><i></i> <span>Нравится: 666</span> </a>
-          </li>
-
-          <li class="post__item">
-            <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
-            <dl class="post__description">
-              <dt class="post__author"> Борис <span>(20 часов назад)</span> </dt>
-              <dd class="post__message"> Здесь могла быть ваша цитата о высоком и вечном. </dd>
-            </dl>
-            <a class="post__like" href="#"><i></i> <span>Нравится: 215</span> </a>
-          </li>
-
-          <li class="post__item">
-            <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
-            <dl class="post__description">
-              <dt class="post__author"> Сергей <span>(25 часов назад)</span> </dt>
-              <dd class="post__message"> Самая кубанская в мире! </dd>
-            </dl>
-            <a class="post__like" href="#"><i></i> <span>Нравится: 4</span> </a>
-          </li>
-
-          <li class="post__item">
-            <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
+            <a class="post__img-wrapper" href="#">
+              <img class="post__img" src="http://placehold.it/280x185" alt="user-foto" />
+            </a>
             <dl class="post__description">
               <dt class="post__author"> Левон <span>(5 часов назад)</span> </dt>
               <dd class="post__message"> Вчера он на луну летал, сегодня в руки к нам попал. </dd>
@@ -119,7 +98,42 @@
           </li>
 
           <li class="post__item">
-            <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
+            <a class="post__img-wrapper" href="#">
+              <img class="post__img" src="http://placehold.it/280x185" alt="user-foto" />
+            </a>
+            <dl class="post__description">
+              <dt class="post__author"> Антон <span>(12 часов назад)</span> </dt>
+              <dd class="post__message"> Соседи будут рады! </dd>
+            </dl>
+            <a class="post__like" href="#"><i></i> <span>Нравится: 666</span> </a>
+          </li>
+
+          <li class="post__item">
+            <a class="post__img-wrapper" href="#">
+              <img class="post__img" src="http://placehold.it/280x185" alt="user-foto" />
+            </a>
+            <dl class="post__description">
+              <dt class="post__author"> Борис <span>(20 часов назад)</span> </dt>
+              <dd class="post__message"> Здесь могла быть ваша цитата о высоком и вечном. </dd>
+            </dl>
+            <a class="post__like" href="#"><i></i> <span>Нравится: 215</span> </a>
+          </li>
+
+          <li class="post__item">
+            <a class="post__img-wrapper" href="#">
+              <img class="post__img" src="http://placehold.it/280x185" alt="user-foto" />
+            </a>
+            <dl class="post__description">
+              <dt class="post__author"> Сергей <span>(25 часов назад)</span> </dt>
+              <dd class="post__message"> Самая кубанская в мире! </dd>
+            </dl>
+            <a class="post__like" href="#"><i></i> <span>Нравится: 4</span> </a>
+          </li>
+
+          <li class="post__item">
+            <a class="post__img-wrapper" href="#">
+              <img class="post__img" src="http://placehold.it/280x185" alt="user-foto" />
+            </a>
             <dl class="post__description">
               <dt class="post__author"> Максим <span>(40 часов назад)</span> </dt>
               <dd class="post__message"> Где снег-то? </dd>
@@ -128,7 +142,9 @@
           </li>
 
           <li class="post__item">
-            <a class="post__img" href="#"><img src="http://placehold.it/280x185" alt="user-foto" /></a>
+            <a class="post__img-wrapper" href="#">
+              <img class="post__img" src="http://placehold.it/280x185" alt="user-foto" />
+            </a>
             <dl class="post__description">
               <dt class="post__author"> Надежда <span>(45 часов назад)</span> </dt>
               <dd class="post__message"> Всем GM и взаимные лайки! </dd>
@@ -143,42 +159,66 @@
     <!-- "Upload foto" block -->
     <div class="upload">
       <div class="upload__inner">
-        <p class="upload__title"> Затмите их всех! Выкладывайте все, что накопилось в телефоне! </p>
+        <p class="upload__title"> Затмите их всех!
+          <br> Выкладывайте все, что накопилось в телефоне! </p>
       </div>
 
       <div class="upload__wrapper">
         <div class="upload__inner">
+
+          <!-- upload zone -->
           <form class="upload__area" action="/echo" method="post" enctype="multipart/form-data">
             <!-- Foto -->
             <label class="upload__foto">
               <input type="file" name="foto">
-              <img src="http://placehold.it/280x375" alt="foto" />
+              <img class="upload__img" src="http://placehold.it/280x375" alt="foto" />
             </label>
 
             <!-- edit tools -->
             <div class="upload__tools">
-              <a class="upload__tool  upload__tool--crop  upload__tool--active" href="#"> Crop </a>
-              <!-- range -->
-              <div class="upload__range-control">
-                <div class="upload__range-bar"></div>
-                <div class="upload__range-toggle"></div>
+              <ul class="upload__tool-list">
+
+                <li class="upload__tool-item">
+                  <a class="upload__tool  upload__tool--crop  upload__tool--active" href="#"> Crop </a>
+                  <!-- range -->
+                  <div class="upload__range-control">
+                    <div class="upload__range-bar"></div>
+                    <div class="upload__range-toggle"></div>
+                  </div>
+                </li>
+
+                <li class="upload__tool-item">
+                  <a class="upload__tool  upload__tool--fill" href="#"> Fill </a>
+                  <!-- range -->
+                  <div class="upload__range-control">
+                    <div class="upload__range-bar"></div>
+                    <div class="upload__range-toggle"></div>
+                  </div>
+                </li>
+
+                <li class="upload__tool-item">
+                  <a class="upload__tool  upload__tool--bright" href="#"> Bright </a>
+                  <!-- range -->
+                  <div class="upload__range-control">
+                    <div class="upload__range-bar"></div>
+                    <div class="upload__range-toggle"></div>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- submit buttons -->
+              <div class="upload__send">
+                <button class="upload__btn  upload__btn--active"> Запостить </button>
+                <button class="upload__btn"> Отмена </button>
               </div>
-
-              <a class="upload__tool  upload__tool--fill" href="#"> Fill </a>
-              <a class="upload__tool  upload__tool--bright" href="#"> Bright </a>
-            </div>
-
-            <!-- submit buttons -->
-            <div class="upload__send">
-              <button class="upload__btn  upload__btn--active"> Запостить </button>
-              <button class="upload__btn"> Отмена </button>
             </div>
 
           </form>
+
         </div>
       </div>
-
     </div>
+
   </main>
 
 

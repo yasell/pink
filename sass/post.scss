@@ -1,42 +1,43 @@
 .post {
-  margin-top: -65px;
 
-  @media (min-width: $tablet) {
-    margin-top: -110px;
-  }
 }
 
 .post__inner {
   @include container;
-  outline: 1px solid red;
 }
 
 .post__title {
-  min-height: 185px;
   margin: 0;
+  padding: 50px 18px;
 
+  font: normal 14px/30px "OpenSans", sans-serif;
   text-align: center;
 
   @media (min-width: $tablet) {
-    min-height: 230px;
+    padding: 80px 90px;
+
+    font-size: 18px;
   }
 
   @media (min-width: $desktop) {
-    min-height: 240px;
+    padding: 90px 180px;
   }
 }
 
+// photo of a day
 .post__of-day {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-.post__of-day > .post__img {
+.post__of-day .post__img-wrapper {
+  position: relative;
+
+  display: block;
   width: 100%;
   height: 140px;
-
-  background: olive;
 
   @media (min-width: $tablet) {
     height: 510px;
@@ -47,10 +48,24 @@
   }
 }
 
-.post__of-day > .post__inner {
+.post__of-day .post__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+.post__of-day .post__inner {
+  position: relative;
+
   background: $gray-bg;
 }
 
+// post feed
 .post__list {
   display: flex;
   flex-direction: column;
@@ -65,18 +80,148 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
  }
 }
 
 .post__item {
+  position: relative;
+
+  width: 280px;
+  margin-bottom: 20px;
+
   background: $gray-bg;
 
   @media (min-width: $tablet) {
     width: 300px;
     height: 455px;
   }
+
+  @media (min-width: $desktop) {
+    height: 555px;
+  }
+}
+
+.post__img-wrapper {
+  position: relative;
+
+  display: block;
+  height: 180px;
+
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    height: 300px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 400px;
+  }
+}
+
+.post__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  transform: translate(-50%, -50%);
 }
 
 .post__description {
+  padding: 20px;
 
+  font: normal 14px/24px "OpenSans", sans-serif;
+
+  @media (min-width: $tablet) {
+    padding: 25px 30px;
+  }
+}
+
+.post__author {
+  font-weight: bold;
+}
+
+.post__author span {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.post__like {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+
+  cursor: default;
+
+  font: normal 12px/24px "OpenSans", sans-serif;
+  text-decoration: none;
+
+  color: $pink-color;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 25px;
+  }
+}
+
+.post__like i {
+  width: 15px;
+  height: 15px;
+  margin: 0 20px;
+
+  background: olive;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+}
+
+.post__like span {
+  @media (min-width: $tablet) {
+    order: -1;
+  }
+}
+
+// from "photo of a day"
+.post__of-day .post__like {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    bottom: 73px;
+    left: 443px;
+
+    width: 175px;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 50px;
+    left: 765px;
+  }
+}
+
+.post__of-day .post__like span {
+  @media (min-width: $tablet) {
+    order: -1;
+  }
+}
+
+.post__of-day .post__like i {
+  @media (min-width: $tablet) {
+    margin-left: 15px;
+  }
 }

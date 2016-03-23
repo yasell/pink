@@ -1,43 +1,63 @@
 .promo {
-  margin-top: -20px;
-  outline: 1px solid green;
-
-  @media (min-width: $tablet) {
-    margin-top: -50px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-top: -30px;
-  }
+  position: relative;
 }
 
 .promo__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 220px;
-
-  outline: 1px solid red;
 
   @include container;
 
   @media (min-width: $tablet) {
     flex-direction: row-reverse;
     justify-content: space-between;
-    min-height: 240px;
   }
 
   @media (min-width: $desktop) {
-    min-height: 270px;
+    flex-direction: row;
+    align-items: flex-end;
   }
 }
 
+// block title
 .promo__title {
   margin: 0;
   padding: 0;
+  padding-top: 40px;
+
+  font: 200 24px "OpenSans", sans-serif;
+  font-style: normal;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+    padding-top: 50px;
+
+    font-size: 40px;
+  }
 }
 
+.promo__half-title {
+  display: block;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
+}
+
+.promo__half-title:last-child {
+  padding: 0;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+
+// block content - 3 items
 .promo__wrapper {
   background-color: $gray-bg;
 }
@@ -48,6 +68,7 @@
   align-items: center;
 
   margin: 0;
+  margin-bottom: 10px;
   padding: 0;
 
   list-style: none;
@@ -58,48 +79,106 @@
 
   @media (min-width: $desktop) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
   }
 }
 
 .promo__item {
-  @media (min-width: $desktop) {
-    padding-top: 360px;
-  }
-}
+  padding-bottom: 35px;
 
-.promo__item:befor {
-  @media (min-width: $desktop) {
-    background-image: url(http://placehold.it/180x305);
-  }
-}
+  text-align: center;
 
-.promo__item-inner {
-
-}
-
-.promo__item-title {
-
-}
-
-.promo__item-content {
-
-}
-
-.promo-picture {
   @media (min-width: $tablet) {
-    width: 290px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    width: 250px;
+    // padding-top: 360px;
+
+    text-align: center;
+  }
+}
+
+.promo__item:first-child {
+  padding-top: 80px;
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    // padding-top: 360px;
+    padding-bottom: 35px;
+  }
+}
+
+// content title
+.promo__item-title {
+  padding-bottom: 20px;
+
+  font: 700 18px/10px "OpenSans", sans-serif;
+
+  @media (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+// blocks content
+.promo__item-content {
+  font: 400 14px/24px "OpenSans", sans-serif;
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+// iPhone picture on mobile&tablet
+.promo__img-wrapper {
+  position: relative;
+
+  display: block;
+  width: 160px;
+  height: 280px;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    width: 270px;
     height: 480px;
   }
   @media (min-width: $desktop) {
-
+    display: none;
   }
 }
 
 .promo__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  transform: translate(-50%, -50%);
+
   @media (min-width: $desktop) {
     display: none;
+  }
+}
+
+// iPhones picture on desktop
+.promo__item::before {
+  display: none;
+
+  @media (min-width: $desktop) {
+    content: url(http://placehold.it/180x300);
+
+    display: block;
+    width: 185px;
+    height: 300px;
+    margin: 0 auto;
+    margin-bottom: 55px;
   }
 }

@@ -1,15 +1,27 @@
 .page-header {
-  position: relative;
-  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  z-index: 200;
 
   display: flex;
-  flex-direction: column;
-  min-height: 65px;
 
-  background-color: $header-bg;
+  background: $header-bg;
+
+  body.menu-open & {
+    background: $intro-bg;
+  }
 
   @media (min-width: $tablet) {
-    min-height: 110px;
+    height: 110px;
+  }
+
+  @media (min-width: $desktop) {
+    body.menu-open & {
+      background: $header-bg;
+    }
   }
 }
 
@@ -19,18 +31,12 @@
   align-items: center;
   height: inherit;
 
-  width: 100%;
-  min-height: inherit;
-
   @include container;
-
-  @media (min-width: $tablet) {
-    height: 110px;
-  }
 }
 
 .page-header__logo {
-  width: 80px;
+  z-index: 200;
+  width: 150px;
   margin: 0;
 
   @media (min-width: $tablet) {
@@ -38,18 +44,86 @@
   }
 }
 
-.page-header__trigger-wrap {
-  width: 55px;
+.page-header__trigger-btn {
+  // position: absolute;
+  // top: 10px;
+  // right: 10px;
+  z-index: 100;
 
-  background-image: url(../img/icon-menu-burger.svg);
+  width: 50px;
+  height: 25px;
+
+  background: white;
+  font-size: 0;
+
+  text-decoration: none;
 
   @media (min-width: $desktop) {
     display: none;
   }
 }
 
-.page-header__trigger-btn {
-  font-size: 0;
+// trigger
+@mixin user_menu_butt_line {
+ position: absolute;
+ top: 50%;
+ left: 0;
+ width: 100%;
+ height: .4rem;
+ margin-top:-.2rem;
+ background: black;
+}
 
-  text-decoration: none;
+.menu_trigger {
+ z-index: 210;
+ position: absolute;
+ top: 50%;
+ // right: $gl_indent;
+ display: none; // hidden on wide screens
+ height: 2.6rem;
+ width: 3.8rem;
+ margin-top: -1.6rem;
+ text-transform: uppercase;
+
+ color: transparent;
+ cursor: pointer;
+
+ // @include bp($point_3) {
+ //  display: block;// appear on tablets
+ // }
+
+ &:before {
+  content: '';
+  transform: translate(0, -1rem);
+  transition: all .3s ease;
+
+  @include user_menu_butt_line;
+ }
+ &:after {
+  content: '';
+  transform: translate(0, 1rem);
+  transition: all .3s ease;
+
+  @include user_menu_butt_line;
+ }
+ &.active_mod {
+  &:before {
+   transform: (rotate(45deg) translate(0, 0));
+  }
+
+  &:after {
+   transform: (rotate(-45deg) translate(0, 0));
+  }
+ }
+}
+
+.menu_trigger_decor {
+ transition: all .3s ease;
+
+ .active_mod & {
+  opacity: 0;
+  transform: translate(100%, 0);
+ }
+
+ @include user_menu_butt_line;
 }

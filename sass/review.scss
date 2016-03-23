@@ -1,24 +1,15 @@
 .review {
-  min-height: 340px;
-  padding-top: 50px;
-
-  outline: 1px solid green;
-
-  @media (min-width: $tablet) {
-    min-height: 250px;
-    padding-top: 100px;
-  }
-
-  @media (min-width: $desktop) {
-    min-height: 400px;
-    padding-top: 180px;
-  }
+  position: relative;
 }
 
 .review__inner {
-  @include container;
+  position: relative;
 
-  outline: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include container;
 }
 
 .review__list {
@@ -38,5 +29,129 @@
 }
 
 .review__item {
-  min-height: 200px;
+  position: relative;
+
+  text-align: center;
+
+  @media (min-width: $desktop) {
+    padding-top: 190px;
+    padding-bottom: 45px;
+  }
+}
+
+// slider btn (desktop)
+.review__nav--prev,
+.review__nav--next {
+  @media (min-width: $desktop) {
+    content: "";
+    position: absolute;
+
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.review__nav--prev {
+  @media (min-width: $desktop) {
+    top: 225px;
+    left: 8px;
+
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;
+    border-radius: 2px;
+    transform: rotate(45deg);
+
+  }
+}
+
+.review__nav--next {
+  @media (min-width: $desktop) {
+    top:  225px;
+    right: 8px;
+
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
+}
+
+// comment content
+.review__item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font: normal 14px/30px "OpenSans", sans-serif;
+
+  @media (min-width: $tablet) {
+    flex-direction: column-reverse;
+
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 680px;
+  }
+}
+
+.review__author {
+  padding-top: 45px;
+
+  font: bold 18px/30px "OpenSans", sans-serif;
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.review__author-intro {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+
+    font: normal 14px/30px "OpenSans", sans-serif;
+  }
+}
+
+.review__content {
+  padding-top: 10px;
+  padding-bottom: 35px;
+
+  quotes: "\00ab" "\00bb";
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    quotes: none;
+  }
+}
+
+.review__content::before {
+  content:open-quote;
+}
+
+.review__content::after {
+  content:close-quote;
+}
+
+.review__list ~ .review__nav {
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
