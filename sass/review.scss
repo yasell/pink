@@ -22,6 +22,10 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $desktop) {
+    margin-top: -30px;
+  }
 }
 
 .review__list li:not(:first-child) {
@@ -47,14 +51,14 @@
     position: absolute;
 
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
   }
 }
 
 .review__nav--prev {
   @media (min-width: $desktop) {
-    top: 225px;
+    top: 195px;
     left: 8px;
 
     border-bottom: 2px solid gray;
@@ -67,7 +71,7 @@
 
 .review__nav--next {
   @media (min-width: $desktop) {
-    top:  225px;
+    top:  195px;
     right: 8px;
 
     border-top: 2px solid gray;
@@ -97,7 +101,7 @@
 }
 
 .review__author {
-  padding-top: 45px;
+  padding-top: 30px;
 
   font: bold 18px/30px "OpenSans", sans-serif;
 
@@ -107,7 +111,10 @@
   }
 
   @media (min-width: $desktop) {
+    padding-top: 35px;
     padding-bottom: 0;
+
+    font-size: 24px
   }
 }
 
@@ -119,11 +126,15 @@
 
     font: normal 14px/30px "OpenSans", sans-serif;
   }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+  }
 }
 
 .review__content {
   padding-top: 10px;
-  padding-bottom: 35px;
+  padding-bottom: 38px;
 
   quotes: "\00ab" "\00bb";
 
@@ -148,7 +159,7 @@
   padding-bottom: 50px;
 
   @media (min-width: $tablet) {
-    padding-bottom: 20px;
+    padding-bottom: 35px;
   }
 
   @media (min-width: $desktop) {

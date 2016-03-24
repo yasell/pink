@@ -10,7 +10,7 @@
 
 .form__title {
   margin: 0;
-  padding: 55px 0;
+  padding: 45px 0 16px 0;
 
   font: normal 14px/30px "OpenSans", sans-serif;
   text-align: center;
@@ -19,13 +19,14 @@
     width: 500px;
     margin: 0 auto;
     padding-top: 100px;
-    padding-bottom: 70px;
+    padding-bottom: 12px;
 
     font-size: 18px;
   }
 
   @media (min-width: $desktop) {
     width: 800px;
+    padding-bottom: 35px;
   }
 }
 
@@ -58,7 +59,6 @@ textarea {
 }
 
 .form__list {
-
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@ textarea {
   color: $blue-color;
 
   @media (min-width: $tablet) {
-    margin-bottom: 60px;
+    margin-bottom: 18px;
   }
 }
 
@@ -110,6 +110,8 @@ textarea {
 .form__item:nth-child(2) {
   @media (min-width: $tablet) {
     order: 3;
+    margin-top: -20px;
+    margin-bottom: 72px;
   }
 }
 
@@ -122,16 +124,19 @@ textarea {
 .form__item:nth-child(4) {
   @media (min-width: $tablet) {
     order: 1;
+    margin-bottom: 65px;
   }
 
   @media (min-width: $desktop) {
     width: 470px;
+    margin-bottom: 35px;
+    padding-left: 35px;
   }
 }
 
 .form__item:nth-child(4) .form__inner {
   @media (min-width: $desktop) {
-    width: 470px;
+    width: 435px;
     margin: 0;
   }
 }
@@ -159,7 +164,7 @@ textarea {
 }
 
 .form__block {
-  padding-top: 20px;
+  padding-top: 18px;
 
   @media (min-width: $tablet) {
     padding-top: 50px;
@@ -202,10 +207,11 @@ textarea {
 // checkbox (progress-block)
 .form__item-intro {
   margin: 0;
-  padding: 35px 0;
+  padding: 30px 20px 38px 20px;
 
   text-align: center;
   text-transform: uppercase;
+  line-height: 1.5;
   color: $pink-color;
 
   @media (min-width: $tablet) {
@@ -224,6 +230,7 @@ textarea {
 .form__progress-part {
   @media (min-width: $desktop) {
     width: 260px;
+    margin-right: -55px;
   }
 }
 
@@ -278,12 +285,22 @@ textarea {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: 50px 60px;
+    padding: 54px 60px 15px 60px;
   }
 }
 
 .form__progress-part {
-  padding-bottom: 40px;
+  padding-bottom: 48px;
+}
+
+.form__progress-part:last-child {
+  @media (min-width: $tablet) {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 48px;
+  }
 }
 
 .form__check {
@@ -349,9 +366,7 @@ textarea {
   list-style: none;
 
   @media (min-width: $tablet) {
-    padding: 0 60px;
-    padding-top: 45px;
-    padding-bottom: 35px;
+    padding: 45px 60px 35px 60px;
     margin-bottom: 65px;
 
     border: 2px solid $gray-light;
@@ -360,8 +375,12 @@ textarea {
   @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 0;
+    padding: 30px 60px 5px 60px;
   }
+}
+
+.form__contacts .form__block {
+  padding-top: 8px;
 }
 
 .form__item:nth-child(3) .form__item-intro {
@@ -384,7 +403,11 @@ textarea {
 
 .form__contacts .form__block:first-child {
   @media (min-width: $tablet) {
-    padding-bottom: 35px;
+    padding-bottom: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
   }
 }
 
@@ -396,7 +419,7 @@ textarea {
 .form__contacts .form__text-title {
   order: 2;
   padding-left: 20px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .form__contacts .form__main-field {
@@ -439,9 +462,13 @@ textarea {
   list-style: none;
 
   @media (min-width: $tablet) {
-    padding: 50px 60px;
+    padding: 50px 60px 36px 60px;
 
     border: 2px solid $gray-light;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 70px;
   }
 }
 
@@ -497,11 +524,6 @@ textarea {
 }
 
 // comment block
-.form__item:last-child .form__item-intro {
-  padding-top: 60px;
-  padding-bottom: 20px;
-}
-
 .form__textarea-wrapper {
   @media (min-width: $tablet) {
     padding: 45px 60px;
@@ -510,7 +532,9 @@ textarea {
   }
 }
 
-.form__item:last-child .form__item-intro {
+.form__textarea-wrapper .form__item-intro {
+  padding: 72px 0 12px 0;
+
   @media (min-width: $tablet) {
     padding: 0 35px;
   }
@@ -520,7 +544,7 @@ textarea {
   display: block;
   width: 280px;
   height: 200px;
-  padding: 20px;
+  padding: 10px;
 
   font-size: 18px;
 
@@ -537,16 +561,23 @@ textarea {
 }
 
 .form__submit-wrapper {
+  padding-top: 10px;
+
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 70px 0 30px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 60px 0 15px 0;
   }
 }
 
 .form__submit {
   width: 100%;
-  margin: 45px 0;
+  margin: 55px 0 20px 0;
   padding: 15px 0;
 
   font-size: 18px;
@@ -560,6 +591,7 @@ textarea {
 
   @media (min-width: $tablet) {
     width: 300px;
+    margin: 0;
   }
 }
 
@@ -572,6 +604,7 @@ textarea {
 }
 
 .form__required {
+text-transform: uppercase;
   text-align: center;
 }
 

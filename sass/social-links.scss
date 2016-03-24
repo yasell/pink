@@ -1,16 +1,16 @@
 .social-links {
 
   display: none;
-  min-height: 130px;
 
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 35px 0 30px 0;
   }
 
   @media (min-width: $desktop) {
-    min-height: 200px;
+    padding-top: 100px 0 50px 0;
   }
 }
 
@@ -26,10 +26,6 @@
   padding: 0;
 
   list-style: none;
-}
-
-.social-links__item {
-
 }
 
 .social-links__link {
@@ -51,8 +47,12 @@
 
   font: normal 14px/18px "OpenSans", sans-serif;
   align-items: center;
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+  }
 }
 
-.social-links__copyright span {
-  padding: 0 15px;
+.social-links__copyright-logo {
+  margin-left: 15px;
 }

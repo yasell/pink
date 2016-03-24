@@ -5,11 +5,12 @@
 
   @media (min-width: $tablet) {
     display: block;
-    padding: 60px 0;
+    padding: 60px 0 85px 0;
   }
 
   @media (min-width: $desktop) {
     background: $gray-bg;
+    padding-top: 28px;
   }
 }
 
@@ -78,6 +79,7 @@
 
   @media (min-width: $desktop) {
     width: 100%;
+    padding-top: 35px;
 
     line-height: 30px;
   }
@@ -89,7 +91,11 @@
 
 .intro__description {
   margin: 0;
-  padding: 20px 0;
+  padding: 15px 0 5px 0;
+
+  @media (min-width: $desktop) {
+    padding: 20px 0 30px 0;
+  }
 }
 
 .intro__href {

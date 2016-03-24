@@ -8,19 +8,19 @@
 
 .post__title {
   margin: 0;
-  padding: 50px 18px;
+  padding: 40px 18px;
 
   font: normal 14px/30px "OpenSans", sans-serif;
   text-align: center;
 
   @media (min-width: $tablet) {
-    padding: 80px 90px;
+    padding: 97px 90px 67px 90px;
 
     font-size: 18px;
   }
 
   @media (min-width: $desktop) {
-    padding: 90px 180px;
+    padding: 97px 180px 80px 180px;
   }
 }
 
@@ -29,7 +29,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 46px;
+  }
 }
 
 .post__of-day .post__img-wrapper {
@@ -37,14 +42,14 @@
 
   display: block;
   width: 100%;
-  height: 140px;
+  height: 135px;
 
   @media (min-width: $tablet) {
     height: 510px;
   }
 
   @media (min-width: $desktop) {
-    min-height: 505px;
+    height: 500px;
   }
 }
 
@@ -88,17 +93,19 @@
   position: relative;
 
   width: 280px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   background: $gray-bg;
 
   @media (min-width: $tablet) {
     width: 300px;
     height: 455px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: $desktop) {
     height: 555px;
+    margin-bottom: 58px;
   }
 }
 
@@ -131,7 +138,7 @@
 }
 
 .post__description {
-  padding: 20px;
+  padding: 20px 0 10px 20px;
 
   font: normal 14px/24px "OpenSans", sans-serif;
 
@@ -163,7 +170,7 @@
 
   @media (min-width: $tablet) {
     position: absolute;
-    bottom: 30px;
+    bottom: 22px;
     left: 0;
 
     justify-content: space-between;
