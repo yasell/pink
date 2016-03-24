@@ -35,7 +35,7 @@
 
   @media (min-width: $desktop) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 640px;
     padding: 0;
@@ -79,7 +79,7 @@
   color: #fff;
 
   @media (min-width: $desktop) {
-    padding-left: 80px;
+    padding-left: 75px;
 
     font-weight: normal;
     line-height: 18px;

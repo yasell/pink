@@ -15,12 +15,12 @@
 
   overflow: hidden;
   background: $gray-bg;
-  
+
   @media (min-width: $tablet) {
-    height: 370px;
+    height: 380px;
   }
 
   @media (min-width: $desktop) {
-
+    height: 500px;
   }
 }

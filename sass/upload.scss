@@ -15,15 +15,14 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 70px;
 
     font-size: 18px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 45px;
-    padding-bottom: 65px;
+    padding: 0 0 68px 0;
   }
 }
 
@@ -109,7 +108,7 @@
   &:before {
     content: "";
     position: absolute;
-    bottom: -40px;
+    bottom: -48px;
     left: 50%;
     height: 2px;
     width: 5000px;
@@ -119,6 +118,7 @@
 
   @media (min-width: $tablet) {
     flex-direction: column;
+    padding: 10px 0;
 
     &:before {
       display: none;
@@ -133,10 +133,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // width: 275px;
     padding: 11px 0;
 
-    border-bottom: 2px solid #dddfe0;
+    border-bottom: 1px solid #dddfe0;
   }
 
   @media (min-width: $desktop) {
@@ -215,7 +214,7 @@
 
   @media (min-width: $desktop) {
     width: 290px;
-    padding-bottom: 25px;
+    padding: 12px 0 25px 0;
   }
 }
 
@@ -257,18 +256,28 @@
 .upload__tool-item:nth-child(2) .upload__range-toggle {
   top: 13px;
   left: 25px;
+
+  @media (min-width: $desktop) {
+    top: 6px;
+    left: 250px;
+  }
 }
 
 .upload__tool-item:nth-child(3) .upload__range-toggle {
   top: 13px;
   left: 95px;
+
+  @media (min-width: $desktop) {
+    top: 7px;
+    left: 160px;
+  }
 }
 
 // submit buttons
 .upload__send {
   display: flex;
   flex-direction: column;
-  padding: 55px 0;
+  padding: 87px 0 20px 0;
   width: 100%;
 
   @media (min-width: $tablet) {
@@ -280,7 +289,7 @@
   @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 90px;
+    padding-top: 126px;
   }
 }
 
@@ -299,10 +308,6 @@
     width: 185px;
   }
 }
-
-// .upload__btn:last-child {
-//   margin: 0;
-// }
 
 .upload__btn--active {
   color: $pink-color;
