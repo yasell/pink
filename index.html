@@ -16,17 +16,23 @@
 
       <!-- Logo -->
       <h1 class="page-header__logo">
-      <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+          <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+          <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+        </picture>
       </h1>
 
       <!-- "hamburger-menu" -->
-      <a class="page-header__trigger-btn" href="#"> Открыть меню </a>
+      <div class="page-header__trigger">
+        <span class="page-header__trigger-decor"></span>
+      </div>
 
       <!-- Main navigation menu -->
       <nav class="main-nav">
         <ul class="main-nav__list">
 
-          <li class="main-nav__item">
+          <li class="main-nav__item  main-nav__item--active">
             <a class="main-nav__link"> Главная </a>
           </li>
 
@@ -48,9 +54,7 @@
     </div>
   </header>
 
-
   <main class="page-content">
-
 
     <!-- "Load" block -->
     <div class="app-load">
@@ -60,14 +64,14 @@
           <h2 class="app-load__title"> Взгляните на жизнь иначе! </h2>
           <a class="app-load__main-btn" href="#"> Скачать приложение </a>
           <ul class="app-load__list">
-            <li class="app-load__item  app-load__item--apple">
-              <a class="app-load__link" href="#"> Apple </a>
+            <li class="app-load__item">
+              <a class="app-load__link app-load__link--apple" href="#"> Apple </a>
             </li>
-            <li class="app-load__item  app-load__item--android">
-              <a class="app-load__link" href="#"> Android </a>
+            <li class="app-load__item">
+              <a class="app-load__link app-load__link--android" href="#"> Android </a>
             </li>
-            <li class="app-load__item  app-load__item--wind">
-              <a class="app-load__link" href="#"> Windows </a>
+            <li class="app-load__item">
+              <a class="app-load__link app-load__link--wind" href="#"> Windows </a>
             </li>
           </ul>
           <p class="app-load__brief"> Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8 </p>
@@ -113,7 +117,10 @@
           </ul>
 
           <div class="promo__img-wrapper">
-            <img class="promo__img" src="http://placehold.it/160x280" alt="iPhone">
+            <picture>
+              <source media="(min-width: 700px)" srcset="img/iphone-screen-tablet-3@1x.png, img/iphone-screen-tablet-3@2x.png">
+              <img class="promo__img" src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile.png, img/iphone-screen-mobile@2x.png" alt="iPhone">
+            </picture>
           </div>
 
         </div>
@@ -126,7 +133,14 @@
       <div class="intro__inner">
 
         <div class="intro__img-wrapper">
-          <img class="intro__img" src="http://placehold.it/240x280" alt="Clock">
+          <svg class="intro__img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="240px" height="280px" viewBox="0 0 298 345.097" enable-background="new 0 0 298 345.097" xml:space="preserve">
+            <path d="M264.568,102.055l5.355-5.355c7.717-7.717,9.124-18.938,3.126-24.935c-5.997-5.997-17.217-4.59-24.934,3.127l-5.386,5.385
+            	C221.768,63.292,196.11,51.875,168,48.297v-9.583h7.658c10.914,0,19.843-8.711,19.843-19.357S186.573,0,175.659,0h-53.317
+            	c-10.913,0-19.842,8.711-19.842,19.357s8.929,19.357,19.842,19.357H130v9.583C56.681,57.629,0,120.244,0,196.097
+            	c0,82.291,66.709,149,149,149c82.29,0,149-66.709,149-149C298,160.434,285.465,127.703,264.568,102.055z M149,306.264
+            	c-60.844,0-110.167-49.323-110.167-110.167S88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167
+            	S209.843,306.264,149,306.264z" />
+          </svg>
         </div>
 
         <div class="intro__content">
@@ -147,6 +161,18 @@
 
         <a class="review__nav review__nav--prev" href="#"></a>
         <a class="review__nav review__nav--next" href="#"></a>
+
+        <!-- Quotes -->
+        <svg class="review__quotes" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="65px" viewBox="0 0 78.672 63.789" enable-background="new 0 0 78.672 63.789" xml:space="preserve">
+          <g>
+            <path d="M34.967,7.063L30.713,0C28.272,1.495,0,12.207,0,39.617c0,7.231,0.336,24.172,18.9,24.172
+        		c11.187,0,13.94-10.279,13.94-13.584c0-21.977-21.382-14.177-21.382-14.177C11.458,17.957,31.263,9.184,34.967,7.063z" />
+          </g>
+          <g>
+            <path d="M78.672,7.063L74.418,0c-2.44,1.495-30.713,12.207-30.713,39.617c0,7.231,0.337,24.172,18.9,24.172
+        		c11.187,0,13.939-10.279,13.939-13.584c0-21.977-21.381-14.177-21.381-14.177C55.165,17.957,74.969,9.184,78.672,7.063z" />
+          </g>
+        </svg>
 
         <ul class="review__list">
 
@@ -215,15 +241,39 @@
             </div>
             <div class="price__field">
               <span class="price__field-name"> Розовый фильтр </span>
-              <span class="price__marker  price__marker--yes"> yes </span>
+              <span class="price__marker  price__marker--yes">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="32px" height="22px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                	 xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0
+                	s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.09
+                	C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                </svg>
+              </span>
             </div>
             <div class="price__field">
               <span class="price__field-name"> Смайлики </span>
-              <span class="price__marker  price__marker--no"> no </span>
+              <span class="price__marker  price__marker--no">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="27px" height="27px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+                <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439
+                	c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121
+                	c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439
+                	s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+                </svg>
+              </span>
             </div>
             <div class="price__field">
               <span class="price__field-name"> Комментарии </span>
-              <span class="price__marker  price__marker--no"> no </span>
+              <span class="price__marker  price__marker--no">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="27px" height="27px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+                <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439
+                	c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121
+                	c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439
+                	s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+                </svg>
+              </span>
             </div>
           </li>
 
@@ -234,15 +284,39 @@
             </div>
             <div class="price__field">
               <span class="price__field-name"> Розовый фильтр </span>
-              <span class="price__marker  price__marker--yes"> yes </span>
+              <span class="price__marker  price__marker--yes">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="32px" height="22px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                	 xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0
+                	s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.09
+                	C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                </svg>
+              </span>
             </div>
             <div class="price__field">
               <span class="price__field-name"> Смайлики </span>
-              <span class="price__marker  price__marker--yes"> yes </span>
+              <span class="price__marker  price__marker--yes">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="32px" height="22px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                	 xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0
+                	s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.09
+                	C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                </svg>
+              </span>
             </div>
             <div class="price__field">
               <span class="price__field-name"> Комментарии </span>
-              <span class="price__marker  price__marker--no"> no </span>
+              <span class="price__marker  price__marker--no">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="27px" height="27px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+                <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439
+                	c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121
+                	c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439
+                	s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+                </svg>
+              </span>
             </div>
           </li>
 
@@ -253,15 +327,39 @@
             </div>
             <div class="price__field">
               <span class="price__field-name"> Розовый фильтр </span>
-              <span class="price__marker  price__marker--yes"> yes </span>
+              <span class="price__marker  price__marker--yes">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="32px" height="22px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                	 xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0
+                	s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.09
+                	C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                </svg>
+              </span>
             </div>
             <div class="price__field">
               <span class="price__field-name"> Смайлики </span>
-              <span class="price__marker  price__marker--yes"> yes </span>
+              <span class="price__marker  price__marker--yes">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="32px" height="22px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                	 xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0
+                	s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.09
+                	C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                </svg>
+              </span>
             </div>
             <div class="price__field">
               <span class="price__field-name"> Комментарии </span>
-              <span class="price__marker  price__marker--yes"> yes </span>
+              <span class="price__marker  price__marker--yes">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="32px" height="22px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                	 xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0
+                	s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.09
+                	C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                </svg>
+              </span>
             </div>
           </li>
         </ul>
@@ -276,7 +374,6 @@
     </div>
   </main>
 
-
   <!-- Document footer -->
   <footer class="page-footer">
     <div class="page-footer__inner">
@@ -287,7 +384,7 @@
         <ul class="contacts__list">
           <li class="contacts__item">
             <p class="contacts__link"> Звоните:
-              <a class="contacts__link-item" href="tel:+78125556666"> +7(812)555-66-66 </a>
+              <span class="contacts__link-item" href="tel:+78125556666"> +7(812)555-66-66 </span>
             </p>
           </li>
           <li class="contacts__item">
@@ -306,35 +403,76 @@
 
     <!-- Map-->
     <div class="page-footer__map">
-
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3997.198230653264!2d30.323083!3d59.938794!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1459105931874" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
     <!-- "Social links" block -->
     <div class="page-footer__inner">
       <div class="social-links">
 
-        <img class="social-links__logo" src="http://placehold.it/150x60" alt="Pink">
+        <a class="social-links__logo" href="#">
+          <picture>
+            <source media="(max-width: 1200px)" srcset="img/logo-pink-blue-mobile.svg">
+            <img src="img/logo-pink-blue-desktop.svg" alt="Pink">
+          </picture>
+        </a>
 
         <ul class="social-links__list">
           <li class="social-links__item">
-            <a class="social-links__link  social-links--tweetter" href="#">tweeter</a>
+            <a class="social-links__link  social-links--tweetter" href="#">
+              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="15px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                <g id="W6EeEF_1_">
+                  <g>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151
+              			c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86
+              			c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0
+              			c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881
+              			c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461
+              			c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z" />
+                  </g>
+                </g>
+              </svg>
+            </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link  social-links--facebook" href="#">facebook</a>
+            <a class="social-links__link  social-links--facebook" href="#">
+              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="9px" height="18px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
+                <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115
+              	H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786
+              	C5.765,5.07,5.75,3.709,6.275,3.357z" />
+              </svg>
+            </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link  social-links--youtube" href="#">youtube</a>
+            <a class="social-links__link  social-links--youtube" href="#">
+              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="13px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+                <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932
+              	c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z" />
+              </svg>
+            </a>
           </li>
         </ul>
 
         <div class="social-links__copyright">
           <span> Разработано </span>
-          <img class="social-links__copyright-logo" src="http://placehold.it/30x40" alt="">
+          <a class="social-links__copyright-logo" href="#">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="34px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334
+          	l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5
+          	l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787
+          	l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65
+          	l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036
+          	v10.02L13.472,31.85L1.925,24.979V15.127z" />
+            </svg>
+          </a>
         </div>
 
       </div>
     </div>
   </footer>
+
+  <script src="js/jquery-2.2.2.min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 

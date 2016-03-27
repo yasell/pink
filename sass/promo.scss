@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   @include container;
 
   @media (min-width: $tablet) {
@@ -23,9 +22,7 @@
 // block title
 .promo__title {
   margin: 0;
-  padding: 0;
-  padding-top: 40px;
-
+  padding: 40px 0 0;
   font: 200 24px "OpenSans", sans-serif;
   font-style: normal;
   text-align: center;
@@ -33,12 +30,11 @@
   @media (min-width: $tablet) {
     margin: 0 auto;
     padding-top: 50px;
-
     font-size: 40px;
   }
 
   @media (min-width: $desktop) {
-    padding: 68px 0 20px 0;
+    padding: 68px 0 20px;
     font-size: 50px;
   }
 }
@@ -53,8 +49,7 @@
 }
 
 .promo__half-title:last-child {
-  padding: 0;
-  padding-bottom: 30px;
+  padding: 0 0 30px;
 
   @media (min-width: $tablet) {
     width: 350px;
@@ -75,11 +70,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   padding: 0;
-
   list-style: none;
 
   @media (min-width: $tablet) {
@@ -95,8 +87,8 @@
 }
 
 .promo__item {
+  position: relative;
   padding-bottom: 40px;
-
   text-align: center;
 
   @media (min-width: $tablet) {
@@ -107,8 +99,7 @@
   @media (min-width: $desktop) {
     display: block;
     width: 250px;
-    // padding-top: 360px;
-
+    padding-top: 360px;
     text-align: center;
   }
 }
@@ -117,16 +108,13 @@
   padding-top: 80px;
 
   @media (min-width: $desktop) {
-    padding: 0;
-    // padding-top: 360px;
-    padding-bottom: 35px;
+    padding: 360px 0 35px;
   }
 }
 
 // content title
 .promo__item-title {
   padding-bottom: 20px;
-
   font: 700 18px/10px "OpenSans", sans-serif;
 
   @media (min-width: $desktop) {
@@ -148,16 +136,16 @@
 // iPhone picture on mobile&tablet
 .promo__img-wrapper {
   position: relative;
-
   display: block;
   width: 160px;
-  height: 280px;
+  height: 285px;
   overflow: hidden;
 
   @media (min-width: $tablet) {
     width: 270px;
-    height: 480px;
+    height: 485px;
   }
+
   @media (min-width: $desktop) {
     display: none;
   }
@@ -167,11 +155,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
   min-width: 100%;
   min-height: 100%;
+  transform: translate(-50%, -44%);
 
-  transform: translate(-50%, -50%);
+  @media (min-width: $tablet) {
+    transform: translate(-50%, -50%);
+  }
 
   @media (min-width: $desktop) {
     display: none;
@@ -183,12 +173,42 @@
   display: none;
 
   @media (min-width: $desktop) {
-    content: url(http://placehold.it/180x300);
-
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
     display: block;
-    width: 185px;
+    width: 290px;
     height: 300px;
-    margin: 0 auto;
-    margin-bottom: 60px;
+    margin: 0 10px 60px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .promo__item:first-child::before {
+    content: url("../img/iphone-screen-desktop-1@1x.png");
+  }
+
+  .promo__item:nth-child(2)::before {
+    content: url("../img/iphone-screen-desktop-2@1x.png");
+  }
+
+  .promo__item:last-child::before {
+    content: url("../img/iphone-screen-desktop-3@1x.png");
+  }
+}
+
+@media (min-width: $desktop) and (min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  .promo__item:first-child::before {
+    content: url("../img/iphone-screen-desktop-1@2x.png");
+  }
+
+  .promo__item:nth-child(2)::before {
+    content: url("../img/iphone-screen-desktop-2@2x.png");
+  }
+
+  .promo__item:last-child::before {
+    content: url("../img/iphone-screen-desktop-3@2x.png");
   }
 }

@@ -49,8 +49,38 @@
 
     min-width: 100%;
     min-height: 100%;
+    fill: #dedede;
 
     transform: translate(-50%, -50%);
+  }
+}
+
+// red circle
+.intro__img-wrapper::after {
+  content: "24";
+  position: absolute;
+  top: 59px;
+  left: 20px;
+
+  display: block;
+  width: 200px;
+  height: 200px;
+
+  font: bold 120px/186px "OpenSans", sans-serif;
+  text-align: center;
+
+  color: $pink-color;
+  border: 14px solid $pink-color;
+  border-radius: 50%;
+
+  @media (min-width: $desktop) {
+    top: 69px;
+    left: 23px;
+
+    width: 255px;
+    height: 255px;
+
+    border-width: 17px;
   }
 }
 
@@ -100,4 +130,12 @@
 
 .intro__href {
   color: $pink-color;
+
+  &:hover {
+    color: $blue-color;
+  }
+
+  &:active {
+    color: #ced0d2;
+  }
 }

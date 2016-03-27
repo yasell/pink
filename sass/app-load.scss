@@ -5,25 +5,64 @@
   width: 100%;
   padding-top: 65px;
 
-  background: $intro-bg;
+  background: url("../img/bg-back-mobile.jpg") 50% 50% no-repeat;
+  background-size: cover;
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
+// for tablet
   @media (min-width: $tablet) {
     padding-top: 110px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  @media (min-width: $tablet) and (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-back-tablet@2x.jpg");
+  }
+
+// for desktop
+  @media (min-width: $desktop) {
+    background-image: url("../img/bg-back-desktop.jpg");
   }
 }
 
 .app-load__inner {
+  @include container;
+
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
+  min-height: 665px;
 
-  @include container;
+  background: url("../img/iphone-hand-mobile.png") 50% 30% no-repeat;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+  }
+// for tablet
+  @media (min-width: $tablet) {
+    background: url("../img/iphone-hand-tablet@1x.png") 50% 100% no-repeat;
+  }
+
+  @media (min-width: $tablet) and (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/iphone-hand-tablet@2x.png");
+  }
+// for desktop
+  @media (min-width: $desktop) {
+    background: url("../img/iphone-hand-desktop@1x.png") 50% 100% no-repeat;
+  }
+
+  @media (min-width: $desktop) and (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/iphone-hand-desktop@2x.png");
+  }
 }
 
 .app-load__vendor-block {
   width: 100%;
   margin-top: auto;
-  padding-top: 390px;
 
   background-color: $intro-bg;
 
@@ -72,8 +111,17 @@
   text-decoration: none;
 
   color: #fff;
-  border: 3px solid #fff;
+  border: 3px solid white;
   border-radius: 30px;
+
+  &:hover {
+    color: $pink-color;
+    background-color: white;
+  }
+
+  &:active {
+    color: #f2ced5;
+  }
 
   @media (min-width: $tablet) {
     margin-top: 35px;
@@ -115,8 +163,21 @@
 
   font-size: 0px;
   text-decoration: none;
+}
 
-  background: olive;
+.app-load__link--apple {
+  background: url("../img/logo-apple.svg") 50% 50% no-repeat;
+  background-size: 50px 50px;
+}
+
+.app-load__link--android {
+  background: url("../img/logo-android.svg") 50% 50% no-repeat;
+  background-size: 50px 50px;
+}
+
+.app-load__link--wind {
+  background: url("../img/logo-microsoft.svg") 50% 50% no-repeat;
+  background-size: 50px 50px;
 }
 
 .app-load__brief {

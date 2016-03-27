@@ -5,9 +5,7 @@
   width: 100%;
   height: 65px;
   z-index: 200;
-
   display: flex;
-
   background: $header-bg;
 
   body.menu-open & {
@@ -30,97 +28,76 @@
   justify-content: space-between;
   align-items: center;
   height: inherit;
-
   @include container;
 }
 
 .page-header__logo {
   z-index: 200;
-  width: 150px;
   margin: 0;
 
-  @media (min-width: $tablet) {
-    width: 150px;
-  }
+  // &:hover {
+  //   fill: $pink-color;
+  // }
 }
 
-.page-header__trigger-btn {
-  z-index: 100;
-
+// trigger
+.page-header__trigger {
+  z-index: 200;
   width: 50px;
   height: 25px;
-
-  background: white;
-  font-size: 0;
-
-  text-decoration: none;
+  color: transparent;
+  cursor: pointer;
 
   @media (min-width: $desktop) {
     display: none;
   }
-}
 
-// trigger
-@mixin user_menu_butt_line {
- position: absolute;
- top: 50%;
- left: 0;
- width: 100%;
- height: .4rem;
- margin-top:-.2rem;
- background: black;
-}
-
-.menu_trigger {
- z-index: 210;
- position: absolute;
- top: 50%;
- // right: $gl_indent;
- display: none; // hidden on wide screens
- height: 2.6rem;
- width: 3.8rem;
- margin-top: -1.6rem;
- text-transform: uppercase;
-
- color: transparent;
- cursor: pointer;
-
- // @include bp($point_3) {
- //  display: block;// appear on tablets
- // }
-
- &:before {
-  content: '';
-  transform: translate(0, -1rem);
-  transition: all .3s ease;
-
-  @include user_menu_butt_line;
- }
- &:after {
-  content: '';
-  transform: translate(0, 1rem);
-  transition: all .3s ease;
-
-  @include user_menu_butt_line;
- }
- &.active_mod {
   &:before {
-   transform: (rotate(45deg) translate(0, 0));
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
   }
 
   &:after {
-   transform: (rotate(-45deg) translate(0, 0));
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform: translate(0, 12px);
   }
- }
 }
 
-.menu_trigger_decor {
- transition: all .3s ease;
+.page-header__trigger-decor {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transform: translate(0, 6px);
+  transition: all 0.3s ease-in-out;
 
- .active_mod & {
-  opacity: 0;
-  transform: translate(100%, 0);
- }
+  body.menu-open & {
+    background: white;
+    opacity: 0;
+    transform: rotate(180deg);
+    transform: translate(100%, 0);
+  }
+}
 
- @include user_menu_butt_line;
+.menu-open .page-header__trigger {
+  &:before {
+    width: 23px;
+    background: white;
+    transform: translate(30px, 10px) rotate(45deg);
+  }
+
+  &:after {
+    width: 23px;
+    background: white;
+    transform: translate(30px, 2px) rotate(-45deg);
+  }
 }
