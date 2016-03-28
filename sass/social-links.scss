@@ -1,9 +1,12 @@
 .social-links {
-
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $tablet) {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 35px 0 30px 0;
@@ -15,6 +18,10 @@
 }
 
 .social-links__logo {
+  @media (max-width: $mobile) {
+    padding: 35px 0;
+  }
+
   &:hover {
     fill: $pink-color;
   }
@@ -59,6 +66,10 @@
 
   font: normal 14px/18px "OpenSans", sans-serif;
   align-items: center;
+
+  @media (max-width: $mobile) {
+    padding: 35px 0;
+  }
 
   @media (min-width: $desktop) {
     font-size: 18px;
