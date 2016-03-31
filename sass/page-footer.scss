@@ -8,13 +8,30 @@
 
 .page-footer__map {
   position: relative;
-
   display: block;
   width: 100%;
   height: 200px;
 
-  overflow: hidden;
-  background: $gray-bg;
+  // &:before {
+  //   content: "";
+  //   z-index: 10;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   display: block;
+  //   width: 100%;
+  //   height: 65px;
+  //   background: url(../img/bg-triangle-white-footer.svg) center top no-repeat;
+  //   background-size: 100% auto;
+  //
+    // @media (min-width: $tablet) {
+    //   height: 110px;
+    // }
+    //
+    // @media (min-width: $desktop) {
+    //   height: 160px;
+    // }
+  // }
 
   @media (min-width: $tablet) {
     height: 380px;
@@ -25,11 +42,10 @@
   }
 }
 
-.page-footer__map iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
+.page-footer__inner:nth-child(3) {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
 }
