@@ -71,8 +71,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 10px;
-  padding: 0;
+  margin: 0 0 10px 0;
+  padding: 80px 0 0 0;
   list-style: none;
 
   @media (min-width: $tablet) {
@@ -81,9 +81,10 @@
 
   @media (min-width: $desktop) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0;
   }
 }
 
@@ -99,17 +100,9 @@
 
   @media (min-width: $desktop) {
     display: block;
-    width: 250px;
-    padding-top: 360px;
+    width: 265px;
+    padding-top: 370px;
     text-align: center;
-  }
-}
-
-.promo__item:first-child {
-  padding-top: 80px;
-
-  @media (min-width: $desktop) {
-    padding: 360px 0 35px;
   }
 }
 
@@ -152,7 +145,7 @@
   }
 }
 
-.promo__img {
+.promo__mobile-img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -169,47 +162,32 @@
   }
 }
 
-// iPhones picture on desktop
-.promo__item::before {
+.promo__main-img {
   display: none;
-
-  @media (min-width: $desktop) {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -20px;
-    display: block;
-    width: 290px;
-    height: 300px;
-    margin: 0 10px 60px;
-  }
 }
 
+// desktop
 @media (min-width: $desktop) {
-  .promo__item:first-child::before {
-    content: url("../img/iphone-screen-desktop-1@1x.png");
+  .promo__main-img {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    display: block;
+    width: 265px;
+    height: 300px;
   }
 
-  .promo__item:nth-child(2)::before {
-    content: url("../img/iphone-screen-desktop-2@1x.png");
+  .promo__item:first-child {
+    padding-left: 20px;
+    .promo__main-img {
+      left: 18px;
+    }
   }
 
-  .promo__item:last-child::before {
-    content: url("../img/iphone-screen-desktop-3@1x.png");
-  }
-}
-
-@media (min-width: $desktop) and (min-resolution: 144dpi),
-(min-resolution: 1.5dppx) {
-  .promo__item:first-child::before {
-    content: url("../img/iphone-screen-desktop-1@2x.png");
-  }
-
-  .promo__item:nth-child(2)::before {
-    content: url("../img/iphone-screen-desktop-2@2x.png");
-  }
-
-  .promo__item:last-child::before {
-    content: url("../img/iphone-screen-desktop-3@2x.png");
+  .promo__item:last-child {
+    padding-right: 20px;
+    .promo__main-img {
+      left: -18px;
+    }
   }
 }

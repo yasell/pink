@@ -16,7 +16,7 @@
   }
 }
 
-// media for mobile
+// bg for mobile
 @media (max-width: $mobile) {
   .app-load {
     background: url("../img/bg-back-mobile.jpg") 50% 50% no-repeat;
@@ -39,7 +39,7 @@
   }
 }
 
-// media for tablet
+// bg for tablet
 @media (min-width: $tablet) {
   .app-load {
     padding-top: 110px;
@@ -63,7 +63,7 @@
   }
 }
 
-// media for desktop
+// bg for desktop
 @media (min-width: $desktop) {
   .app-load {
     background-image: url("../img/bg-back-desktop.jpg");
@@ -71,7 +71,7 @@
   }
 
   .app-load__inner {
-    background: url("../img/iphone-hand-desktop@1x.png") 50% 100% no-repeat;
+    background: url("../img/iphone-hand-desktop@1x.png") 0 100% no-repeat;
   }
 }
 
