@@ -1,58 +1,114 @@
 .app-load {
   position: relative;
   z-index: 10;
-
   width: 100%;
   padding-top: 65px;
-
-  background: $intro-bg;
-
-  @media (min-width: $tablet) {
-    padding-top: 110px;
-  }
 }
 
 .app-load__inner {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
+  min-height: 665px;
 
-  @include container;
+  @media (min-width: $tablet) {
+    @include container;
+  }
+}
+
+// bg for mobile
+@media (max-width: $mobile) {
+  .app-load {
+    background: url("../img/bg-back-mobile.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  .app-load__inner {
+    background: url("../img/iphone-hand-mobile.png") 50% 30% no-repeat;
+  }
+}
+
+@media (max-width: $mobile) and (min-resolution: 144dpi), (max-width: $mobile) and (min-resolution: 1.5dppx) {
+  .app-load {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  .app-load__inner {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+    background-size: 260px auto;
+  }
+}
+
+// bg for tablet
+@media (min-width: $tablet) {
+  .app-load {
+    padding-top: 110px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: cover;
+  }
+
+  .app-load__inner {
+    background: url("../img/iphone-hand-tablet@1x.png") 50% 100% no-repeat;
+  }
+}
+
+@media (min-width: $tablet) and (min-resolution: 144dpi), (min-width: $tablet) and (min-resolution: 1.5dppx) {
+  .app-load {
+    background-image: url("../img/bg-back-tablet@2x.jpg");
+  }
+
+  .app-load__inner {
+    background-image: url("../img/iphone-hand-tablet@2x.png");
+    background-size: 700px auto;
+  }
+}
+
+// bg for desktop
+@media (min-width: $desktop) {
+  .app-load {
+    background-image: url("../img/bg-back-desktop.jpg");
+    background-size: cover;
+  }
+
+  .app-load__inner {
+    background: url("../img/iphone-hand-desktop@1x.png") 0 100% no-repeat;
+  }
+}
+
+@media (min-width: $desktop) and (min-resolution: 144dpi), (min-width: $desktop) and (min-resolution: 1.5dppx) {
+  .app-load__inner {
+    background-image: url("../img/iphone-hand-desktop@2x.png");
+    background-size: 1050px auto;
+  }
 }
 
 .app-load__vendor-block {
   width: 100%;
   margin-top: auto;
-  padding-top: 390px;
-
   background-color: $intro-bg;
 
   @media (min-width: $tablet) {
     width: 300px;
     margin: 0;
-    padding: 100px 0 80px 0;
-
+    padding: 100px 0 80px;
     background: none;
   }
 
   @media (min-width: $desktop) {
-    padding: 120px 0 90px 0;
+    padding: 120px 0 90px;
   }
 }
 
 .app-load__title {
   display: none;
   margin: 0;
-
   font: 200 40px/0.9 "OpenSans", sans-serif;
   font-style: normal;
   text-align: center;
-
   color: #fff;
 
   @media (min-width: $tablet) {
     display: block;
-
     font-size: 50px;
   }
 
@@ -63,21 +119,30 @@
 
 .app-load__main-btn {
   display: block;
-  width: 100%;
+  width: 280px;
+  margin: 0 auto;
   margin-top: 30px;
   padding: 15px 0;
-
   font: 700 18px/18px "OpenSans", sans-serif;
   text-align: center;
   text-decoration: none;
-
   color: #fff;
-  border: 3px solid #fff;
+  border: 3px solid white;
   border-radius: 30px;
 
-  @media (min-width: $tablet) {
-    margin-top: 35px;
+  &:hover {
+    color: $pink-color;
+    background-color: white;
+  }
 
+  &:active {
+    color: #f2ced5;
+  }
+
+  @media (min-width: $tablet) {
+    width: 100%;
+
+    margin-top: 35px;
     font-size: 21px;
   }
 
@@ -89,10 +154,14 @@
 .app-load__list {
   display: flex;
   justify-content: space-around;
-  margin: 0;
+  width: 240px;
+  margin: 0 auto;
   padding: 0 20px;
-
   list-style: none;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .app-load__item {
@@ -112,26 +181,37 @@
   display: block;
   width: 50px;
   height: 50px;
-
-  font-size: 0px;
+  font-size: 0;
   text-decoration: none;
+}
 
-  background: olive;
+.app-load__link--apple {
+  background: url("../img/logo-apple.svg") 50% 50% no-repeat;
+  background-size: 50px 50px;
+}
+
+.app-load__link--android {
+  background: url("../img/logo-android.svg") 50% 50% no-repeat;
+  background-size: 50px 50px;
+}
+
+.app-load__link--wind {
+  background: url("../img/logo-microsoft.svg") 50% 50% no-repeat;
+  background-size: 50px 50px;
 }
 
 .app-load__brief {
-  margin: 0;
-  padding: 20px 0 30px 0;
-
+  width: 240px;
+  margin: 0 auto;
+  padding: 20px 0 30px;
   font: 200 14px/24px "OpenSans", sans-serif;
   font-style: normal;
   text-align: center;
-
   color: #fff;
 
   @media (min-width: $tablet) {
+    width: 100%;
     padding-top: 30px;
-
     font-size: 18px;
   }
 

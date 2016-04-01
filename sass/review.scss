@@ -4,11 +4,9 @@
 
 .review__inner {
   position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   @include container;
 }
 
@@ -17,10 +15,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   margin: 0;
   padding: 0;
-
   list-style: none;
 
   @media (min-width: $desktop) {
@@ -34,7 +30,6 @@
 
 .review__item {
   position: relative;
-
   text-align: center;
 
   @media (min-width: $desktop) {
@@ -49,10 +44,15 @@
   @media (min-width: $desktop) {
     content: "";
     position: absolute;
-
     display: block;
     width: 25px;
     height: 25px;
+  }
+  &:hover {
+    border-color: #969da4;
+  }
+  &:active {
+    border-color: #f7f7f8;
   }
 }
 
@@ -60,24 +60,36 @@
   @media (min-width: $desktop) {
     top: 195px;
     left: 8px;
-
-    border-bottom: 2px solid gray;
-    border-left: 2px solid gray;
+    border-bottom: 2px solid #c2c6ca;
+    border-left: 2px solid #c2c6ca;
     border-radius: 2px;
     transform: rotate(45deg);
-
   }
 }
 
 .review__nav--next {
   @media (min-width: $desktop) {
-    top:  195px;
+    top: 195px;
     right: 8px;
-
-    border-top: 2px solid gray;
-    border-right: 2px solid gray;
+    border-top: 2px solid #c2c6ca;
+    border-right: 2px solid #c2c6ca;
     border-radius: 2px;
     transform: rotate(45deg);
+  }
+}
+
+// quotes
+.review__quotes {
+  display: none;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: auto;
+    fill: #efefef;
   }
 }
 
@@ -86,12 +98,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   font: normal 14px/30px "OpenSans", sans-serif;
 
   @media (min-width: $tablet) {
     flex-direction: column-reverse;
-
     font-size: 18px;
   }
 
@@ -102,7 +112,6 @@
 
 .review__author {
   padding-top: 30px;
-
   font: bold 18px/30px "OpenSans", sans-serif;
 
   @media (min-width: $tablet) {
@@ -113,8 +122,7 @@
   @media (min-width: $desktop) {
     padding-top: 35px;
     padding-bottom: 0;
-
-    font-size: 24px
+    font-size: 24px;
   }
 }
 
@@ -123,7 +131,6 @@
 
   @media (min-width: $tablet) {
     display: block;
-
     font: normal 14px/30px "OpenSans", sans-serif;
   }
 
@@ -135,7 +142,6 @@
 .review__content {
   padding-top: 10px;
   padding-bottom: 38px;
-
   quotes: "\00ab" "\00bb";
 
   @media (min-width: $tablet) {
@@ -148,11 +154,11 @@
 }
 
 .review__content::before {
-  content:open-quote;
+  content: open-quote;
 }
 
 .review__content::after {
-  content:close-quote;
+  content: close-quote;
 }
 
 .review__list ~ .review__nav {

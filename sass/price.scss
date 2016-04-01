@@ -3,7 +3,8 @@
 
   padding-top: 90px;
 
-  background: $gray-bg;
+  background: url(../img/bg-triangle-white.svg) center top no-repeat $gray-bg;
+  background-size: 100% auto;
 
   @media (min-width: $desktop) {
     padding-top: 145px;
@@ -16,11 +17,6 @@
   align-items: center;
 
   @include container;
-}
-
-.price__marker-icon {
-  fill: red;
-  width: 10px;
 }
 
 .price__list {
@@ -120,7 +116,6 @@
   flex-direction: column;
   justify-content: center;
   height: 100px;
-
   color: #fff;
   background-color: $blue-color;
 
@@ -130,6 +125,34 @@
 
   @media (min-width: $desktop) {
     height: 100px;
+  }
+}
+
+.price__item:nth-child(3) .price__field-header {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: -2px;
+    left: -2px;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url(../img/bg-hit.png) center no-repeat;
+    background-size: 100% auto;
+    overflow: hidden;
+
+    @media (min-width: $tablet) {
+      width: 56px;
+      height: 56px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 70px;
+      height: 70px;
+    }
   }
 }
 
@@ -157,18 +180,27 @@
   }
 }
 
+// icons yes/no
 .price__marker {
   width: 30px;
-  height: 30px;
-  margin-right: 20px;
+  height: 28px;
+  margin-right: 28px;
 
   font-size: 0;
-
-  background: olive;
 
   @media (min-width: $tablet) {
     margin: 0;
   }
+}
+
+.price__marker--yes {
+  width: 32px;
+  height: 22px;
+  fill: green;
+}
+
+.price__marker--no {
+  fill: red;
 }
 
 // slider navigation

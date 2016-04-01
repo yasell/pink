@@ -1,19 +1,128 @@
 .popap {
   display: none;
+  box-shadow: 0 15px 20px 0 rgba(0, 1, 1, .15);
+}
+
+.popap--error {
+  z-index: 300;
+  position: absolute;
+  top: 43%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: $body-bg;
+
+  @media (min-width: $tablet) {
+    width: 460px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 40%;
+  }
+}
+
+.popap--ok {
+  z-index: 300;
+  position: absolute;
+  top: 59%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: $body-bg;
+
+  @media (min-width: $tablet) {
+    width: 460px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 63%;
+    width: 780px;
+  }
 }
 
 .popap__inner {
   @include container;
+
+  @media (min-width: $tablet) {
+    width: 300px;
+  }
+}
+
+.popap__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+
+  }
 }
 
 .popap__title {
+  padding: 45px 0 35px 0;
+  font: bold 18px/24px "OpenSans", sans-serif;
+  text-align: center;
 
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .popap__content {
+  padding: 0 0 35px 0;
+  font: normal 14px/24px "OpenSans", sans-serif;
+  text-align: center;
 
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
+}
+
+.popap__submit {
+  padding: 50px 0 50px 0;
+  background: $gray-bg;
 }
 
 .popap__btn {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 0;
+  font: bold 18px/30px "OpenSans", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background: $green-btn;
+  color: $body-bg;
+  border: 1px solid $green-btn;
+  border-radius: 3px;
 
+  &:hover {
+    background-color: $green-hvr;
+  }
+
+  &:active {
+    color: #7dbd99;
+  }
+}
+
+.popap--error .popap__btn {
+  margin-bottom: 50px;
+}
+
+.popap--ok .popap__btn {
+  @media (min-width: $tablet) {
+    width: 300px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 460px;
+  }
+}
+
+.popap--ok .popap__inner {
+  @media (min-width: $desktop) {
+    width: 390px;
+  }
 }

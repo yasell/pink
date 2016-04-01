@@ -89,3 +89,14 @@
     padding-top: 20px;
   }
 }
+
+.contacts__item:nth-child(2) .contacts__link-item {
+  &:hover {
+    color: $blue-color;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: #ced0d2;
+  }
+}

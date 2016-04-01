@@ -1,17 +1,11 @@
-.form {
-
-}
-
 .form__inner {
   position: relative;
-
   @include container;
 }
 
 .form__title {
   margin: 0;
   padding: 45px 0 16px 0;
-
   font: normal 14px/30px "OpenSans", sans-serif;
   text-align: center;
 
@@ -20,7 +14,6 @@
     margin: 0 auto;
     padding-top: 100px;
     padding-bottom: 12px;
-
     font-size: 18px;
   }
 
@@ -47,15 +40,24 @@ textarea {
 
   &::-webkit-input-placeholder {
     color: $blue-color;
-   }
+  }
 
-   &::-moz-placeholder {
+  &::-moz-placeholder {
     color: $blue-color;
-   }
+  }
 
-   &:-ms-input-placeholder {
+  &:-ms-input-placeholder {
     color: $blue-color;
-   }
+  }
+
+  &:hover {
+    border-color: black;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $pink-color;
+  }
 }
 
 .form__list {
@@ -68,16 +70,13 @@ textarea {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-
     @include container;
   }
 }
 
 .form__item {
   width: 100%;
-
   font: normal 14px/30px "OpenSans", sans-serif;
-
   color: $blue-color;
 
   @media (min-width: $tablet) {
@@ -85,7 +84,7 @@ textarea {
   }
 }
 
-// gray background on mobile
+// background on mobile
 .form__item:nth-child(2n) {
   background: $gray-bg;
 
@@ -151,11 +150,8 @@ textarea {
 .form__text {
   display: flex;
   flex-direction: column;
-
   margin: 0;
-  padding: 0;
-  padding-bottom: 45px;
-
+  padding: 0 0 45px 0;
   list-style: none;
 
   @media (min-width: $desktop) {
@@ -181,13 +177,11 @@ textarea {
 
 .form__text-title {
   padding-left: 20px;
-
   color: $pink-color;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    padding: 0;
-    padding-right: 20px;
+    padding: 0 20px 0 0;
   }
 }
 
@@ -199,16 +193,14 @@ textarea {
 
 .form__main-field {
   width: 100%;
-  padding: 20px 20px;
-
+  padding: 20px;
   font-size: 18px;
 }
 
 // checkbox (progress-block)
 .form__item-intro {
   margin: 0;
-  padding: 30px 20px 38px 20px;
-
+  padding: 30px 20px 38px;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.5;
@@ -218,11 +210,9 @@ textarea {
     position: absolute;
     top: -15px;
     left: 50%;
-
     transform: translate(-50%,0);
     white-space: nowrap;
     padding: 0 35px;
-
     background: $body-bg;
   }
 }
@@ -267,16 +257,12 @@ textarea {
 .form__progress {
   display: flex;
   flex-direction: column;
-
   margin: 0;
   padding: 0;
-
   list-style: none;
 
   @media (min-width: $tablet) {
-    padding: 50px 0;
-    padding-left: 60px;
-
+    padding: 50px 0 50px 60px;
     border: 2px solid $gray-light;
   }
 
@@ -303,53 +289,61 @@ textarea {
   }
 }
 
+// for radio and checkbox
 .form__check {
   display: flex;
   align-items: center;
   width: 100%;
-
   font-size: 18px;
+  cursor: pointer;
+
+  &:hover {
+    .form__field-name:before, .form__field-square:before {
+      border: 2px solid black;
+    }
+  }
+
+  &:active {
+    .form__field-name:before, .form__field-square:before {
+      border: 2px solid $pink-color;
+    }
+  }
 }
 
- // square checkbox
+// square checkbox
 .form__checkbox {
   display: none;
   margin-right: 30px;
 
   &:checked + .form__field-square:after {
-   opacity: 1;
+    opacity: 1;
   }
 }
 
 .form__field-square {
   position: relative;
   padding: 3px 0 0 60px;
+  cursor: pointer;
 
   &:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-
     width: 40px;
     height: 40px;
-
     border: 2px solid $gray-light;
   }
 
   &:after {
-    content: "";
+    content: url("../img/icon-yes.svg");
     position: absolute;
-    top: 12px;
-    left: 12px;
-
-    width: 16px;
+    top: 6px;
+    left: 9px;
+    width: 22px;
     height: 16px;
-
-    border-radius: 100%;
-    background: red;
     opacity: 0;
-    transition: .3s ease;
+    transition: 0.3s ease;
   }
 }
 
@@ -357,18 +351,13 @@ textarea {
 .form__contacts {
   display: flex;
   flex-direction: column;
-
   margin: 0;
-  padding: 0;
-  padding-top: 15px;
-  padding-bottom: 55px;
-
+  padding: 15px 0 55px 0;
   list-style: none;
 
   @media (min-width: $tablet) {
     padding: 45px 60px 35px 60px;
     margin-bottom: 65px;
-
     border: 2px solid $gray-light;
   }
 
@@ -429,22 +418,27 @@ textarea {
 .form__contacts .form__text-field {
   position: relative;
 
-  @media (min-width: $tablet) {
-    &:after {
-      content: "";
-      position: absolute;
-      top: 20px;
-      right: 20px;
-
-      width: 26px;
-      height: 26px;
-
-      background: olive;
-    }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
   }
 }
 
-// checkbox (app - block)
+@media (min-width: $tablet) {
+  .form__contacts .form__block:first-child .form__text-field:after {
+    content: url("../img/icon-phone.svg");
+  }
+
+  .form__contacts .form__block:last-child .form__text-field:after {
+    content: url("../img/icon-mail.svg");
+  }
+}
+
+// radio (app - block)
 .form-item:nth-child(4) .form__inner {
   @media (min-width: $desktop) {
     width: 435px;
@@ -455,15 +449,12 @@ textarea {
 .form__travelapp {
   display: flex;
   flex-direction: column;
-
   margin: 0;
   padding: 0;
-
   list-style: none;
 
   @media (min-width: $tablet) {
     padding: 50px 60px 36px 60px;
-
     border: 2px solid $gray-light;
   }
 
@@ -479,18 +470,15 @@ textarea {
 // radio buttons
 .form__radio {
   display: none;
-
   margin-right: 30px;
 
   &:checked + .form__field-name:after {
-
     opacity: 1;
   }
 }
 
 .form__field-name {
   position: relative;
-
   padding: 3px 0 0 60px;
 
   &:before {
@@ -498,10 +486,8 @@ textarea {
     position: absolute;
     top: 0;
     left: 0;
-
     width: 40px;
     height: 40px;
-
     border: 2px solid $gray-light;
     border-radius: 100%;
     cursor: pointer;
@@ -512,22 +498,19 @@ textarea {
     position: absolute;
     top: 12px;
     left: 12px;
-
     width: 16px;
     height: 16px;
-
     border-radius: 100%;
     background: red;
     opacity: 0;
-    transition: .3s ease;
+    transition: 0.3s ease;
   }
 }
 
-// comment block
+// textarea (comment block)
 .form__textarea-wrapper {
   @media (min-width: $tablet) {
     padding: 45px 60px;
-
     border: 2px solid $gray-light;
   }
 }
@@ -545,7 +528,6 @@ textarea {
   width: 280px;
   height: 200px;
   padding: 10px;
-
   font-size: 18px;
 
   @media (min-width: $tablet) {
@@ -560,6 +542,7 @@ textarea {
   }
 }
 
+// Send form block
 .form__submit-wrapper {
   padding-top: 10px;
 
@@ -579,15 +562,26 @@ textarea {
   width: 100%;
   margin: 55px 0 20px 0;
   padding: 15px 0;
-
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-
   background: $green-btn;
   color: $body-bg;
   border: 1px solid $green-btn;
   border-radius: 3px;
+
+  &:hover {
+    background-color: $green-hvr;
+  }
+
+  &:active {
+    color: #7dbd99;
+  }
+
+  &[disabled] {
+    background-color: $gray-light;
+    border-color: $gray-light;
+  }
 
   @media (min-width: $tablet) {
     width: 300px;
@@ -604,7 +598,7 @@ textarea {
 }
 
 .form__required {
-text-transform: uppercase;
+  text-transform: uppercase;
   text-align: center;
 }
 

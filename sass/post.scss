@@ -1,6 +1,4 @@
-.post {
-
-}
+.post {}
 
 .post__inner {
   @include container;
@@ -9,18 +7,16 @@
 .post__title {
   margin: 0;
   padding: 40px 18px;
-
   font: normal 14px/30px "OpenSans", sans-serif;
   text-align: center;
 
   @media (min-width: $tablet) {
-    padding: 97px 90px 67px 90px;
-
+    padding: 97px 90px 67px;
     font-size: 18px;
   }
 
   @media (min-width: $desktop) {
-    padding: 97px 180px 80px 180px;
+    padding: 97px 180px 80px;
   }
 }
 
@@ -39,7 +35,6 @@
 
 .post__of-day .post__img-wrapper {
   position: relative;
-
   display: block;
   width: 100%;
   height: 135px;
@@ -57,16 +52,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
   min-width: 100%;
   min-height: 100%;
-
   transform: translate(-50%, -50%);
 }
 
 .post__of-day .post__inner {
   position: relative;
-
   background: $gray-bg;
 }
 
@@ -75,26 +67,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 0;
   padding: 0;
-
   list-style: none;
 
- @media (min-width: $tablet) {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
- }
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 .post__item {
   position: relative;
-
   width: 280px;
   margin-bottom: 10px;
-
   background: $gray-bg;
 
   @media (min-width: $tablet) {
@@ -111,10 +99,8 @@
 
 .post__img-wrapper {
   position: relative;
-
   display: block;
   height: 180px;
-
   overflow: hidden;
 
   @media (min-width: $tablet) {
@@ -130,16 +116,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
   min-width: 100%;
   min-height: 100%;
-
   transform: translate(-50%, -50%);
 }
 
 .post__description {
   padding: 20px 0 10px 20px;
-
   font: normal 14px/24px "OpenSans", sans-serif;
 
   @media (min-width: $tablet) {
@@ -160,19 +143,15 @@
   display: flex;
   align-items: center;
   padding-bottom: 25px;
-
   cursor: default;
-
   font: normal 12px/24px "OpenSans", sans-serif;
   text-decoration: none;
-
   color: $pink-color;
 
   @media (min-width: $tablet) {
     position: absolute;
     bottom: 22px;
     left: 0;
-
     justify-content: space-between;
     width: 100%;
     padding: 0 30px;
@@ -183,13 +162,12 @@
   }
 }
 
-.post__like i {
+.post__like svg {
   width: 15px;
   height: 15px;
   margin: 0 20px;
-
-  background: olive;
   cursor: pointer;
+  fill: $pink-color;
 
   @media (min-width: $tablet) {
     margin: 0;
@@ -211,7 +189,6 @@
     position: absolute;
     bottom: 73px;
     left: 443px;
-
     width: 175px;
   }
 
@@ -227,7 +204,9 @@
   }
 }
 
-.post__of-day .post__like i {
+.post__of-day .post__like svg {
+  fill: $pink-color;
+
   @media (min-width: $tablet) {
     margin-left: 15px;
   }

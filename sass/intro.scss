@@ -1,11 +1,10 @@
 .intro {
   position: relative;
-
   display: none;
 
   @media (min-width: $tablet) {
     display: block;
-    padding: 60px 0 85px 0;
+    padding: 60px 0 85px;
   }
 
   @media (min-width: $desktop) {
@@ -28,12 +27,35 @@
 // picture "Clock"
 .intro__img-wrapper {
   position: relative;
-
   display: block;
   width: 240px;
   height: 280px;
-
   overflow: hidden;
+
+// circle
+  &:after {
+    content: "24";
+    position: absolute;
+    top: 59px;
+    left: 20px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    font: bold 120px/186px "OpenSans", sans-serif;
+    text-align: center;
+    color: $pink-color;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 14px $pink-color;
+
+    @media (min-width: $desktop) {
+      top: 69px;
+      left: 23px;
+      width: 255px;
+      height: 255px;
+      line-height: 240px;
+      box-shadow: inset 0 0 0 17px $pink-color;
+    }
+  }
 
   @media (min-width: $desktop) {
     width: 300px;
@@ -46,10 +68,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-
     min-width: 100%;
     min-height: 100%;
-
+    fill: #dedede;
     transform: translate(-50%, -50%);
   }
 }
@@ -64,7 +85,6 @@
 
   @media (min-width: $desktop) {
     width: 570px;
-
     font-size: 18px;
     line-height: 30px;
   }
@@ -73,14 +93,12 @@
 .intro__title {
   width: 170px;
   margin: 0;
-
   font: bold 30px/36px "OpenSans", sans-serif;
   text-align: left;
 
   @media (min-width: $desktop) {
     width: 100%;
     padding-top: 35px;
-
     line-height: 30px;
   }
 }
@@ -91,13 +109,20 @@
 
 .intro__description {
   margin: 0;
-  padding: 15px 0 5px 0;
-
+  padding: 15px 0 5px;
   @media (min-width: $desktop) {
-    padding: 20px 0 30px 0;
+    padding: 20px 0 30px;
   }
 }
 
 .intro__href {
   color: $pink-color;
+
+  &:hover {
+    color: $blue-color;
+  }
+
+  &:active {
+    color: #ced0d2;
+  }
 }
