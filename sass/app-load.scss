@@ -13,6 +13,7 @@
 
   @media (min-width: $tablet) {
     @include container;
+    min-height: 618px;
   }
 }
 

@@ -36,15 +36,6 @@
   }
 }
 
-// показывать или нет на мобайл (?)
-.price__list li:not(:nth-child(2)) {
-  // display: none;
-
-  @media (min-width: $tablet) {
-    // display: block;
-  }
-}
-
 // moving table column
 .price__item:first-child {
   display: none;
@@ -63,6 +54,7 @@
 .price__item:first-child .price__field {
   justify-content: flex-start;
   padding-left: 15px;
+  text-transform: none;
 }
 
 .price__item:first-child .price__field:first-child {
@@ -75,16 +67,13 @@
   flex-direction: column;
   align-items: center;
   width: 275px;
-  // min-height: 275px;
 
   @media (min-width: $tablet) {
     width: 150px;
-    // min-height: 220px;
   }
 
   @media (min-width: $desktop) {
     width: 235px;
-    // height: 280px;
   }
 }
 
