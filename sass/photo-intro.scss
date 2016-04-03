@@ -5,27 +5,40 @@
   justify-content: center;
   min-height: 240px;
   padding-top: 65px;
-  background: url("../img/bg-back-mobile.jpg") 50% 50% no-repeat;
-  background-size: cover;
+}
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 1400px auto;
+// bg for mobile
+@media (max-width: $mobile) {
+  .photo-intro {
+    background: url("../img/bg-back-mobile.jpg") 50% 50% no-repeat;
+    background-size: cover;
   }
+}
 
-  // for tablet
-  @media (min-width: $tablet) {
+@media (max-width: $mobile) and (min-resolution: 144dpi), (max-width: $mobile) and (min-resolution: 1.5dppx) {
+  .photo-intro {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+}
+
+// bg for tablet
+@media (min-width: $tablet) {
+  .photo-intro {
     padding-top: 110px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: cover;
   }
+}
 
-  @media (min-width: $tablet) and (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (min-width: $tablet) and (min-resolution: 144dpi), (min-width: $tablet) and (min-resolution: 1.5dppx) {
+  .photo-intro {
     background-image: url("../img/bg-back-tablet@2x.jpg");
-    background-size: 2400px auto;
   }
+}
 
-  // for desktop
-  @media (min-width: $desktop) {
+// bg for desktop
+@media (min-width: $desktop) {
+  .photo-intro {
     background-image: url("../img/bg-back-desktop.jpg");
     background-size: cover;
   }
@@ -46,7 +59,7 @@
     padding: 75px 0 140px;
     font-size: 50px;
   }
-
+  
   @media (min-width: $desktop) {
     width: 370px;
     margin: 0 auto;
