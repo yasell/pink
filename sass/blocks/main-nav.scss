@@ -128,5 +128,12 @@
 }
 
 .without-js .main-nav {
-  transform: translate(0,0);
+  @media (max-width: $desktop) {
+    position: static;
+    width: 150%;
+    padding-top: 260px;
+    margin-left: -200px;
+    margin-right: -50px;
+    transform: translate(0,0);
+  }
 }
