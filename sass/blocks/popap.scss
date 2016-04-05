@@ -11,11 +11,9 @@
   right: 0;
   margin: auto;
   background: $body-bg;
-
   @media (min-width: $tablet) {
     width: 460px;
   }
-
   @media (min-width: $desktop) {
     top: 40%;
   }
@@ -29,11 +27,9 @@
   right: 0;
   margin: auto;
   background: $body-bg;
-
   @media (min-width: $tablet) {
     width: 460px;
   }
-
   @media (min-width: $desktop) {
     top: 63%;
     width: 780px;
@@ -42,7 +38,6 @@
 
 .popap__inner {
   @include container;
-
   @media (min-width: $tablet) {
     width: 300px;
   }
@@ -52,17 +47,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media (min-width: $tablet) {
-
-  }
+  @media (min-width: $tablet) {}
 }
 
 .popap__title {
-  padding: 45px 0 35px 0;
-  font: bold 18px/24px "OpenSans", sans-serif;
+  padding: 45px 0 35px;
+  font: bold 18px/24px "OpenSans", "Arial", sans-serif;
   text-align: center;
-
   @media (min-width: $tablet) {
     font-size: 30px;
     line-height: 40px;
@@ -70,17 +61,16 @@
 }
 
 .popap__content {
-  padding: 0 0 35px 0;
-  font: normal 14px/24px "OpenSans", sans-serif;
+  padding: 0 0 35px;
+  font: normal 14px/24px "OpenSans", "Arial", sans-serif;
   text-align: center;
-
   @media (min-width: $tablet) {
     font-size: 18px;
   }
 }
 
 .popap__submit {
-  padding: 50px 0 50px 0;
+  padding: 50px 0;
   background: $gray-bg;
 }
 
@@ -89,7 +79,7 @@
   width: 280px;
   margin: 0 auto;
   padding: 20px 0;
-  font: bold 18px/30px "OpenSans", sans-serif;
+  font: bold 18px/30px "OpenSans", "Arial", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -115,7 +105,6 @@
   @media (min-width: $tablet) {
     width: 300px;
   }
-
   @media (min-width: $desktop) {
     width: 460px;
   }

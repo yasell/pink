@@ -5,10 +5,9 @@
 
 .form__title {
   margin: 0;
-  padding: 45px 0 16px 0;
-  font: normal 14px/30px "OpenSans", sans-serif;
+  padding: 45px 0 16px;
+  font: normal 14px/30px "OpenSans", "Arial", sans-serif;
   text-align: center;
-
   @media (min-width: $tablet) {
     width: 500px;
     margin: 0 auto;
@@ -16,7 +15,6 @@
     padding-bottom: 12px;
     font-size: 18px;
   }
-
   @media (min-width: $desktop) {
     width: 800px;
     padding-bottom: 35px;
@@ -25,7 +23,6 @@
 
 .form__title-hidden {
   display: none;
-
   @media (min-width: $tablet) {
     display: inline;
   }
@@ -33,8 +30,8 @@
 
 // form - common styles
 .form__list input[type="text"],
-input[type="tel"],
 input[type="email"],
+input[type="tel"],
 textarea {
   border: 2px solid $gray-light;
 
@@ -65,7 +62,6 @@ textarea {
     display: flex;
     flex-direction: column;
   }
-
   @media (min-width: $desktop) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -76,9 +72,8 @@ textarea {
 
 .form__item {
   width: 100%;
-  font: normal 14px/30px "OpenSans", sans-serif;
+  font: normal 14px/30px "OpenSans", "Arial", sans-serif;
   color: $blue-color;
-
   @media (min-width: $tablet) {
     margin-bottom: 18px;
   }
@@ -87,7 +82,6 @@ textarea {
 // background on mobile
 .form__item:nth-child(2n) {
   background: $gray-bg;
-
   @media (min-width: $tablet) {
     background: none;
   }
@@ -112,24 +106,27 @@ textarea {
     margin-top: -20px;
     margin-bottom: 72px;
   }
+  @media (min-width: $desktop) {
+    margin-bottom: 66px;
+  }
 }
 
 .form__item:nth-child(3) {
   @media (min-width: $tablet) {
     order: 2;
+    margin-bottom: 12px;
   }
 }
 
 .form__item:nth-child(4) {
   @media (min-width: $tablet) {
     order: 1;
-    margin-bottom: 65px;
+    margin-bottom: 55px;
   }
-
   @media (min-width: $desktop) {
     width: 470px;
-    margin-bottom: 35px;
-    padding-left: 35px;
+    margin-bottom: 20px;
+    padding-left: 40px;
   }
 }
 
@@ -151,9 +148,8 @@ textarea {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0 0 45px 0;
+  padding: 0 0 45px;
   list-style: none;
-
   @media (min-width: $desktop) {
     width: 435px;
   }
@@ -161,9 +157,11 @@ textarea {
 
 .form__block {
   padding-top: 18px;
-
   @media (min-width: $tablet) {
     padding-top: 50px;
+  }
+  @media (min-width: $desktop) {
+    padding-top: 47px;
   }
 }
 
@@ -179,7 +177,6 @@ textarea {
   padding-left: 20px;
   color: $pink-color;
   text-transform: uppercase;
-
   @media (min-width: $tablet) {
     padding: 0 20px 0 0;
   }
@@ -205,7 +202,6 @@ textarea {
   text-transform: uppercase;
   line-height: 1.5;
   color: $pink-color;
-
   @media (min-width: $tablet) {
     position: absolute;
     top: -15px;
@@ -220,7 +216,6 @@ textarea {
 .form__progress-part {
   @media (min-width: $desktop) {
     width: 260px;
-    margin-right: -55px;
   }
 }
 
@@ -260,32 +255,29 @@ textarea {
   margin: 0;
   padding: 0;
   list-style: none;
-
   @media (min-width: $tablet) {
     padding: 50px 0 50px 60px;
     border: 2px solid $gray-light;
   }
-
   @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: 54px 60px 15px 60px;
+    padding: 46px 0 15px 60px;
   }
 }
 
 .form__progress-part {
-  padding-bottom: 48px;
+  padding-bottom: 53px;
 }
 
 .form__progress-part:last-child {
   @media (min-width: $tablet) {
     padding-bottom: 0;
   }
-
   @media (min-width: $desktop) {
-    padding-bottom: 48px;
+    padding-bottom: 52px;
   }
 }
 
@@ -298,13 +290,15 @@ textarea {
   cursor: pointer;
 
   &:hover {
-    .form__field-name:before, .form__field-square:before {
+    .form__field-name:before,
+    .form__field-square:before {
       border: 2px solid black;
     }
   }
 
   &:active {
-    .form__field-name:before, .form__field-square:before {
+    .form__field-name:before,
+    .form__field-square:before {
       border: 2px solid $pink-color;
     }
   }
@@ -322,7 +316,7 @@ textarea {
 
 .form__field-square {
   position: relative;
-  padding: 3px 0 0 60px;
+  padding: 0 0 0 60px;
   cursor: pointer;
 
   &:before {
@@ -352,29 +346,30 @@ textarea {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 15px 0 55px 0;
+  padding: 15px 0 55px;
   list-style: none;
-
   @media (min-width: $tablet) {
-    padding: 45px 60px 35px 60px;
+    padding: 45px 60px 35px;
     margin-bottom: 65px;
     border: 2px solid $gray-light;
   }
-
   @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px 60px 5px 60px;
+    padding: 37px 60px 14px;
+    margin-bottom: 77px;
   }
 }
 
 .form__contacts .form__block {
-  padding-top: 8px;
+  padding-top: 4px;
+  @media (min-width: $tablet) {
+    padding-top: 8px;
+  }
 }
 
 .form__item:nth-child(3) .form__item-intro {
   display: none;
-
   @media (min-width: $tablet) {
     display: block;
   }
@@ -384,7 +379,6 @@ textarea {
   @media (min-width: $tablet) {
     padding: 0;
   }
-
   @media (min-width: $desktop) {
     width: 375px;
   }
@@ -394,7 +388,6 @@ textarea {
   @media (min-width: $tablet) {
     padding-bottom: 18px;
   }
-
   @media (min-width: $desktop) {
     padding: 0;
   }
@@ -452,19 +445,17 @@ textarea {
   margin: 0;
   padding: 0;
   list-style: none;
-
   @media (min-width: $tablet) {
-    padding: 50px 60px 36px 60px;
+    padding: 50px 60px 36px;
     border: 2px solid $gray-light;
   }
-
   @media (min-width: $desktop) {
-    padding-left: 70px;
+    padding: 50px 60px 20px 70px;
   }
 }
 
 .form__travelapp-block {
-  padding-bottom: 35px;
+  padding-bottom: 40px;
 }
 
 // radio buttons
@@ -479,7 +470,7 @@ textarea {
 
 .form__field-name {
   position: relative;
-  padding: 3px 0 0 60px;
+  padding: 3px 0 0 67px;
 
   &:before {
     content: "";
@@ -505,6 +496,10 @@ textarea {
     opacity: 0;
     transition: 0.3s ease;
   }
+
+  @media (min-width: $tablet) {
+    padding: 3px 0 0 60px;
+  }
 }
 
 // textarea (comment block)
@@ -513,11 +508,13 @@ textarea {
     padding: 45px 60px;
     border: 2px solid $gray-light;
   }
+  @media (min-width: $desktop) {
+    padding: 40px 60px;
+  }
 }
 
 .form__textarea-wrapper .form__item-intro {
-  padding: 72px 0 12px 0;
-
+  padding: 65px 0 12px;
   @media (min-width: $tablet) {
     padding: 0 35px;
   }
@@ -529,12 +526,10 @@ textarea {
   height: 200px;
   padding: 10px;
   font-size: 18px;
-
   @media (min-width: $tablet) {
     width: 500px;
     height: 195px;
   }
-
   @media (min-width: $desktop) {
     width: 820px;
     height: 125px;
@@ -544,23 +539,20 @@ textarea {
 
 // Send form block
 .form__submit-wrapper {
-  padding-top: 10px;
-
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 70px 0 30px 0;
+    padding: 70px 0 30px;
   }
-
   @media (min-width: $desktop) {
-    padding: 60px 0 15px 0;
+    padding: 72px 0 15px;
   }
 }
 
 .form__submit {
   width: 100%;
-  margin: 55px 0 20px 0;
+  margin: 55px 0 20px;
   padding: 15px 0;
   font-size: 18px;
   font-weight: bold;
@@ -591,7 +583,6 @@ textarea {
 
 .form__submit-words {
   display: none;
-
   @media (min-width: $desktop) {
     display: inline;
   }

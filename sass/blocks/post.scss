@@ -7,14 +7,12 @@
 .post__title {
   margin: 0;
   padding: 40px 18px;
-  font: normal 14px/30px "OpenSans", sans-serif;
+  font: normal 14px/30px "OpenSans", "Arial", sans-serif;
   text-align: center;
-
   @media (min-width: $tablet) {
     padding: 97px 90px 67px;
     font-size: 18px;
   }
-
   @media (min-width: $desktop) {
     padding: 97px 180px 80px;
   }
@@ -27,9 +25,11 @@
   align-items: center;
   margin-bottom: 15px;
   padding-top: 10px;
-
   @media (min-width: $tablet) {
     margin-bottom: 46px;
+  }
+  @media (min-width: $desktop) {
+    margin-bottom: 50px;
   }
 }
 
@@ -38,11 +38,9 @@
   display: block;
   width: 100%;
   height: 135px;
-
   @media (min-width: $tablet) {
-    height: 510px;
+    height: 508px;
   }
-
   @media (min-width: $desktop) {
     height: 500px;
   }
@@ -71,14 +69,16 @@
   width: 140px;
   height: 36px;
   padding: 7px 0;
-  font: bold 12px/24px "OpenSans", sans-serif;
+  font: bold 12px/24px "OpenSans", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
   background: $pink-color;
   color: white;
-
   @media (min-width: $tablet) {
     top: -455px;
+  }
+  @media (min-width: $desktop) {
+    top: -448px;
   }
 }
 
@@ -90,7 +90,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
   @media (min-width: $tablet) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -102,15 +101,13 @@
 .post__item {
   position: relative;
   width: 280px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   background: $gray-bg;
-
   @media (min-width: $tablet) {
     width: 300px;
     height: 455px;
     margin-bottom: 22px;
   }
-
   @media (min-width: $desktop) {
     height: 555px;
     margin-bottom: 58px;
@@ -122,11 +119,9 @@
   display: block;
   height: 180px;
   overflow: hidden;
-
   @media (min-width: $tablet) {
     height: 300px;
   }
-
   @media (min-width: $desktop) {
     height: 400px;
   }
@@ -143,8 +138,7 @@
 
 .post__description {
   padding: 20px 0 10px 20px;
-  font: normal 14px/24px "OpenSans", sans-serif;
-
+  font: normal 14px/24px "OpenSans", "Arial", sans-serif;
   @media (min-width: $tablet) {
     padding: 25px 30px;
   }
@@ -164,21 +158,20 @@
   align-items: center;
   padding-bottom: 25px;
   cursor: default;
-  font: normal 12px/24px "OpenSans", sans-serif;
+  font: normal 12px/24px "OpenSans", "Arial", sans-serif;
   text-decoration: none;
   color: $pink-color;
-
   @media (min-width: $tablet) {
     position: absolute;
     bottom: 22px;
     left: 0;
     justify-content: space-between;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 26px 0 30px;
   }
-
   @media (min-width: $desktop) {
     bottom: 25px;
+    padding: 0 32px 0 25px;
   }
 }
 
@@ -188,7 +181,6 @@
   margin: 0 20px;
   cursor: pointer;
   fill: $pink-color;
-
   @media (min-width: $tablet) {
     margin: 0;
   }
@@ -204,14 +196,12 @@
 .post__of-day .post__like {
   display: flex;
   align-items: center;
-
   @media (min-width: $tablet) {
     position: absolute;
     bottom: 73px;
     left: 443px;
     width: 175px;
   }
-
   @media (min-width: $desktop) {
     bottom: 50px;
     left: 765px;
@@ -226,7 +216,6 @@
 
 .post__of-day .post__like svg {
   fill: $pink-color;
-
   @media (min-width: $tablet) {
     margin-left: 15px;
   }

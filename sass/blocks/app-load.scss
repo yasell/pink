@@ -10,28 +10,30 @@
   flex-direction: column-reverse;
   justify-content: center;
   min-height: 665px;
-
   @media (min-width: $tablet) {
-    @include container;
+    width: 620px;
     min-height: 618px;
+    margin: 0 auto;
+  }
+  @media (min-width: $desktop) {
+    width: 940px;
   }
 }
 
 // bg for mobile
 @media (max-width: $mobile) {
   .app-load {
-    background: url("../img/bg-back-mobile.jpg") 50% 50% no-repeat;
-    background-size: cover;
+    background: url("../img/bg-back-mobile.jpg") 50% 0 no-repeat;
   }
 
   .app-load__inner {
-    background: url("../img/iphone-hand-mobile.png") 50% 30% no-repeat;
+    background: url("../img/iphone-hand-mobile.png") -8% 28% no-repeat;
   }
 }
-
 @media (max-width: $mobile) and (min-resolution: 144dpi), (max-width: $mobile) and (min-resolution: 1.5dppx) {
   .app-load {
     background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 700px auto;
   }
 
   .app-load__inner {
@@ -45,17 +47,17 @@
   .app-load {
     padding-top: 110px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-size: cover;
+    background-position: -256px 50%;
   }
 
   .app-load__inner {
     background: url("../img/iphone-hand-tablet@1x.png") 50% 100% no-repeat;
   }
 }
-
 @media (min-width: $tablet) and (min-resolution: 144dpi), (min-width: $tablet) and (min-resolution: 1.5dppx) {
   .app-load {
     background-image: url("../img/bg-back-tablet@2x.jpg");
+    background-size: 1200px auto;
   }
 
   .app-load__inner {
@@ -68,15 +70,18 @@
 @media (min-width: $desktop) {
   .app-load {
     background-image: url("../img/bg-back-desktop.jpg");
-    background-size: cover;
+    background-position: -600px 50%;
   }
 
   .app-load__inner {
     background: url("../img/iphone-hand-desktop@1x.png") 0 100% no-repeat;
   }
 }
-
 @media (min-width: $desktop) and (min-resolution: 144dpi), (min-width: $desktop) and (min-resolution: 1.5dppx) {
+  .app-load {
+    background-position: 50% 50%;
+    background-size: auto;
+  }
   .app-load__inner {
     background-image: url("../img/iphone-hand-desktop@2x.png");
     background-size: 1050px auto;
@@ -87,14 +92,12 @@
   width: 100%;
   margin-top: auto;
   background-color: $intro-bg;
-
   @media (min-width: $tablet) {
     width: 300px;
     margin: 0;
-    padding: 100px 0 80px;
+    padding: 48px 0 80px;
     background: none;
   }
-
   @media (min-width: $desktop) {
     padding: 120px 0 90px;
   }
@@ -103,17 +106,17 @@
 .app-load__title {
   display: none;
   margin: 0;
-  font: 200 40px/0.9 "OpenSans", sans-serif;
+  font: 200 40px "OpenSans", "Arial", sans-serif;
   font-style: normal;
   text-align: center;
   color: #fff;
-
   @media (min-width: $tablet) {
     display: block;
-    font-size: 50px;
+    padding: 20px 30px 0 30px;
   }
-
   @media (min-width: $desktop) {
+    padding-top: 0;
+    font-size: 50px;
     line-height: 1.1;
   }
 }
@@ -121,10 +124,9 @@
 .app-load__main-btn {
   display: block;
   width: 280px;
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 30px auto 0;
   padding: 15px 0;
-  font: 700 18px/18px "OpenSans", sans-serif;
+  font: 700 18px/18px "OpenSans", "Arial", sans-serif;
   text-align: center;
   text-decoration: none;
   color: #fff;
@@ -139,16 +141,13 @@
   &:active {
     color: #f2ced5;
   }
-
   @media (min-width: $tablet) {
     width: 100%;
-
     margin-top: 35px;
-    font-size: 21px;
   }
-
   @media (min-width: $desktop) {
     margin-top: 55px;
+    font-size: 21px;
   }
 }
 
@@ -159,63 +158,63 @@
   margin: 0 auto;
   padding: 0 20px;
   list-style: none;
-
   @media (min-width: $tablet) {
     width: 100%;
+    padding: 0 40px;
   }
 }
 
 .app-load__item {
   display: inline-block;
   padding-top: 40px;
-
-  @media (min-width: $tablet) {
-    padding-top: 55px;
+  &:nth-child(2) {
+    padding-left: 30px;
+    padding-right: 30px;
   }
-
+  @media (min-width: $tablet) {
+    padding-top: 50px;
+  }
   @media (min-width: $desktop) {
-    padding-top: 80px;
+    padding-top: 72px;
   }
 }
 
 .app-load__link {
   display: block;
   width: 50px;
-  height: 50px;
+  height: 55px;
   font-size: 0;
   text-decoration: none;
 }
 
 .app-load__link--apple {
   background: url("../img/logo-apple.svg") 50% 50% no-repeat;
-  background-size: 50px 50px;
+  background-size: 50px 55px;
 }
 
 .app-load__link--android {
   background: url("../img/logo-android.svg") 50% 50% no-repeat;
-  background-size: 50px 50px;
+  background-size: 50px 45px;
 }
 
 .app-load__link--wind {
   background: url("../img/logo-microsoft.svg") 50% 50% no-repeat;
-  background-size: 50px 50px;
+  background-size: 50px 45px;
 }
 
 .app-load__brief {
   width: 240px;
   margin: 0 auto;
   padding: 20px 0 30px;
-  font: 200 14px/24px "OpenSans", sans-serif;
+  font: 200 14px/24px "OpenSans", "Arial", sans-serif;
   font-style: normal;
   text-align: center;
   color: #fff;
-
   @media (min-width: $tablet) {
     width: 100%;
     padding-top: 30px;
     font-size: 18px;
   }
-
   @media (min-width: $desktop) {
     padding-top: 50px;
   }

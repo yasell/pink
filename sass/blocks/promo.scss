@@ -7,12 +7,10 @@
   flex-direction: column;
   align-items: center;
   @include container;
-
   @media (min-width: $tablet) {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-
   @media (min-width: $desktop) {
     flex-direction: row;
     align-items: flex-end;
@@ -23,16 +21,15 @@
 .promo__title {
   margin: 0;
   padding: 40px 0 0;
-  font: 200 24px "OpenSans", sans-serif;
+  font: 100 24px "OpenSans", "Arial", sans-serif;
   font-style: normal;
   text-align: center;
-
   @media (min-width: $tablet) {
     margin: 0 auto;
-    padding-top: 50px;
+    padding: 50px 0 20px 0;
     font-size: 40px;
+    line-height: 1.2;
   }
-
   @media (min-width: $desktop) {
     padding: 68px 0 20px;
     font-size: 50px;
@@ -42,7 +39,6 @@
 .promo__half-title {
   display: block;
   padding-bottom: 20px;
-
   @media (min-width: $tablet) {
     padding: 0;
   }
@@ -50,12 +46,10 @@
 
 .promo__half-title:last-child {
   padding: 0 0 30px;
-
   @media (min-width: $tablet) {
     width: 350px;
     margin: 0 auto;
   }
-
   @media (min-width: $desktop) {
     width: 440px;
   }
@@ -63,7 +57,7 @@
 
 // block content - 3 items
 .promo__wrapper {
-  background: url(../img/bg-triangle-white.svg) center top no-repeat $gray-bg;
+  background: url("../img/bg-triangle-white.svg") center top no-repeat $gray-bg;
   background-size: 100% auto;
 }
 
@@ -71,14 +65,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 10px 0;
-  padding: 80px 0 0 0;
+  margin: 0;
+  padding: 80px 0 0;
   list-style: none;
-
   @media (min-width: $tablet) {
     width: 320px;
   }
-
   @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
@@ -92,16 +84,14 @@
   position: relative;
   padding-bottom: 40px;
   text-align: center;
-
   @media (min-width: $tablet) {
     text-align: left;
     padding-left: 10px;
   }
-
   @media (min-width: $desktop) {
     display: block;
     width: 265px;
-    padding-top: 370px;
+    padding: 388px 0 40px 0;
     text-align: center;
   }
 }
@@ -109,8 +99,7 @@
 // content title
 .promo__item-title {
   padding-bottom: 20px;
-  font: 700 18px/10px "OpenSans", sans-serif;
-
+  font: 700 18px/10px "OpenSans", "Arial", sans-serif;
   @media (min-width: $desktop) {
     font-size: 30px;
     line-height: 30px;
@@ -119,8 +108,7 @@
 
 // blocks content
 .promo__item-content {
-  font: 400 14px/24px "OpenSans", sans-serif;
-
+  font: 400 14px/24px "OpenSans", "Arial", sans-serif;
   @media (min-width: $desktop) {
     font-size: 18px;
     line-height: 30px;
@@ -134,12 +122,10 @@
   width: 160px;
   height: 285px;
   overflow: hidden;
-
   @media (min-width: $tablet) {
     width: 270px;
     height: 485px;
   }
-
   @media (min-width: $desktop) {
     display: none;
   }
@@ -152,11 +138,9 @@
   min-width: 100%;
   min-height: 100%;
   transform: translate(-50%, -44%);
-
   @media (min-width: $tablet) {
     transform: translate(-50%, -50%);
   }
-
   @media (min-width: $desktop) {
     display: none;
   }
@@ -170,21 +154,22 @@
 @media (min-width: $desktop) {
   .promo__main-img {
     position: absolute;
-    top: 8px;
+    top: 32px;
     left: 0;
     display: block;
-    width: 265px;
+    width: 292px;
     height: 300px;
   }
 
   .promo__item:first-child {
     padding-left: 20px;
-    .promo__main-img {
-      left: 18px;
-    }
   }
 
   .promo__item:last-child {
-    padding-right: 20px;
+    padding-right: 30px;
+
+    .promo__main-img {
+      left: -24px;
+    }
   }
 }

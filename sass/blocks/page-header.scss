@@ -10,11 +10,9 @@
   body.menu-open & {
     background: $intro-bg;
   }
-
   @media (min-width: $tablet) {
     height: 110px;
   }
-
   @media (min-width: $desktop) {
     body.menu-open & {
       background: $header-bg;
@@ -33,36 +31,42 @@
 .page-header__logo {
   z-index: 200;
   margin: 0;
+  @media (min-width: $tablet) {
+    padding-bottom: 15px;
+  }
 }
 
 .page-header__logo-link {
   &:hover {
     .page-header__logo-svg {
-      .text path, .glass path {
+      .glass path,
+      .text path {
         fill: $pink-color;
       }
     }
   }
   &:active {
     .page-header__logo-svg {
-      .text path, .glass path {
+      .glass path,
+      .text path {
         fill: white;
       }
     }
   }
 }
 
-.page-header__logo-svg .star, .glass {
+.glass,
+.page-header__logo-svg .star {
   display: none;
 }
 
 .page-header__logo-svg {
   position: relative;
-  top:-5px;
+  top: -5px;
   left: -70px;
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
@@ -84,12 +88,17 @@
 
 // trigger
 .page-header__trigger {
+  position: absolute;
+  top: 19px;
+  right: 5%;
   z-index: 200;
   width: 50px;
   height: 25px;
   color: transparent;
   cursor: pointer;
-
+  @media (min-width: $tablet) {
+    top: 45px;
+  }
   @media (min-width: $desktop) {
     display: none;
   }
@@ -101,7 +110,6 @@
     height: 4px;
     background-color: white;
     transition: all 0.3s ease-in-out;
-
   }
 
   &:after {
@@ -129,9 +137,6 @@
     transform: rotate(180deg);
     transform: translate(100%, 0);
   }
-  // body.menu-open &:active {
-  //   opacity: 0;
-  // }
 }
 
 .menu-open .page-header__trigger {
@@ -150,18 +155,32 @@
 
 .page-header__trigger {
   &:hover {
-    .page-header__trigger-decor,
     &:before,
-    &:after {
+    &:after,
+    .page-header__trigger-decor {
       background-color: $pink-color;
     }
   }
 
   &:active {
-    .page-header__trigger-decor,
-    &:before,
-    &:after {
-      opacity: .3;
+     &:before,
+    &:after,
+    .page-header__trigger-decor {
+      opacity: 0.3;
     }
   }
+}
+
+.without-js .page-header {
+  background: $intro-bg;
+  @media (min-width: $tablet) {
+    height: 110px;
+  }
+  @media (min-width: $desktop) {
+    background: $header-bg;
+  }
+}
+
+.without-js .page-header__trigger {
+  display: none;
 }

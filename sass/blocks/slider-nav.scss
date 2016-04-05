@@ -7,14 +7,12 @@
 }
 
 .slider-nav__btn {
-	display: inline-block;
+  display: inline-block;
   width: 6px;
   height: 6px;
-
   background-color: #bec2c7;
   border-radius: 50%;
   box-sizing: content-box;
-
   cursor: pointer;
 
   &:hover {
@@ -28,7 +26,6 @@
 
 .slider-nav__btn-current {
   background-color: $body-bg;
-
   border: 3px solid $blue-color;
 
   &:hover {

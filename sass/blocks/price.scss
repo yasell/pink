@@ -1,11 +1,8 @@
 .price {
   position: relative;
-
   padding-top: 90px;
-
-  background: url(../img/bg-triangle-white.svg) center top no-repeat $gray-bg;
+  background: url("../img/bg-triangle-white.svg") center top no-repeat $gray-bg;
   background-size: 100% auto;
-
   @media (min-width: $desktop) {
     padding-top: 145px;
   }
@@ -15,7 +12,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   @include container;
 }
 
@@ -24,28 +20,26 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-
   margin: 0;
   padding: 0;
-
   list-style: none;
-
   @media (min-width: $tablet) {
     width: 100%;
     padding-bottom: 65px;
+  }
+  @media (min-width: $desktop) {
+    padding-bottom: 95px;
   }
 }
 
 // moving table column
 .price__item:first-child {
   display: none;
-
   @media (min-width: $tablet) {
     display: flex;
     align-items: flex-start;
     width: 155px;
   }
-
   @media (min-width: $desktop) {
     width: 235px;
   }
@@ -67,11 +61,9 @@
   flex-direction: column;
   align-items: center;
   width: 275px;
-
   @media (min-width: $tablet) {
-    width: 150px;
+    width: 155px;
   }
-
   @media (min-width: $desktop) {
     width: 235px;
   }
@@ -83,18 +75,14 @@
   align-items: center;
   width: 100%;
   height: 60px;
-
-  font: normal 14px/30px "OpenSans", sans-serif;
+  font: normal 14px/30px "OpenSans", "Arial", sans-serif;
   text-transform: uppercase;
-
   background: $body-bg;
   border: 1px solid $gray-dark;
-
   @media (min-width: $tablet) {
     justify-content: center;
-    height: 50px;
+    height: 45px;
   }
-
   @media (min-width: $desktop) {
     height: 60px;
     font-size: 18px;
@@ -107,11 +95,9 @@
   height: 100px;
   color: #fff;
   background-color: $blue-color;
-
   @media (min-width: $tablet) {
     height: 80px;
   }
-
   @media (min-width: $desktop) {
     height: 100px;
   }
@@ -129,15 +115,13 @@
     display: block;
     width: 70px;
     height: 70px;
-    background: url(../img/bg-hit.png) center no-repeat;
+    background: url("../img/bg-hit.png") center no-repeat;
     background-size: 100% auto;
     overflow: hidden;
-
     @media (min-width: $tablet) {
       width: 56px;
       height: 56px;
     }
-
     @media (min-width: $desktop) {
       width: 70px;
       height: 70px;
@@ -154,16 +138,27 @@
 }
 
 .price__name {
-  font: bold 18px/30px "OpenSans", sans-serif;
+  font: bold 18px/30px "OpenSans", "Arial", sans-serif;
+  @media (min-width: $tablet) {
+    font-size: 16px;
+  }
+  @media (min-width: $desktop) {
+    font-size: 18px;
+  }
 }
 
 .price__cost {
-  font: 200 24px/30px "OpenSans", sans-serif;
+  font: 200 24px/30px "OpenSans", "Arial", sans-serif;
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
+  @media (min-width: $desktop) {
+    font-size: 24px;
+  }
 }
 
 .price__field-name {
   padding-left: 20px;
-
   @media (min-width: $tablet) {
     display: none;
   }
@@ -173,10 +168,8 @@
 .price__marker {
   width: 30px;
   height: 28px;
-  margin-right: 28px;
-
+  margin-right: 15px;
   font-size: 0;
-
   @media (min-width: $tablet) {
     margin: 0;
   }

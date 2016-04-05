@@ -9,14 +9,13 @@
 // bg for mobile
 @media (max-width: $mobile) {
   .form-intro {
-    background: url("../img/bg-back-mobile.jpg") 50% 50% no-repeat;
-    background-size: cover;
+    background: url("../img/bg-back-mobile.jpg") 50% 0 no-repeat;
   }
 }
-
 @media (max-width: $mobile) and (min-resolution: 144dpi), (max-width: $mobile) and (min-resolution: 1.5dppx) {
   .form-intro {
     background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 700px auto;
   }
 }
 
@@ -24,14 +23,13 @@
 @media (min-width: $tablet) {
   .form-intro {
     padding-top: 110px;
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-size: cover;
+    background: url("../img/bg-back-tablet@1x.jpg") 50% 0 no-repeat;
   }
 }
-
 @media (min-width: $tablet) and (min-resolution: 144dpi), (min-width: $tablet) and (min-resolution: 1.5dppx) {
   .form-intro {
     background-image: url("../img/bg-back-tablet@2x.jpg");
+    background-size: 1200px auto;
   }
 }
 
@@ -39,7 +37,6 @@
 @media (min-width: $desktop) {
   .form-intro {
     background-image: url("../img/bg-back-desktop.jpg");
-    background-size: cover;
   }
 }
 
@@ -50,15 +47,13 @@
 .form-intro__title {
   margin: 0;
   padding: 30px 0 56px;
-  font: 200 24px/1.2 "OpenSans", sans-serif;
+  font: 200 24px/1.2 "OpenSans", "Arial", sans-serif;
   text-align: center;
   color: #fff;
-
   @media (min-width: $tablet) {
-    padding: 75px 0;
+    padding: 72px 0;
     font-size: 50px;
   }
-
   @media (min-width: $desktop) {
     padding: 65px 0 95px;
   }

@@ -8,15 +8,13 @@
   margin: 0;
   padding-top: 30px;
   padding-bottom: 50px;
-  font: normal 14px/30px "OpenSans", sans-serif;
+  font: normal 14px/30px "OpenSans", "Arial", sans-serif;
   text-align: center;
-
   @media (min-width: $tablet) {
     padding-top: 40px;
     padding-bottom: 70px;
     font-size: 18px;
   }
-
   @media (min-width: $desktop) {
     padding: 0 0 68px;
   }
@@ -24,9 +22,8 @@
 
 .upload__wrapper {
   background: $gray-bg;
-
   @media (min-width: $desktop) {
-    @include container;
+     @include container;
   }
 }
 
@@ -35,7 +32,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
@@ -49,17 +45,15 @@
 .upload__foto {
   position: relative;
   display: block;
-  margin: 20px 0;
+  margin: 10px 0 22px 0;
   width: 100%;
   height: 375px;
   overflow: hidden;
-
   @media (min-width: $tablet) {
     width: 300px;
     height: 400px;
     margin: 55px 0;
   }
-
   @media (min-width: $desktop) {
     margin-left: 80px;
   }
@@ -77,14 +71,16 @@
 // edit tools
 .upload__tools {
   width: 100%;
-
   @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 275px;
+    min-height: 400px;
   }
-
   @media (min-width: $desktop) {
     width: 410px;
-    margin-right: 60px;
+    margin-right: 64px;
   }
 }
 
@@ -107,30 +103,32 @@
     margin-left: -2500px;
     background: #dddfe0;
   }
-
   @media (min-width: $tablet) {
     flex-direction: column;
-    padding: 10px 0;
+    padding: 0 18px 0 0;
+    margin-top: -11px;
 
     &:before {
       display: none;
     }
   }
+  @media (min-width: $desktop) {
+    padding: 0 26px 0 0;
+    margin-top: -15px;
+  }
 }
 
 .upload__tool-item {
   position: relative;
-
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11px 0;
+    padding: 12px 0 12px 0;
     border-bottom: 1px solid #dddfe0;
   }
-
   @media (min-width: $desktop) {
-    // width: 410px;
+    padding: 12px 0 12px 0;
   }
 }
 
@@ -148,13 +146,11 @@
   &:hover {
     fill: #8d949b;
   }
-
   @media (min-width: $tablet) {
     width: 25px;
     height: 25px;
     margin: 0;
   }
-
   @media (min-width: $desktop) {
     width: 50px;
     height: 50px;
@@ -162,7 +158,18 @@
 }
 
 .upload__tool-item:last-child .upload__tool {
+  width: 50px;
+  height: 50px;
   margin: 0;
+  @media (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+  }
+  @media (min-width: $desktop) {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
 }
 
 .upload__tool--active {
@@ -180,12 +187,10 @@
   top: 60px;
   left: -10px;
   width: 240px;
-
   @media (min-width: $tablet) {
     position: static;
     width: 200px;
   }
-
   @media (min-width: $desktop) {
     width: 290px;
   }
@@ -193,7 +198,6 @@
 
 .upload__tool-item:not(:first-child) .upload__range-control {
   display: none;
-
   @media (min-width: $tablet) {
     display: block;
   }
@@ -207,12 +211,10 @@
   padding-top: 20px;
   padding-bottom: 35px;
   overflow: hidden;
-
   @media (min-width: $tablet) {
     width: 200px;
     padding-bottom: 25px;
   }
-
   @media (min-width: $desktop) {
     width: 290px;
     padding: 12px 0 25px;
@@ -244,21 +246,18 @@
 .upload__tool-item:nth-child(1) .upload__range-toggle {
   top: 14px;
   left: 195px;
-
   @media (min-width: $tablet) {
-    top: 24px;
-    left: 215px;
+    top: 25px;
+    left: 202px;
   }
-
   @media (min-width: $desktop) {
-    top: 24px;
+    left: 163px;
   }
 }
 
 .upload__tool-item:nth-child(2) .upload__range-toggle {
   top: 14px;
   left: 25px;
-
   @media (min-width: $desktop) {
     top: 6px;
     left: 250px;
@@ -268,7 +267,6 @@
 .upload__tool-item:nth-child(3) .upload__range-toggle {
   top: 14px;
   left: 95px;
-
   @media (min-width: $desktop) {
     top: 7px;
     left: 160px;
@@ -281,27 +279,35 @@
   flex-direction: column;
   padding: 87px 0 20px;
   width: 100%;
-
   @media (min-width: $tablet) {
-    padding: 45px 15px 0 0;
+    padding: 43px 15px 0 0;
   }
-
   @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 126px;
+    padding: 0;
   }
 }
 
 .upload__btn {
   margin-bottom: 15px;
   padding: 15px 0;
-  font: bold 18px/18px "OpenSans", sans-serif;
+  font: bold 18px/18px "OpenSans", "Arial", sans-serif;
   color: #dddfe0;
   background: none;
   border: 3px solid #dddfe0;
   border-radius: 40px;
 
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  @media (min-width: $tablet) {
+    margin-bottom: 25px;
+  }
+  @media (min-width: $desktop) {
+    width: 185px;
+    margin: 0;
+  }
   &:hover {
     color: #cecfd1;
     border-color: $gray-dark;
@@ -309,10 +315,6 @@
 
   &:active {
     background-color: $gray-dark;
-  }
-
-  @media (min-width: $desktop) {
-    width: 185px;
   }
 }
 
