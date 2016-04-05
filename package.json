@@ -26,9 +26,6 @@
     "gulp-postcss": "6.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "2.2.0",
-    "gulp-svgmin": "^1.2.2",
-    "gulp-svgstore": "^6.0.0",
-    "svgstore": "^1.0.0"
   },
   "scripts": {
     "test": "editorconfig-tools check *",

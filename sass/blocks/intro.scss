@@ -1,21 +1,18 @@
 .intro {
   position: relative;
   display: none;
-
   @media (min-width: $tablet) {
     display: block;
     padding: 60px 0 85px;
   }
-
   @media (min-width: $desktop) {
     background: $gray-bg;
-    padding-top: 28px;
+    padding: 28px 0 70px;
   }
 }
 
 .intro__inner {
   @include container;
-
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: row;
@@ -31,8 +28,7 @@
   width: 240px;
   height: 280px;
   overflow: hidden;
-
-// circle
+  // circle
   &:after {
     content: "24";
     position: absolute;
@@ -41,12 +37,11 @@
     display: block;
     width: 200px;
     height: 200px;
-    font: bold 120px/186px "OpenSans", sans-serif;
+    font: bold 120px/186px "OpenSans", "Arial", sans-serif;
     text-align: center;
     color: $pink-color;
     border-radius: 50%;
     box-shadow: inset 0 0 0 14px $pink-color;
-
     @media (min-width: $desktop) {
       top: 69px;
       left: 23px;
@@ -56,7 +51,6 @@
       box-shadow: inset 0 0 0 17px $pink-color;
     }
   }
-
   @media (min-width: $desktop) {
     width: 300px;
     height: 345px;
@@ -77,28 +71,25 @@
 
 // content
 .intro__content {
-  font: normal 14px/24px "OpenSans", sans-serif;
-
+  font: normal 14px/24px "OpenSans", "Arial", sans-serif;
   @media (min-width: $tablet) {
     width: 310px;
   }
-
   @media (min-width: $desktop) {
-    width: 570px;
+    width: 575px;
     font-size: 18px;
     line-height: 30px;
+    padding-top: 46px;
   }
 }
 
 .intro__title {
   width: 170px;
   margin: 0;
-  font: bold 30px/36px "OpenSans", sans-serif;
+  font: bold 30px/36px "OpenSans", "Arial", sans-serif;
   text-align: left;
-
   @media (min-width: $desktop) {
     width: 100%;
-    padding-top: 35px;
     line-height: 30px;
   }
 }
@@ -111,7 +102,7 @@
   margin: 0;
   padding: 15px 0 5px;
   @media (min-width: $desktop) {
-    padding: 20px 0 30px;
+    padding: 30px 0 30px;
   }
 }
 

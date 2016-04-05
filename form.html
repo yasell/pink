@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="menu-closed" id="body">
+<body class="without-js" id="body">
 
   <!-- Document Header -->
   <header class="page-header">
@@ -84,21 +84,17 @@
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html"> Главная </a>
           </li>
-
           <li class="main-nav__item">
             <a class="main-nav__link" href="photo.html"> Фотографии </a>
           </li>
-
-          <li class="main-nav__item  main-nav__item--active">
+          <li class="main-nav__item">
             <a class="main-nav__link"> Конкурс </a>
           </li>
-
           <li class="main-nav__item">
             <a class="main-nav__link" href="#"> HTML Academy </a>
           </li>
         </ul>
       </nav>
-
     </div>
   </header>
 
@@ -119,11 +115,10 @@
 
       <!-- Just Form -->
       <form class="form__list" action="/echo" method="post">
-
+        <!-- Text-field part -->
         <div class="form__item">
           <div class="form__inner">
             <ul class="form__text">
-
               <li class="form__block">
                 <dl class="form__text-block">
                   <dt class="form__text-title"><label for="name"> Имя: </label></dt>
@@ -132,7 +127,6 @@
                   </dd>
                 </dl>
               </li>
-
               <li class="form__block">
                 <dl class="form__text-block">
                   <dt class="form__text-title"><label for="family"> Фамилия: </label></dt>
@@ -141,7 +135,6 @@
                   </dd>
                 </dl>
               </li>
-
               <li class="form__block">
                 <dl class="form__text-block">
                   <dt class="form__text-title"><label for="middle-name"> Отчество: </label></dt>
@@ -150,61 +143,52 @@
                   </dd>
                 </dl>
               </li>
-
             </ul>
           </div>
         </div>
-
+        <!-- Checkbox part -->
         <div class="form__item">
           <div class="form__inner">
             <p class="form__item-intro"> Ваши безбашенные достижения в путешествии </p>
             <ul class="form__progress">
-
               <li class="form__progress-part">
                 <label class="form__check">
                   <input class="form__checkbox" type="checkbox" name="selfi" checked> <span class="form__field-square"> Сделал селфи с акулой </span>
                 </label>
               </li>
-
               <li class="form__progress-part">
                 <label class="form__check">
                   <input class="form__checkbox" type="checkbox" name="hot" checked> <span class="form__field-square"> Обгорел на пляже </span>
                 </label>
               </li>
-
               <li class="form__progress-part">
                 <label class="form__check">
                   <input class="form__checkbox" type="checkbox" name="norris"> <span class="form__field-square"> Видел Чака Норриса </span>
                 </label>
               </li>
-
               <li class="form__progress-part">
                 <label class="form__check">
                   <input class="form__checkbox" type="checkbox" name="souvenir"> <span class="form__field-square"> Накупил сувениров </span>
                 </label>
               </li>
-
               <li class="form__progress-part">
                 <label class="form__check">
                   <input class="form__checkbox" type="checkbox" name="tower" checked> <span class="form__field-square"> Удержал башню </span>
                 </label>
               </li>
-
               <li class="form__progress-part">
                 <label class="form__check">
                   <input class="form__checkbox" type="checkbox" name="riot"> <span class="form__field-square"> Разгромил отель </span>
                 </label>
               </li>
-
             </ul>
           </div>
         </div>
-
+        <!-- Text-field part -->
         <div class="form__item">
           <div class="form__inner">
             <p class="form__item-intro"> Контактная информация </p>
             <ul class="form__contacts">
-
               <li class="form__block">
                 <dl class="form__text-block">
                   <dt class="form__text-title"><label for="tel"> Номер телефона </label></dt>
@@ -213,7 +197,6 @@
                   </dd>
                 </dl>
               </li>
-
               <li class="form__block">
                 <dl class="form__text-block">
                   <dt class="form__text-title"><label for="mail"> Адрес почты </label></dt>
@@ -222,55 +205,46 @@
                   </dd>
                 </dl>
               </li>
-
             </ul>
           </div>
         </div>
-
+        <!-- Radio buttons part -->
         <div class="form__item">
           <div class="form__inner">
             <p class="form__item-intro"> С каким приложением путешествовали? </p>
             <ul class="form__travelapp">
-
               <li class="form__travelapp-block">
                 <label class="form__check">
                   <input class="form__radio" type="radio" name="app" value="ios" checked> <span class="form__field-name"> Pink для iOS </span>
                 </label>
               </li>
-
               <li class="form__travelapp-block">
                 <label class="form__check">
                   <input class="form__radio" type="radio" name="app" value="android"> <span class="form__field-name"> Pink на Android </span>
                 </label>
               </li>
-
               <li class="form__travelapp-block">
                 <label class="form__check">
                   <input class="form__radio" type="radio" name="app" value="windows"> <span class="form__field-name"> Windows Phone </span>
                 </label>
               </li>
-
             </ul>
           </div>
         </div>
-
+        <!-- Textarea part -->
         <div class="form__item">
           <div class="form__inner">
-
             <div class="form__textarea-wrapper">
               <p class="form__item-intro"> Опишите свои эмоции </p>
               <textarea class="form__textarea" name="emotion" rows="6" cols="25"> Можно прям в красках, не стесняясь выражений </textarea>
             </div>
-
             <div class="form__submit-wrapper">
               <input class="form__submit" type="submit" value="Отправить форму" disabled>
               <p class="form__required"><span>*</span> - обязательные <span class="form__submit-words"> для заполнения </span> поля </p>
             </div>
-
           </div>
         </div>
       </form>
-
     </div>
   </main>
 
@@ -280,9 +254,8 @@
 
       <!-- "Social" links block -->
       <div class="social-links  social-links--form">
-
         <a class="social-links__logo" href="#">
-          <svg class="social-links__svg" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg class="social-links__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 width="146px" height="40px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
           <g class="social-links__svg-text">
           	<path fill="#283645" d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.063
@@ -337,11 +310,10 @@
           </g>
           </svg>
         </a>
-
         <ul class="social-links__list">
           <li class="social-links__item">
             <a class="social-links__link  social-links--tweetter" href="#">
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="15px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="15px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
                 <g id="W6EeEF_1_">
                   <g>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151
@@ -357,7 +329,7 @@
           </li>
           <li class="social-links__item">
             <a class="social-links__link  social-links--facebook" href="#">
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="9px" height="18px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="9px" height="18px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
                 <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115
                 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786
                 C5.765,5.07,5.75,3.709,6.275,3.357z" />
@@ -366,18 +338,17 @@
           </li>
           <li class="social-links__item">
             <a class="social-links__link  social-links--youtube" href="#">
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="13px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="13px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
                 <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932
                 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z" />
               </svg>
             </a>
           </li>
         </ul>
-
         <div class="social-links__copyright">
           <span> Разработано </span>
           <a class="social-links__copyright-logo" href="https://htmlacademy.ru/">
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="34px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="34px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
               <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334
             l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5
             l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787
@@ -387,9 +358,7 @@
             </svg>
           </a>
         </div>
-
       </div>
-
     </div>
   </footer>
 
@@ -406,7 +375,6 @@
       <a class="popap__btn" href="#"> Ok </a>
     </div>
   </div>
-
   <!-- No -->
   <div class="popap popap--error">
     <div class="popap__inner">
@@ -421,5 +389,4 @@
   <script src="js/main.js"></script>
 
 </body>
-
 </html>

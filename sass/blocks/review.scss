@@ -8,6 +8,9 @@
   flex-direction: column;
   align-items: center;
   @include container;
+  @media (min-width: $desktop) {
+    padding-top: 24px;
+  }
 }
 
 .review__list {
@@ -18,7 +21,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
   @media (min-width: $desktop) {
     margin-top: -30px;
   }
@@ -31,7 +33,6 @@
 .review__item {
   position: relative;
   text-align: center;
-
   @media (min-width: $desktop) {
     padding-top: 190px;
     padding-bottom: 45px;
@@ -39,8 +40,8 @@
 }
 
 // slider btn (desktop)
-.review__nav--prev,
-.review__nav--next {
+.review__nav--next,
+.review__nav--prev {
   @media (min-width: $desktop) {
     content: "";
     position: absolute;
@@ -48,9 +49,11 @@
     width: 25px;
     height: 25px;
   }
+
   &:hover {
     border-color: #969da4;
   }
+
   &:active {
     border-color: #f7f7f8;
   }
@@ -58,7 +61,7 @@
 
 .review__nav--prev {
   @media (min-width: $desktop) {
-    top: 195px;
+    top: 220px;
     left: 8px;
     border-bottom: 2px solid #c2c6ca;
     border-left: 2px solid #c2c6ca;
@@ -69,7 +72,7 @@
 
 .review__nav--next {
   @media (min-width: $desktop) {
-    top: 195px;
+    top: 220px;
     right: 8px;
     border-top: 2px solid #c2c6ca;
     border-right: 2px solid #c2c6ca;
@@ -81,10 +84,9 @@
 // quotes
 .review__quotes {
   display: none;
-
   @media (min-width: $desktop) {
     position: absolute;
-    top: 35px;
+    top: 64px;
     left: 0;
     right: 0;
     display: block;
@@ -98,13 +100,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font: normal 14px/30px "OpenSans", sans-serif;
-
+  font: normal 14px/30px "OpenSans", "Arial", sans-serif;
   @media (min-width: $tablet) {
     flex-direction: column-reverse;
     font-size: 18px;
   }
-
   @media (min-width: $desktop) {
     width: 680px;
   }
@@ -112,13 +112,12 @@
 
 .review__author {
   padding-top: 30px;
-  font: bold 18px/30px "OpenSans", sans-serif;
-
+  font: bold 18px/30px "OpenSans", "Arial", sans-serif;
   @media (min-width: $tablet) {
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 40px;
+    font-size: 20px;
   }
-
   @media (min-width: $desktop) {
     padding-top: 35px;
     padding-bottom: 0;
@@ -128,12 +127,10 @@
 
 .review__author-intro {
   display: none;
-
   @media (min-width: $tablet) {
     display: block;
-    font: normal 14px/30px "OpenSans", sans-serif;
+    font: normal 14px/30px "OpenSans", "Arial", sans-serif;
   }
-
   @media (min-width: $desktop) {
     font-size: 18px;
   }
@@ -143,11 +140,9 @@
   padding-top: 10px;
   padding-bottom: 38px;
   quotes: "\00ab" "\00bb";
-
   @media (min-width: $tablet) {
     padding: 0;
   }
-
   @media (min-width: $desktop) {
     quotes: none;
   }
@@ -163,11 +158,9 @@
 
 .review__list ~ .review__nav {
   padding-bottom: 50px;
-
   @media (min-width: $tablet) {
-    padding-bottom: 35px;
+    padding-bottom: 28px;
   }
-
   @media (min-width: $desktop) {
     display: none;
   }

@@ -10,8 +10,6 @@ var mqpacker = require("css-mqpacker");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
-var svgstore = require("gulp-svgstore");
-var svgmin = require("gulp-svgmin");
 var jsmin = require("gulp-jsmin");
 var clean = require("gulp-clean");
 
@@ -57,18 +55,8 @@ gulp.task("img-optimization", function() {
   .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("symbols", function() {
-  return gulp.src("build/img/icons/*.svg")
-  .pipe(svgmin())
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename("symbols.svg"))
-  .pipe(gulp.dest("build/img"));
-})
-
 gulp.task("mincss", ["copy"], function() {
-  return gulp.src("buils/сss/*.css")
+  return gulp.src("build/сss/*.css")
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))

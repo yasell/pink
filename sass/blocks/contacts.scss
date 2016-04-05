@@ -8,21 +8,16 @@
   margin: 0;
   padding-top: 40px;
   padding-bottom: 30px;
-
-  font: 200 24px "OpenSans", sans-serif;
+  font: 200 24px "OpenSans", "Arial", sans-serif;
   text-align: center;
-
   @media (min-width: $tablet) {
     width: 380px;
-    padding: 30px 0;
-
+    padding: 50px 0 30px 0;
     font-size: 40px;
   }
-
   @media (min-width: $desktop) {
     width: 480px;
-    padding: 90px 0 45px 0;
-
+    padding: 60px 0 45px;
     font-size: 50px;
   }
 }
@@ -34,32 +29,25 @@
   width: 100%;
   margin: 0;
   padding: 0;
-
   list-style: none;
-
   @media (min-width: $tablet) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-
-  @media (min-width: $desktop) {
-    // justify-content: space-between;
-  }
 }
 
 .contacts__item:nth-child(2) {
-    @media (min-width: $desktop) {
-      order: 1;
-    }
+  @media (min-width: $desktop) {
+    order: 1;
+    // margin-left: 20px;
+  }
 }
 
 .contacts__item {
   padding-bottom: 20px;
-
-  font: bold 18px "OpenSans", sans-serif;
+  font: bold 18px "OpenSans", "Arial", sans-serif;
   text-align: center;
-
   @media (min-width: $tablet) {
     padding-bottom: 50px;
   }
@@ -67,9 +55,11 @@
 
 .contacts__item:last-child {
   padding-bottom: 35px;
-
   @media (min-width: $tablet) {
     padding-bottom: 20px;
+  }
+  @media (min-width: $desktop) {
+    // margin-left: 45px;
   }
 }
 
@@ -79,12 +69,10 @@
 
 .contacts__link-item {
   display: block;
-
   font-size: 24px;
   font-weight: 200;
   text-decoration: none;
   color: $pink-color;
-
   @media (min-width: $desktop) {
     padding-top: 20px;
   }
