@@ -33,6 +33,28 @@ gulp.task("style", function() {
     .pipe(server.reload({stream: true}));
 });
 
+gulp.task("stylemin", ["copy"], function() {
+  gulp.src("sass/style.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer({browsers: [
+        "last 1 version",
+        "last 2 Chrome versions",
+        "last 2 Firefox versions",
+        "last 2 Opera versions",
+        "last 2 Edge versions"
+      ]}),
+      mqpacker({
+        sort: true
+      })
+    ]))
+    .pipe(gulp.dest("css"))
+    .pipe(minify())
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest("build/css"))
+});
+
 gulp.task("clean", function() {
   return gulp.src("build", {read: false})
     .pipe(clean());
@@ -53,13 +75,6 @@ gulp.task("img-optimization", function() {
     progressive: true
   }))
   .pipe(gulp.dest("build/img"));
-});
-
-gulp.task("mincss", ["copy"], function() {
-  return gulp.src("build/сss/*.css")
-    .pipe(minify())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
 });
 
 gulp.task("minjs", ["copy"], function() {
@@ -84,9 +99,8 @@ gulp.task("serve", ["style"], function() {
 gulp.task("build", [
   "clean",
   "copy",
+  "stylemin",
   "minjs",
-  "mincss",
   "img-optimization",
-  "symbols"
   ], function() {
 });
