@@ -1,9 +1,9 @@
-.popap {
+.popup {
   display: none;
   box-shadow: 0 15px 20px 0 rgba(0, 1, 1, .15);
 }
 
-.popap--error {
+.popup--error {
   z-index: 300;
   position: absolute;
   top: 43%;
@@ -16,10 +16,11 @@
   }
   @media (min-width: $desktop) {
     top: 40%;
+    width: 940px;
   }
 }
 
-.popap--ok {
+.popup--ok {
   z-index: 300;
   position: absolute;
   top: 59%;
@@ -36,21 +37,21 @@
   }
 }
 
-.popap__inner {
+.popup__inner {
   @include container;
   @media (min-width: $tablet) {
     width: 300px;
   }
 }
 
-.popap__item {
+.popup__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   @media (min-width: $tablet) {}
 }
 
-.popap__title {
+.popup__title {
   padding: 45px 0 35px;
   font: bold 18px/24px "OpenSans", "Arial", sans-serif;
   text-align: center;
@@ -60,7 +61,7 @@
   }
 }
 
-.popap__content {
+.popup__content {
   padding: 0 0 35px;
   font: normal 14px/24px "OpenSans", "Arial", sans-serif;
   text-align: center;
@@ -69,12 +70,12 @@
   }
 }
 
-.popap__submit {
+.popup__submit {
   padding: 50px 0;
   background: $gray-bg;
 }
 
-.popap__btn {
+.popup__btn {
   display: block;
   width: 280px;
   margin: 0 auto;
@@ -97,11 +98,11 @@
   }
 }
 
-.popap--error .popap__btn {
+.popup--error .popup__btn {
   margin-bottom: 50px;
 }
 
-.popap--ok .popap__btn {
+.popup--ok .popup__btn {
   @media (min-width: $tablet) {
     width: 300px;
   }
@@ -110,7 +111,7 @@
   }
 }
 
-.popap--ok .popap__inner {
+.popup--ok .popup__inner {
   @media (min-width: $desktop) {
     width: 390px;
   }

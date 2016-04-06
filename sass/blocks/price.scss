@@ -78,7 +78,7 @@
   font: normal 14px/30px "OpenSans", "Arial", sans-serif;
   text-transform: uppercase;
   background: $body-bg;
-  border: 1px solid $gray-dark;
+  border: 1px solid $gray-light;
   @media (min-width: $tablet) {
     justify-content: center;
     height: 45px;
@@ -103,7 +103,7 @@
   }
 }
 
-.price__item:nth-child(3) .price__field-header {
+.price__item:nth-child(3) .price__field--header {
   position: relative;
 
   &:before {
@@ -130,11 +130,11 @@
 }
 
 .price__field:last-child {
-  border-bottom: 2px solid $gray-dark;
+  border-bottom: 2px solid $gray-light;
 }
 
 .price__item:last-child .price__field {
-  border-right: 2px solid $gray-dark;
+  border-right: 2px solid $gray-light;
 }
 
 .price__name {
