@@ -23,7 +23,7 @@
 // bg for mobile
 @media (max-width: $mobile) {
   .app-load {
-    background: url("../img/bg-back-mobile.jpg") 50% 0 no-repeat;
+    background: url("../img/bg-back-mobile.jpg") 50% 0 no-repeat $intro-bg;
   }
 
   .app-load__inner {
@@ -167,6 +167,7 @@
 .app-load__item {
   display: inline-block;
   padding-top: 40px;
+  vertical-align: bottom;
   &:nth-child(2) {
     padding-left: 30px;
     padding-right: 30px;

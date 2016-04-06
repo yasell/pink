@@ -10,7 +10,7 @@
 // bg for mobile
 @media (max-width: $mobile) {
   .photo-intro {
-    background: url("../img/bg-back-mobile.jpg") 50% 0 no-repeat;
+    background: url("../img/bg-back-mobile.jpg") 50% 0 no-repeat $intro-bg;
   }
 }
 @media (max-width: $mobile) and (min-resolution: 144dpi), (max-width: $mobile) and (min-resolution: 1.5dppx) {
@@ -24,7 +24,7 @@
 @media (min-width: $tablet) {
   .photo-intro {
     padding-top: 110px;
-    background: url("../img/bg-back-tablet@1x.jpg") 50% 0 no-repeat;
+    background: url("../img/bg-back-tablet@1x.jpg") 50% 0 no-repeat $intro-bg;
   }
 }
 @media (min-width: $tablet) and (min-resolution: 144dpi), (min-width: $tablet) and (min-resolution: 1.5dppx) {

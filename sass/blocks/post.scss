@@ -38,6 +38,7 @@
   display: block;
   width: 100%;
   height: 135px;
+  background-color: $gray-dark;
   @media (min-width: $tablet) {
     height: 508px;
   }
@@ -105,11 +106,11 @@
   background: $gray-bg;
   @media (min-width: $tablet) {
     width: 300px;
-    height: 455px;
+    min-height: 455px;
     margin-bottom: 22px;
   }
   @media (min-width: $desktop) {
-    height: 555px;
+    min-height: 555px;
     margin-bottom: 58px;
   }
 }
@@ -119,6 +120,7 @@
   display: block;
   height: 180px;
   overflow: hidden;
+  background-color: $gray-dark;
   @media (min-width: $tablet) {
     height: 300px;
   }
@@ -142,6 +144,15 @@
   @media (min-width: $tablet) {
     padding: 25px 30px;
   }
+  @media (min-width: $desktop) {
+    padding: 25px 30px 30px 30px;
+  }
+}
+
+.post__item .post__description {
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 .post__author {
@@ -151,6 +162,7 @@
 .post__author span {
   font-size: 12px;
   font-weight: 200;
+  text-transform: uppercase;
 }
 
 .post__like {
@@ -160,6 +172,7 @@
   cursor: default;
   font: normal 12px/24px "OpenSans", "Arial", sans-serif;
   text-decoration: none;
+  text-transform: uppercase;
   color: $pink-color;
   @media (min-width: $tablet) {
     position: absolute;
@@ -167,7 +180,7 @@
     left: 0;
     justify-content: space-between;
     width: 100%;
-    padding: 0 26px 0 30px;
+    padding: 0 30px 0 30px;
   }
   @media (min-width: $desktop) {
     bottom: 25px;
@@ -177,7 +190,7 @@
 
 .post__like svg {
   width: 15px;
-  height: 15px;
+  height: 12px;
   margin: 0 20px;
   cursor: pointer;
   fill: $pink-color;
@@ -200,7 +213,7 @@
     position: absolute;
     bottom: 73px;
     left: 443px;
-    width: 175px;
+    width: 181px;
   }
   @media (min-width: $desktop) {
     bottom: 50px;

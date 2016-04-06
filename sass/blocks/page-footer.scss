@@ -48,6 +48,9 @@
 }
 
 .without-js .page-footer .page-footer__map {
-  background: url("../img/bg-map.png") 50% 50% no-repeat;
+  background: url("../img/bg-map-mobile.png") 50% 50% no-repeat;
   background-size: 100% auto;
+  @media (min-width: $tablet) {
+    background-image: url("../img/bg-map.png");
+  }
 }
